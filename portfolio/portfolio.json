@@ -1,0 +1,245 @@
+{
+  "badges": {
+    "alpha": {
+      "statusLabel": "Alpha",
+      "statusBackgroundColor": "secondary",
+      "statusTextColor": "light",
+      "statusDescription": "Velmi raná fáze vývoje či pouze myšlenkový koncept; zatím neuspokojivý výsledek, který neplní ani má očekávání."
+    },
+    "beta": {
+      "statusLabel": "Beta",
+      "statusBackgroundColor": "warning",
+      "statusTextColor": "dark",
+      "statusDescription": "Funkční a pokročilý, ale stále s nedostatky a potenciálem k vylepšení; očekávání částečně splněna."
+    },
+    "completed": {
+      "statusLabel": "Completed",
+      "statusBackgroundColor": "success",
+      "statusTextColor": "light",
+      "statusDescription": "Považovaný za dokončený a uspokojivě hotový projekt - vlastní očekávání splněna."
+    },
+    "forRemake": {
+      "statusLabel": "For Remake",
+      "statusBackgroundColor": "danger",
+      "statusTextColor": "light",
+      "statusDescription": "Projekt určený k přepracování nebo úplné náhradě; s větším důrazem na detaily a vizi, kterou jsem dříve opomíjel."
+    }
+  },
+  "projects": [
+    {
+      "id": 0,
+      "title": "Taskami",
+      "description": "WPF aplikace pro správu úkolů, která kombinuje funkce Pomodoro a To-Do Listu pro zvýšení produktivity.",
+      "shortDescription": "WPF To-Do s Pomodoro funkcí",
+      "note": "Projekt je ve velmi rané (alpha) fázi vývoje.",
+      "completionDate": null,
+      "version": "0.1 Alpha",
+      "tags": "C#, WPF",
+      "status": [
+        "alpha"
+      ],
+      "thumbnail": "portfolio/img/taskami-thumb.png",
+      "gallery": [
+        "portfolio/img/taskami1.png",
+        "portfolio/img/taskami2.png",
+        "portfolio/img/taskami3.png"
+      ],
+      "changelog": [
+        {
+          "version": "0.1 Alpha",
+          "date": "2025-05",
+          "notes": "Náčrt uživatelského rozhraní"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Todoist Widget",
+      "description": "Widget pro integraci s aplikací Todoist pro lepší správu úkolů přímo z domácí obrazovky.",
+      "shortDescription": "Todoist widget na plochu",
+      "note": "Vytvářel jsem to s použitím umělé inteligence a bez předchozích zkušeností s Pythonem; mým hlavním zaměřením jsou C# (.NET, WPF) a JavaScript. Projekt ukazuje mou schopnost pracovat s AI a adaptovat se na nové technologie.",
+      "completionDate": "2024-06",
+      "version": "1.0",
+      "tags": "Python",
+      "links": [
+        {
+          "type": "download",
+          "url": "https://github.com/danixek/todoist-widget/releases/download/todoist/TodoistWidget.exe"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/todoist-widget"
+        }
+      ],
+      "status": [
+        "completed"
+      ],
+      "thumbnail": "portfolio/img/todoistWidget-thumb.png",
+      "gallery": [
+        "portfolio/img/todoistWidget1.png",
+        "portfolio/img/todoistWidget2.png"
+      ],
+      "changelog": [
+        {
+          "version": "1.0",
+          "date": "2024-06",
+          "notes": "Podpora Todoist API a synchronizace\nPřidáno přemístění widgety\nPřidáno průhledné pozadí\n Přidána možnost označit úkol jako splněný kliknutím na kolečko."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Evidence pojištění",
+      "description": "Správa pojištěnců a pojištění v C# a ASP.NET za pomocí MySQL, Entity Frameworku a Bootstrapu.",
+      "shortDescription": "Správce pojištěnců a pojištění v C# .NET",
+      "note": "Plánuji remake, jakmile získám výkonnější počítač a přístup ke generátoru obrázků MidJourney; příště bych se zároveň více věnoval vzhledu a kreativnějšímu názvu, který by lépe odrážel podnikatelský potenciál.",
+      "completionDate": "2025-03",
+      "version": "0.2.0",
+      "tags": "C#, ASP.NET, Bootstrap, Entity Framework, SQL",
+      "links": [
+        {
+          "type": "download",
+          "url": "https://github.com/danixek/itnetwork-kurz_Kefurt/archive/refs/heads/master.zip"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/itnetwork-kurz_Kefurt"
+        }
+      ],
+      "status": [
+        "beta",
+        "forRemake"
+      ],
+      "thumbnail": "portfolio/img/evidencePojisteni-thumb.webp",
+      "gallery": [
+        "portfolio/img/evidencePojisteni1.png",
+        "portfolio/img/evidencePojisteni2.png",
+        "portfolio/img/evidencePojisteni3.png",
+        "portfolio/img/evidencePojisteni4.png",
+        "portfolio/img/evidencePojisteni5.png",
+        "portfolio/img/evidencePojisteni6.png"
+      ],
+      "changelog": [
+        {
+          "version": "0.2.0",
+          "date": "2025-03",
+          "notes": "Provedena úprava uživatelského rozhraní za pomocí Bootstrapu. Doladěny chyby na backendu. Kontrola dobrých praktik."
+        },
+        {
+          "version": "0.1.0",
+          "date": "2025-02",
+          "notes": "Přidána základní MVC architektura a načítání z databáze MySQL."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "DEV portfolio",
+      "description": "Webové portfolio vytvořené pomocí Bootstrapu, s důrazem na responzivitu, přehlednost a snadnou rozšiřitelnost.",
+      "shortDescription": "Webové portfolio k prezentaci",
+      "note": "Stránka reprezentuje můj pokrok ve vývoji - v technickém i designovém smyslu. V galerii je také patrné přijmení 'Černý', které mi přijde zvučné a sémanticky natolik blízké, až zvažuji jeho přijetí jako osobní značky.",
+      "completionDate": "2025-05",
+      "version": "1.0",
+      "tags": "PHP, Bootstrap, Javascript, HTML, CSS",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://dnx.mzf.cz"
+        },
+        {
+          "type": "github",
+          "url": ""
+        }
+      ],
+      "status": [
+        "completed"
+      ],
+      "thumbnail": "portfolio/img/devPortfolio-thumb.webp",
+      "gallery": [
+        "portfolio/img/devPortfolio1.png",
+        "portfolio/img/devPortfolio2.png",
+        "portfolio/img/devPortfolio3.png",
+        "portfolio/img/devPortfolio4.png",
+        "portfolio/img/devPortfolio5.png",
+        "portfolio/img/devPortfolio6.png"
+      ],
+      "changelog": [
+        {
+          "version": "0.70",
+          "date": "2025-05",
+          "notes": "Nyní jsou k dispozici tři motivy vzhledu - 'dark', 'darker' a 'softlight'. Všechny jsou variace tmavých témat.\nVylepšen filtr portfolia - nyní lze filtrovat i podle vývojových štítků (Alpha,Beta,Completed,ForRemake).\nPřidána zpětná vazba filtru: vypisování aktivních filtrů a počet aktuálně zobrazených výsledků.\nPřidán changelog."
+        },
+        {
+          "version": "0.65",
+          "date": "2025-05",
+          "notes": "Vylepšeno UI v detailech\nPřidán přepínač motivů stránky - kromě defaultního 'dark' vzhledu je dostupný i vzhled 'darker'.\nPřidáno nové logo.\nNyní lze galerii zvětšit a přepínat mezi obrázky ve zvětšeném režimu.\nOprava rozbitého UI v detailu projektu.\nPřidán do patičky webu anti-bot dešifrovač emailu."
+        },
+        {
+          "version": "0.60",
+          "date": "2025-05",
+          "notes": "Vylepšen filtr portfolia - nyní je třístavový.\nPřidána v detailu žlutá poznámka, datum a verze projektu.\nV detailu byla vylepšena tlačítka 'Stáhnout' a 'GitHub'; přidáno tlačítko 'Zobrazit'.\nOprava bugů."
+        },
+        {
+          "version": "0.55",
+          "date": "2025-04",
+          "notes": "Přidán detail projektu i s galerií a tagy.\nDále - jednoduchý filtr technologií k portfoliu a verzovací štítky.\nPřidány citáty."
+        },
+        {
+          "version": "0.50",
+          "date": "2025-04",
+          "notes": "Stránka je celá postavena responzivně a po částech - sekcích čili partials.\nPřidán navbar, hlavička, patička, about-me, a citáty.\nPřidáno bylo i portfolio - výpis projektů na hlavní stránce."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Dashboard",
+      "description": "Vlastní domovská stránka vytvořená v HTML, CSS a JS - bez frameworků. Obsahuje jednoduchý javascriptový našeptávač, který je založen na záložkách.",
+      "shortDescription": "Vlastní domovská stránka bez frameworků",
+      "note": "Tento projekt vznikl během studia na učilišti jako osobní responzivní domovská stránka prohlížeče.",
+      "completionDate": "2025-05",
+      "version": "2.0",
+      "tags": "Javascript, HTML, CSS",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://dnx.mzf.cz/dashboard/"
+        },
+        {
+          "type": "github",
+          "url": ""
+        }
+      ],
+      "status": [
+        "beta"
+      ],
+      "thumbnail": "portfolio/img/dashboard-thumb.webp",
+      "gallery": [
+        "portfolio/img/dashboard1.png",
+        "portfolio/img/dashboard2.png"
+      ],
+      "changelog": [
+        {
+          "version": "2.0",
+          "date": "2025-05",
+          "notes": "Web prošel kompletním redesignem a nově je koncipován jako multifunkční aplikace.\nVyhledávání zahrnuje našeptávač i živé filtrování zobrazených záložek.\nPodpora tagů zatím znovu nebyla implementována.\nPřidány přepínatelné kategorie."
+        },
+        {
+          "version": "1.2",
+          "date": "2024-03",
+          "notes": "Přidán jednoduchý systém záložek s pomocí javascriptu a podporou tagů.\nDo vyhledávacího pole stačí napsat část názvu nebo tagu, a výsledek se objeví v našeptávači."
+        },
+        {
+          "version": "1.1",
+          "date": "2019-03",
+          "notes": "Přidána podpora pro pozadí na hlavní plochu; prozatím bez uživatelské přizpůsobivosti pozadí."
+        },
+        {
+          "version": "1.0",
+          "date": "2018-03",
+          "notes": "Vytvořena hlavní plocha s vyhledávacím formulářem - po scrollování jsou dostupné i záložky, které se responzivně přizpůsobují velikosti okna."
+        }
+      ]
+    }
+  ]
+}
