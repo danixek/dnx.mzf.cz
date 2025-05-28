@@ -1,23 +1,23 @@
+# Aktivace přepisovacího modulu
+RewriteEngine On
 
-# stranka s chybovym hlasenim pro chybu 404 - nenalezen
-ErrorDocument 404 /etc/404.html
-ErrorDocument 403 /etc/403.html
-ErrorDocument 401 /etc/401.html
+# Nastavení vlastních error pages
+ErrorDocument 404 /error.php?code=404
+ErrorDocument 403 /error.php?code=403
+ErrorDocument 500 /error.php?code=500
 
 # nastaveni vychozi stranky adresare
-DirectoryIndex start.html start.php index.html index.php
+DirectoryIndex index.html index.php
 
 # povoleni zobrazeni obsahu adresare, pokud chybi vychozi soubor
 Options +Indexes
 
 # Odstranění koncovky .html
-RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
 # Odstranění koncovky .php
-RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php [L]

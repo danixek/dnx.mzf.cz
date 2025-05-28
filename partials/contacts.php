@@ -47,7 +47,7 @@
     <div class="mt-5 pt-3 text-white">
         <p class="contacts-text mb-0 text-center d-flex justify-content-center align-items-center gap-2 flex-wrap">
             Made with <span class="contacts-heart" aria-label="love" style="color: #e25555;">♥</span> by
-            <img src="logo/dnx-logo_mini.ico" style="height: 20px; margin-bottom: 2px" />
+            <img src="/logo/dnx-logo_mini.ico" style="height: 20px; margin-bottom: 2px" />
             <span class="visually-hidden">D</span><span class="contacts-name">aniel Kefurt &copy;
                 <?= date('Y') ?></span>
         </p>

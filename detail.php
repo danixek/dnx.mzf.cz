@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 
-<?php include 'portfolio/partials/header.php'; ?>
+<?php include 'partials/header.php'; ?>
 
 <body>
 
@@ -9,10 +9,10 @@
         <?php
 
         // Navigační menu
-        require('portfolio/partials/navbar.php');
+        require('partials/navbar.php');
 
         // Utilita v PHP na přepínání barev frontendu - CSS přepínač
-        require('portfolio/utils.php'); ?>
+        require('utils.php'); ?>
 
         <!-- Sekce domů - speciální verze bez citátů -->
         <section id="home" class="<?= getBgClass() ?> text-center text-white pt-4">
@@ -60,14 +60,14 @@
                             <?php if (!empty($selectedProject['gallery'])): ?>
                                 <!-- Hlavní obrázek (kliknutím na něj otevřeš modal) -->
                                 <img id="mainImage"
-                                    src="<?= htmlspecialchars($selectedProject['gallery'][0]) ?? 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAA5CAYAAABxNnTaAAAAFElEQVR4nO3BMQEAAAgDoJvcf+FAAFY7gW8FAAAAAAAAAAAAAPA3A9MNAAEKCcAAAAASUVORK5CYII=' ?>"
+                                    src="/portfolio/gallery/<?= htmlspecialchars($selectedProject['gallery'][0]) ?? 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAA5CAYAAABxNnTaAAAAFElEQVR4nO3BMQEAAAgDoJvcf+FAAFY7gW8FAAAAAAAAAAAAAPA3A9MNAAEKCcAAAAASUVORK5CYII=' ?>"
                                     class="img-fluid rounded mb-3 detail-mainimg" loading="lazy" alt="Hlavní obrázek"
                                     data-bs-toggle="modal" data-bs-target="#imageModal"
                                     style="max-width: 100%; max-height: 400px; object-fit: contain;">
                                 <div class="row g-2">
                                     <?php foreach ($selectedProject['gallery'] as $index => $image): ?>
                                         <div class="col-4 col-md-2 thumb-wrapper"> <!-- 3 sloupce na xs, 6 sloupců na md -->
-                                            <img src="<?= htmlspecialchars($image) ?>" class="img-thumbnail w-100"
+                                            <img src="/portfolio/gallery/<?= htmlspecialchars($image) ?>" class="img-thumbnail w-100"
                                                 style="height: 60px; cursor: pointer; object-fit: cover;"
                                                 onclick="changeMainImage(this)" loading="lazy" data-index="<?= $index ?>"
                                                 alt="Náhled <?= $index ?>">
@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="modal-body p-0"><!-- odstraněny paddingy, aby obrázek zabral maximum -->
                                         <img id="modalImage"
-                                            src="<?= htmlspecialchars($selectedProject['gallery'][0]) ?>"
+                                            src="/portfolio/gallery/<?= htmlspecialchars($selectedProject['gallery'][0]) ?>"
                                             class="img-fluid w-100" loading="lazy" alt="Detail obrázku"
                                             style="max-width:100%; max-height: 90vh; object-fit: contain;"><!-- omezení výšky na 90% viewportu -->
                                         <button type="button"
@@ -322,15 +322,15 @@
     <footer>
         <?php
         // Citáty
-        require('portfolio/partials/quotes.php');
+        require('partials/quotes.php');
 
         // Kontakt
-        require('portfolio/partials/contacts.php'); ?>
+        require('partials/contacts.php'); ?>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="portfolio/js/quotes.js"></script>
-    <script src="portfolio/js/bs-tooltip.js"></script>
+    <script src="/js/quotes.js"></script>
+    <script src="/js/bs-tooltip.js"></script>
 
 
 </body>

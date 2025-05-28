@@ -38,11 +38,11 @@
       "status": [
         "alpha"
       ],
-      "thumbnail": "portfolio/img/taskami-thumb.png",
+      "thumbnail": "taskami-thumb.png",
       "gallery": [
-        "portfolio/img/taskami1.png",
-        "portfolio/img/taskami2.png",
-        "portfolio/img/taskami3.png"
+        "taskami1.png",
+        "taskami2.png",
+        "taskami3.png"
       ],
       "changelog": [
         {
@@ -74,10 +74,10 @@
       "status": [
         "completed"
       ],
-      "thumbnail": "portfolio/img/todoistWidget-thumb.png",
+      "thumbnail": "todoistWidget-thumb.png",
       "gallery": [
-        "portfolio/img/todoistWidget1.png",
-        "portfolio/img/todoistWidget2.png"
+        "todoistWidget1.png",
+        "todoistWidget2.png"
       ],
       "changelog": [
         {
@@ -89,46 +89,71 @@
     },
     {
       "id": 2,
-      "title": "Evidence pojištění",
-      "description": "Správa pojištěnců a pojištění v C# a ASP.NET za pomocí MySQL, Entity Frameworku a Bootstrapu.",
+      "title": "Pojišťák.NET",
+      "description": "Správa pojištěnců a pojištění v C# a ASP.NET za pomocí MS-SQL, Entity Frameworku a Bootstrapu.",
       "shortDescription": "Správce pojištěnců a pojištění v C# .NET",
-      "note": "Plánuji remake, jakmile získám výkonnější počítač a přístup ke generátoru obrázků MidJourney; příště bych se zároveň více věnoval vzhledu a kreativnějšímu názvu, který by lépe odrážel podnikatelský potenciál.",
-      "completionDate": "2025-03",
-      "version": "0.2.0",
+      "note": "Projekt vznikl jako závěrečný úkol během rekvalifikace, ale původní verze mi přišla nedotažená a nevhodná pro portfolio – částečně kvůli omezením slabšího notebooku a nemožnosti využít placené nástroje jako MidJourney či ChatGPT. Rád bych jej vizuálně i technicky posunul dál, aby lépe odrážel můj potenciál pro budoucího zaměstnavatele.",
+      "completionDate": "2025-05",
+      "version": "0.50",
       "tags": "C#, ASP.NET, Bootstrap, Entity Framework, SQL",
       "links": [
         {
           "type": "download",
-          "url": "https://github.com/danixek/itnetwork-kurz_Kefurt/archive/refs/heads/master.zip"
+          "url": "https://github.com/danixek/PojistakNET/archive/refs/heads/master.zip"
         },
         {
           "type": "github",
-          "url": "https://github.com/danixek/itnetwork-kurz_Kefurt"
+          "url": "https://github.com/danixek/PojistakNET"
         }
       ],
       "status": [
         "beta",
         "forRemake"
       ],
-      "thumbnail": "portfolio/img/evidencePojisteni-thumb.webp",
+      "thumbnail": "evidencePojisteni-thumb.webp",
       "gallery": [
-        "portfolio/img/evidencePojisteni1.png",
-        "portfolio/img/evidencePojisteni2.png",
-        "portfolio/img/evidencePojisteni3.png",
-        "portfolio/img/evidencePojisteni4.png",
-        "portfolio/img/evidencePojisteni5.png",
-        "portfolio/img/evidencePojisteni6.png"
+        "evidencePojisteni1.png",
+        "evidencePojisteni2.png",
+        "evidencePojisteni3.png",
+        "evidencePojisteni4.png",
+        "evidencePojisteni5.png",
+        "evidencePojisteni6.png"
       ],
       "changelog": [
         {
-          "version": "0.2.0",
-          "date": "2025-03",
-          "notes": "Provedena úprava uživatelského rozhraní za pomocí Bootstrapu. Doladěny chyby na backendu. Kontrola dobrých praktik."
+          "version": "0.60",
+          "date": "2025-05",
+          "notes": "Změněn název aplikace na Pojišťák.NET.\nOznámeno oficiální zahájení fáze revize – projekt bude postupně modernizován a přizpůsoben jako silná ukázka pro IT portfolio."
         },
         {
-          "version": "0.1.0",
+          "version": "0.55",
+          "date": "2025-03",
+          "notes": "Přidáno automatické formátování finančních částek, PSČ pojištěnce a telefonních čísel pro lepší čitelnost dat.\nKontrola dobrých praktik."
+        },
+        {
+          "version": "0.50",
+          "date": "2025-03",
+          "notes": "Doplněna základní dokumentace k metodám kontrolerů.\nRevize části kontrolerů pro větší přehlednost.\nZavedena základní validace vstupních polí na frontendu.\nProvedena úprava uživatelského rozhraní za pomocí Bootstrapu.\nDoladěny chyby na backendu související s pojmenováním a sladěním proměnných id, insurerId a insuranceId."
+        },
+        {
+          "version": "0.40",
+          "date": "2025-03",
+          "notes": "Přidána možnost přidávat, upravovat a mazat pojištění.\nNyní se při stisknutí tlačítka 'Smazat' zobrazí potvrzovací dialog.\nPři kliknutí na pojištěnce se zobrazí detail s informacemi o jeho pojištění."
+        },
+        {
+          "version": "0.30",
           "date": "2025-02",
-          "notes": "Přidána základní MVC architektura a načítání z databáze MySQL."
+          "notes": "Přidána základní MVC architektura a načítání z databáze MS-SQL.\nPřidána možnost přidávat, upravovat a mazat pojištěnce"
+        },
+        {
+          "version": "0.20",
+          "date": "2025-02",
+          "notes": "Vytvořen základ projektu v ASP.NET Core MVC.\nZaložen repozitář a inicializována databáze."
+        },
+        {
+          "version": "0.10",
+          "date": "2025-02",
+          "notes": "Vytvořeny základní modely pro pojištěnce a pojištění."
         }
       ]
     },
@@ -139,7 +164,7 @@
       "shortDescription": "Webové portfolio k prezentaci",
       "note": "Stránka reprezentuje můj pokrok ve vývoji - v technickém i designovém smyslu. V galerii je také patrné přijmení 'Černý', které mi přijde zvučné a sémanticky natolik blízké, až zvažuji jeho přijetí jako osobní značky.",
       "completionDate": "2025-05",
-      "version": "1.0",
+      "version": "1.00",
       "tags": "PHP, Bootstrap, Javascript, HTML, CSS",
       "links": [
         {
@@ -154,16 +179,21 @@
       "status": [
         "completed"
       ],
-      "thumbnail": "portfolio/img/devPortfolio-thumb.webp",
+      "thumbnail": "devPortfolio-thumb.webp",
       "gallery": [
-        "portfolio/img/devPortfolio1.png",
-        "portfolio/img/devPortfolio2.png",
-        "portfolio/img/devPortfolio3.png",
-        "portfolio/img/devPortfolio4.png",
-        "portfolio/img/devPortfolio5.png",
-        "portfolio/img/devPortfolio6.png"
+        "devPortfolio1.png",
+        "devPortfolio2.png",
+        "devPortfolio3.png",
+        "devPortfolio4.png",
+        "devPortfolio5.png",
+        "devPortfolio6.png"
       ],
       "changelog": [
+        {
+          "version": "1.00",
+          "date": "2025-05",
+          "notes": "Přidán životopis do sekce about-me na hlavní stránce; web již plní základní funkčnost v0.70 --> v1.00."
+        },
         {
           "version": "0.70",
           "date": "2025-05",
@@ -213,10 +243,10 @@
       "status": [
         "beta"
       ],
-      "thumbnail": "portfolio/img/dashboard-thumb.webp",
+      "thumbnail": "dashboard-thumb.webp",
       "gallery": [
-        "portfolio/img/dashboard1.png",
-        "portfolio/img/dashboard2.png"
+        "dashboard1.png",
+        "dashboard2.png"
       ],
       "changelog": [
         {
@@ -238,6 +268,41 @@
           "version": "1.0",
           "date": "2018-03",
           "notes": "Vytvořena hlavní plocha s vyhledávacím formulářem - po scrollování jsou dostupné i záložky, které se responzivně přizpůsobují velikosti okna."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "[ d] blog",
+      "description": "Blog je víc než jen doplněk portfolia - je to prostor pro mé myšlenky. Od programování, přes školství, motivaci a MBTI, až po psychologii a společenská témata. Tvořím ho jako vývojář, který hledá smysl i mimo klávesnici.",
+      "shortDescription": "Blog nejen k portfoliu, ale i pro mé myšlenky",
+      "note": "Články [ d] blogu jsou vytvořené v Markdownu",
+      "completionDate": "2025-05",
+      "version": "0.85",
+      "tags": "PHP, Bootstrap, Markdown, HTML, CSS",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://dnx.mzf.cz/blog"
+        },
+        {
+          "type": "github",
+          "url": ""
+        }
+      ],
+      "status": [
+        "beta"
+      ],
+      "thumbnail": "dBlog-thumb.png",
+      "gallery": [
+        "dBlog1.png",
+        "dBlog2.png"
+      ],
+      "changelog": [
+        {
+          "version": "0.85",
+          "date": "2025-05",
+          "notes": "Blog vytvořen - sdílí vzhled portfolia.\nPokročilé filtry dosud nepřidány\nImprovizované UI rozhraní"
         }
       ]
     }

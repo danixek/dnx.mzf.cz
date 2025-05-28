@@ -31,7 +31,7 @@
 
             <!-- Obrázek -->
             <div class="col-lg-4 col-md-4 order-2 order-md-2 text-center text-md-end">
-                <img src="portfolio/img/profile.jpg" alt="O mně"
+                <img src="profile.jpg" alt="O mně"
                     class="img-fluid rounded shadow mx-auto d-block d-md-inline" style="max-width: 100%; height: auto">
             </div>
 
@@ -53,11 +53,10 @@
 
 
                 <!-- Životopis ke stažení a zobrazení -->
-                 <!--
                 <div class="d-flex justify-content-end mt-3">
                     <div class="btn-group">
-                        <a href="/portfolio/cv.pdf" download class="btn btn-outline-success d-flex align-items-center">
-                            <i class="bi bi-download me-2"></i> Stáhnout CV
+                        <a href="/portfolio/CV-danielKEFURT.pdf" download class="btn btn-outline-success d-flex align-items-center">
+                            <i class="bi bi-download me-2"></i> Stáhnout životopis
                         </a>
                         <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,15 +64,14 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark bg-dark">
                             <li>
-                                <a class="dropdown-item d-flex align-items-center me-4" href="/portfolio/cv.pdf"
+                                <a class="dropdown-item d-flex align-items-center me-4" href="/portfolio/CV-danielKEFURT.pdf"
                                     target="_blank">
-                                    <i class="bi bi-file-earmark-pdf me-2"></i> Zobrazit CV
+                                    <i class="bi bi-file-earmark-pdf me-2"></i> Zobrazit životopis
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                -->
 
             </div>
         </div>

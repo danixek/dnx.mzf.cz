@@ -1,4 +1,4 @@
-fetch('portfolio/quotes.json')
+fetch('/js/quotes.json')
   .then(response => response.json())
   .then(quotes => {
     const quoteBox = document.getElementById('quote-box');

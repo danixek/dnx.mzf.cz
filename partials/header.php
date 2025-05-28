@@ -4,7 +4,7 @@
     <link rel="canonical" href="https://dnx.mzf.cz">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="portfolio/portfolio.css">
+    <link rel="stylesheet" href="/index.css">
     <link rel="icon" href="logo/dnx-logo_mini.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Osobní portfolio vývojáře danixek. Projekty, kontakty a informace o mně.">
@@ -13,7 +13,7 @@
     <meta property="og:title" content="danixek – Portfolio">
     <meta property="og:description" content="Moje práce, dovednosti a kontakt.">
 <!--<meta property="og:image" content="https://dnx.mzf.cz/path/to/preview.jpg"> -->
-    <meta property="og:url" content="https://tvojedomena.cz">
+    <meta property="og:url" content="https://dnx.mzf.cz">
     <meta name="twitter:card" content="summary_large_image">
 </head>    
 

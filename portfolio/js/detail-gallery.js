@@ -1,5 +1,6 @@
 let currentIndex = 0;
 const galleryImages = JSON.parse(document.getElementById('gallery').dataset.gallery);
+const galleryPrefix = "/portfolio/gallery/"; // Nastav adresu ke složce s galerií
 
 function changeMainImage(imgElement) {
     const src = imgElement.src;
@@ -13,10 +14,10 @@ function changeMainImage(imgElement) {
 
 document.getElementById('prevImageBtn').addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    document.getElementById('modalImage').src = galleryImages[currentIndex];
+    document.getElementById('modalImage').src = galleryPrefix + galleryImages[currentIndex];
 });
 
 document.getElementById('nextImageBtn').addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % galleryImages.length;
-    document.getElementById('modalImage').src = galleryImages[currentIndex];
+    document.getElementById('modalImage').src = galleryPrefix + galleryImages[currentIndex];
 });

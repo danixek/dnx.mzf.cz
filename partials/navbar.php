@@ -3,8 +3,8 @@
     style="position: fixed; left: 0px; top: 0px; right: 0px; z-index: 99; opacity: 0.95; height: 60px">
     <div class="container">
 
-        <a class="navbar-brand" href="index.php#" id="logo-link">
-            <img src="logo/dnx-logo_mini_60px.png" alt="Logo" class="logo-img">
+        <a class="navbar-brand" href="/#" id="logo-link">
+            <img src="/logo/dnx-logo_mini_60px.png" alt="Logo" class="logo-img">
             <span class="logo-text">
                 <l>D</l>aniel <b>Kefurt</b>
             </span>
@@ -19,16 +19,19 @@
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php#">Domů</a>
+                    <a class="nav-link active" aria-current="page" href="/#">Domů</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php#about">O mně</a>
+                    <a class="nav-link" href="/#about">O mně</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php#portfolio">Portfolio</a>
+                    <a class="nav-link" href="/#portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php#contact">Kontakt</a>
+                    <a class="nav-link" href="/#contact">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
                 </li>
                 <li class="nav-item mt-1">
                     <button id="theme-toggle" class="btn btn-outline-secondary btn-sm" data-bs-tooltip="tooltip"
@@ -40,4 +43,4 @@
         </div>
     </div>
 </nav>
-<script src="portfolio/js/theme-toggler.js"></script>
+<script src="/js/theme-toggler.js"></script>

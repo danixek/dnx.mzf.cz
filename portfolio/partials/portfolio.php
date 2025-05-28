@@ -198,7 +198,7 @@
                                                 id="filterSQL-checkbox" hidden>
                                             <span class="custom-checkbox"></span>
                                             <label for="filterSQL-checkbox" data-bs-tooltip="tooltip"
-                                                title="Primárně MySQL, ale zkušenosti přenositelně použitelné i pro PostgreSQL, MSSQL a další.">(My)SQL</label>
+                                                title="Do SQL spadá MSSQL a MySQL, a další.">SQL</label>
                                         </div>
                                     </div>
                                 </div>
@@ -299,7 +299,7 @@
                     data-tech="<?= htmlspecialchars($dataTech) ?>" data-version="<?= htmlspecialchars($dataVersion) ?>">
                     <div class="card bg-dark text-light flex-fill">
                         <div class="ratio ratio-16x9">
-                            <img src="<?= $thumbnail ?>" loading="lazy" aria-label="Náhled projektu: <?= $title ?>"
+                            <img src="portfolio/gallery/<?= $thumbnail ?>" aria-label="Náhled projektu: <?= $title ?>"
                                 alt="<?= $title ?>" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
                         </div>
                         <div class="card-body flex-column" style="display: flex">
