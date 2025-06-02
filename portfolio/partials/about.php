@@ -48,10 +48,11 @@
                 </div>
                 -->
                 <h3 class="sub-section-title fs-5 fw-bold">🧠 Růstové myšlení místo rutiny</h3>
-                <p class="section-content">Na střední škole jsem se soustředil na budování růstového myšlení namísto
+                <p class="section-content">Nebojím se jít proti proudu, když to vede k lepšímu řešení. Je to díky období
+                    na
+                    střední škole, kde jsem se soustředil na budování růstového myšlení namísto
                     programování –
-                    učil jsem se přijímat výzvy, zkoušet nové cesty a učit se z vlastních chyb. Dnes díky tomu rychle
-                    chápu nové technologie a nebojím se jít proti proudu, když to vede k lepšímu řešení.
+                    učil jsem se přijímat výzvy, zkoušet nové cesty a učit se z vlastních chyb.
                 </p>
                 <!--
                 <div class="text-end">
@@ -72,9 +73,8 @@
 
                 <h3 class="sub-section-title fs-5 fw-bold">🚀 Co hledám v práci</h3>
                 <p class="section-content">
-                    Hledám prostředí, kde se technické výzvy potkávají s růstem – jak profesně, tak i v osobním životě.
-                    Chci týmově spolupracovat, argumentovat a sdílet nápady. Věřím, že vývoj je o komunikaci stejně jako
-                    o kódu.
+                   Chci týmově spolupracovat, argumentovat a sdílet nápady. Věřím, že vývoj je o komunikaci stejně jako
+                    o kódu. Hledám prostředí, kde se technické výzvy potkávají s růstem – jak profesně, tak i v osobním životě.
                 </p>
                 <!--
                 <div class="text-end">
@@ -83,11 +83,10 @@
                 -->
                 <h3 class="sub-section-title fs-5 fw-bold">🌍 Kde chci ideálně působit?</h3>
                 <p class="section-content" style="margin-bottom: 10px">
+                    Věřím, že kvalitní kód nestačí: klíčová je empatie, komunikace, <strong>schopnost
+                        debatovat</strong> i hledat nové cesty k cíli.
                     Rád bych působil v okolí Prahy – v místě, které nabízí nejen technické výzvy, ale i živou odbornou a
-                    komunitní scénu. Věřím, že kvalitní kód nestačí: klíčová je empatie, komunikace, <strong>schopnost
-                        debatovat</strong>
-                    i
-                    hledat nové cesty k cíli.
+                    komunitní scénu.
                 </p>
                 <!--
                 <div class="text-end">
