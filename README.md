@@ -1,6 +1,8 @@
 # dnx.mzf.cz
 
-Moje osobní webová stránka: [dnx.mzf.cz](https://dnx.mzf.cz)
+Moje osobní webová stránka: [dnx.mzf.cz](https://dnx.mzf.cz)  
+Primárně slouží jako portfolio, kde mohu prezentovat své projekty,  
+a publikovat články na svém blogu.
 
 ---
 

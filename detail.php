@@ -18,8 +18,8 @@
         <section id="home" class="<?= getBgClass() ?> text-center text-white pt-4">
             <div class="container mt-5 pt-4">
                 <h1 class="display-4">Hello, I'm a Programmer</h1>
-                <p class="lead pt-4">Vytvářím řešení pomocí C#, ASP.NET, WPF a JavaScriptu pro rozšíření
-                    svého portfolia.</p>
+                <p class="lead pt-4">Vytvářím řešení pomocí C#, ASP.NET a WPF;<br><br>
+                    od backendu po rozhraní</p>
             </div>
         </section>
     </header>
@@ -63,11 +63,12 @@
                                     src="/portfolio/gallery/<?= htmlspecialchars($selectedProject['gallery'][0]) ?? 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAA5CAYAAABxNnTaAAAAFElEQVR4nO3BMQEAAAgDoJvcf+FAAFY7gW8FAAAAAAAAAAAAAPA3A9MNAAEKCcAAAAASUVORK5CYII=' ?>"
                                     class="img-fluid rounded mb-3 detail-mainimg" loading="lazy" alt="Hlavní obrázek"
                                     data-bs-toggle="modal" data-bs-target="#imageModal"
-                                    style="max-width: 100%; max-height: 400px; object-fit: contain;">
+                                    style="max-width: 100%; max-height: 400px; object-fit: contain; margin: 0">
                                 <div class="row g-2">
                                     <?php foreach ($selectedProject['gallery'] as $index => $image): ?>
                                         <div class="col-4 col-md-2 thumb-wrapper"> <!-- 3 sloupce na xs, 6 sloupců na md -->
-                                            <img src="/portfolio/gallery/<?= htmlspecialchars($image) ?>" class="img-thumbnail w-100"
+                                            <img src="/portfolio/gallery/<?= htmlspecialchars($image) ?>"
+                                                class="img-thumbnail w-100"
                                                 style="height: 60px; cursor: pointer; object-fit: cover;"
                                                 onclick="changeMainImage(this)" loading="lazy" data-index="<?= $index ?>"
                                                 alt="Náhled <?= $index ?>">
@@ -114,7 +115,7 @@
                     <!-- Informace vpravo -->
                     <div class="col-md-8">
                         <!-- Nadpis + status (version) badge + verze -->
-                        <div class="d-flex align-items-center mb-2">
+                        <div class="d-flex flex-wrap flex-lg-nowrap align-items-center mb-2">
                             <h2 class="project-title mb-0 me-3">
                                 <?= htmlspecialchars($selectedProject['title']) ?>
                             </h2>

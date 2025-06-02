@@ -23,6 +23,30 @@
       "statusBackgroundColor": "danger",
       "statusTextColor": "light",
       "statusDescription": "Projekt určený k přepracování nebo úplné náhradě; s větším důrazem na detaily a vizi, kterou jsem dříve opomíjel."
+    },
+    "tester": {
+      "statusLabel": "Tester",
+      "statusBackgroundColor": "secondary",
+      "statusTextColor": "light",
+      "statusDescription": "Testoval funkčnost. Nezasahoval do kódu, ale přispěl zpětnou vazbou; kód generoval ChatGPT."
+    },
+    "chatgpt": {
+      "statusLabel": "S ChatGPT",
+      "statusBackgroundColor": "warning",
+      "statusTextColor": "dark",
+      "statusDescription": "Junior používá ChatGPT jako interaktivní dokumentaci. A učí se při tom přemýšlet."
+    },
+    "documentation": {
+      "statusLabel": "S dokumentací",
+      "statusBackgroundColor": "orange",
+      "statusTextColor": "dark",
+      "statusDescription": "Medior čte oficiální dokumentaci a implementuje řešení samostatně."
+    },
+    "nohelp": {
+      "statusLabel": "Bez nápovědy",
+      "statusBackgroundColor": "success",
+      "statusTextColor": "light",
+      "statusDescription": "Senior nepotřebuje nápovědu – většinou; spoléhá na zkušenosti a kontext."
     }
   },
   "projects": [
@@ -38,7 +62,7 @@
       "status": [
         "alpha"
       ],
-      "thumbnail": "taskami-thumb.png",
+      "thumbnail": "taskami_thumb.png",
       "gallery": [
         "taskami1.png",
         "taskami2.png",
@@ -57,7 +81,7 @@
       "title": "Todoist Widget",
       "description": "Widget pro integraci s aplikací Todoist pro lepší správu úkolů přímo z domácí obrazovky.",
       "shortDescription": "Todoist widget na plochu",
-      "note": "Vytvářel jsem to s použitím umělé inteligence a bez předchozích zkušeností s Pythonem; mým hlavním zaměřením jsou C# (.NET, WPF) a JavaScript. Projekt ukazuje mou schopnost pracovat s AI a adaptovat se na nové technologie.",
+      "note": "Na projektu jsem působil jako tester a zadavatel – využil jsem ChatGPT k vygenerování kódu, který jsem ladil podle chování aplikace. Chtěl jsem si vytvořit nástroj pro vlastní potřebu a ukázat, že i s pomocí AI lze vytvořit praktické řešení.",
       "completionDate": "2024-06",
       "version": "1.0",
       "tags": "Python",
@@ -72,9 +96,10 @@
         }
       ],
       "status": [
-        "completed"
+        "completed",
+        "tester"
       ],
-      "thumbnail": "todoistWidget-thumb.png",
+      "thumbnail": "todoistWidget_thumb.png",
       "gallery": [
         "todoistWidget1.png",
         "todoistWidget2.png"
@@ -93,8 +118,8 @@
       "description": "Správa pojištěnců a pojištění v C# a ASP.NET za pomocí MS-SQL, Entity Frameworku a Bootstrapu.",
       "shortDescription": "Správce pojištěnců a pojištění v C# .NET",
       "note": "Projekt vznikl jako závěrečný úkol během rekvalifikace, ale původní verze mi přišla nedotažená a nevhodná pro portfolio – částečně kvůli omezením slabšího notebooku a nemožnosti využít placené nástroje jako MidJourney či ChatGPT. Rád bych jej vizuálně i technicky posunul dál, aby lépe odrážel můj potenciál pro budoucího zaměstnavatele.",
-      "completionDate": "2025-05",
-      "version": "0.50",
+      "completionDate": "2025-06",
+      "version": "0.58 Tech debt release",
       "tags": "C#, ASP.NET, Bootstrap, Entity Framework, SQL",
       "links": [
         {
@@ -108,25 +133,31 @@
       ],
       "status": [
         "beta",
-        "forRemake"
+        "forRemake",
+        "chatgpt"
       ],
-      "thumbnail": "evidencePojisteni-thumb.webp",
+      "thumbnail": "pojistakNET_thumb.webp",
       "gallery": [
-        "evidencePojisteni1.png",
-        "evidencePojisteni2.png",
-        "evidencePojisteni3.png",
-        "evidencePojisteni4.png",
-        "evidencePojisteni5.png",
-        "evidencePojisteni6.png"
+        "pojistakNET1.png",
+        "pojistakNET2.png",
+        "pojistakNET3.png",
+        "pojistakNET4.png",
+        "pojistakNET5.png",
+        "pojistakNET6.png"
       ],
       "changelog": [
         {
-          "version": "0.60",
+          "version": "0.56 Tech debt release",
+          "date": "2025-06",
+          "notes": "URL Routy převedeny na lowercase, a URL názvy byly zjednodušeny.\nPo úpravách URL si aplikace neprošla testováním => Tech debt release\nVylepšeno UI úvodní stránky\nPřidána dočasná stránka Under Development"
+        },
+        {
+          "version": "0.54",
           "date": "2025-05",
           "notes": "Změněn název aplikace na Pojišťák.NET.\nOznámeno oficiální zahájení fáze revize – projekt bude postupně modernizován a přizpůsoben jako silná ukázka pro IT portfolio."
         },
         {
-          "version": "0.55",
+          "version": "0.53",
           "date": "2025-03",
           "notes": "Přidáno automatické formátování finančních částek, PSČ pojištěnce a telefonních čísel pro lepší čitelnost dat.\nKontrola dobrých praktik."
         },
@@ -163,7 +194,7 @@
       "description": "Webové portfolio vytvořené pomocí Bootstrapu, s důrazem na responzivitu, přehlednost a snadnou rozšiřitelnost.",
       "shortDescription": "Webové portfolio k prezentaci",
       "note": "Stránka reprezentuje můj pokrok ve vývoji - v technickém i designovém smyslu. V galerii je také patrné přijmení 'Černý', které mi přijde zvučné a sémanticky natolik blízké, až zvažuji jeho přijetí jako osobní značky.",
-      "completionDate": "2025-05",
+      "completionDate": "2025-06",
       "version": "1.00",
       "tags": "PHP, Bootstrap, Javascript, HTML, CSS",
       "links": [
@@ -177,9 +208,10 @@
         }
       ],
       "status": [
-        "completed"
+        "completed",
+        "chatgpt"
       ],
-      "thumbnail": "devPortfolio-thumb.webp",
+      "thumbnail": "devPortfolio_thumb.webp",
       "gallery": [
         "devPortfolio1.png",
         "devPortfolio2.png",
@@ -189,6 +221,16 @@
         "devPortfolio6.png"
       ],
       "changelog": [
+        {
+          "version": "1.10",
+          "date": "2025-06",
+          "notes": "Vylepšena sekce „O mně“: přidány podnadpisy a text upraven pro lepší čitelnost a vyšší úspěšnost u HR.\nDůvod úpravy: HR specialisté často nestíhají číst dlouhé slohovky a přitom snadno přehlédnou klíčovou motivaci uchazeče.\nOpravena drobná UI chyba s výpisem verze (u nadpisu) na mobilních zařízeních - nyní se zalamuje.\nProblém s tlačítkem zpět byl již vyřešen - stačí použít tlačítko prohlížeče (odstraněn target _blank z odkazu)."
+        },
+        {
+          "version": "1.07",
+          "date": "2025-06",
+          "notes": "Status štítky rozšířeny - kromě verzovacích jsou dostupné i dle úrovně zapojení ve vývoji.\nDo detailu projektu stále nebylo přidáno tlačítko zpět (UX) pro netechnické HR.\nDosud nebyl opraven bug, kdy aktuální verze v detailu na mobilech se schová mimo obrazovku."
+        },
         {
           "version": "1.00",
           "date": "2025-05",
@@ -243,7 +285,7 @@
       "status": [
         "beta"
       ],
-      "thumbnail": "dashboard-thumb.webp",
+      "thumbnail": "dashboard_thumb.webp",
       "gallery": [
         "dashboard1.png",
         "dashboard2.png"
@@ -293,7 +335,7 @@
       "status": [
         "beta"
       ],
-      "thumbnail": "dBlog-thumb.png",
+      "thumbnail": "dBlog_thumb.png",
       "gallery": [
         "dBlog1.png",
         "dBlog2.png"

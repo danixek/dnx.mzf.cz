@@ -123,7 +123,7 @@
                                         <h5>Programovací jazyky</h5>
                                         <small class="text-muted-darkmode ms-auto" data-bs-tooltip="tooltip"
                                             data-bs-placement="top"
-                                            title="Filtrace technologií: všechny vybrané musí být (AND)">AND</small>
+                                            title="Filtrace tagů: všechny vybrané musí být (AND)">AND</small>
                                     </div>
                                     <div class="checkbox-grid">
                                         <div class="form-check filter-tristate-wrapper" tabindex="0"
@@ -204,10 +204,10 @@
                                 </div>
                                 <div>
                                     <div class="d-flex align-items-center mb-2">
-                                        <h5>Verze projektu</h5>
+                                        <h5>Stav projektu</h5>
                                         <small class="text-muted-darkmode ms-auto" data-bs-tooltip="tooltip"
                                             data-bs-placement="top"
-                                            title="Filtrace verzí: stačí jedna vybraná (OR)">OR</small>
+                                            title="Filtrace štítků: stačí jedna vybraná (OR)">OR</small>
                                     </div>
                                     <div class="checkbox-grid">
                                         <?php foreach ($badgesMap as $badgeKey => $badge): ?>
@@ -284,7 +284,7 @@
 
                 $dataTech = implode(',', $tagsArray);
 
-                // 🧠 STATUS / VERSION (badge)
+                // 🧠 STATUS - VERSION (badge)
                 $badgeKeys = $project['status'] ?? [];
                 $versionArray = array_map(function ($status) {
                     return strtolower(strip_tags(trim($status)));
@@ -295,7 +295,7 @@
                 $thumbnail = $project['thumbnail'] ?? ($project['gallery'][0] ?? 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAA5CAYAAABxNnTaAAAAFElEQVR4nO3BMQEAAAgDoJvcf+FAAFY7gW8FAAAAAAAAAAAAAPA3A9MNAAEKCcAAAAASUVORK5CYII=');
 
                 ?>
-                <a href="detail.php?id=<?= $id ?>" target="_blank" class="project col-lg-3 col-md-4 col-sm-6 col-12 d-flex"
+                <a href="detail.php?id=<?= $id ?>" class="project col-lg-3 col-md-4 col-sm-6 col-12 d-flex"
                     data-tech="<?= htmlspecialchars($dataTech) ?>" data-version="<?= htmlspecialchars($dataVersion) ?>">
                     <div class="card bg-dark text-light flex-fill">
                         <div class="ratio ratio-16x9">
@@ -311,7 +311,7 @@
                                         <?php if (isset($badgesMap[$key])):
                                             $b = $badgesMap[$key]; ?>
                                             <span
-                                                class="badge bg-<?= htmlspecialchars($b['statusBackgroundColor']) ?> text-<?= htmlspecialchars($b['statusTextColor']) ?> me-1"
+                                                class="badge bg-<?= htmlspecialchars($b['statusBackgroundColor']) ?> text-<?= htmlspecialchars($b['statusTextColor']) ?> mt-1 me-1"
                                                 data-bs-tooltip="tooltip" data-bs-placement="left"
                                                 title="<?= htmlspecialchars($b['statusDescription']) ?>">
                                                 <?= htmlspecialchars($b['statusLabel']) ?>
