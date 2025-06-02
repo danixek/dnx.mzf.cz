@@ -95,7 +95,7 @@
                                         <img id="modalImage"
                                             src="/portfolio/gallery/<?= htmlspecialchars($selectedProject['gallery'][0]) ?>"
                                             class="img-fluid w-100" loading="lazy" alt="Detail obrázku"
-                                            style="max-width:100%; max-height: 90vh; object-fit: contain;"><!-- omezení výšky na 90% viewportu -->
+                                            style="max-width:100%; max-height: 90vh; object-fit: contain; margin: 0px"><!-- omezení výšky na 90% viewportu -->
                                         <button type="button"
                                             class="btn btn-dark btn-gallery position-absolute top-50 start-0 translate-middle-y"
                                             id="prevImageBtn">&lt;&nbsp;</button>
