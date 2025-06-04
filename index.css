@@ -211,7 +211,7 @@ body {
 
 .section-content {
     margin-bottom: 10px;
-    margin-left: 35px
+    margin-left: 15px
 }
 
 .img-fluid {
@@ -435,7 +435,7 @@ img.img-thumbnail {
     border-color: rgb(60, 60, 60)
 }
 
-.github-link {
+.contacts-links {
     text-decoration: none;
     color: #B0B0B0 !important;
     /* Světle šedá pro text */
@@ -443,19 +443,19 @@ img.img-thumbnail {
     /* Plynulý přechod pro text */
 }
 
-.github-link i {
+.contacts-links i {
     color: #B0B0B0 !important;
     /* Světle šedá pro ikonu */
     transition: color 0.3s ease;
     /* Plynulý přechod pro ikonu */
 }
 
-.github-link:hover {
+.contacts-links:hover {
     color: #ffffff !important;
     /* Bílá barva textu při hoveru */
 }
 
-.github-link:hover i {
+.contacts-links:hover i {
     color: #ffffff !important;
     /* Bílá barva ikony při hoveru */
 }

@@ -12,7 +12,7 @@
 
             <!-- Text -->
             <div class="col-lg-8 col-md-8 order-1 order-md-1">
-                <h3 class="fs-5 fw-bold">💻 Technologie, které mě oslovují</h3>
+                <h3 class="fs-5 fw-bold">Technologie, které mě oslovují</h3>
                 <p class="section-content">Nejblíže mám k <strong>C#</strong> technologiím jako
                     <strong>ASP.NET</strong> a <strong>WPF</strong>. Zároveň mám blízko k <strong>Linuxu</strong>,
                     návrhu <strong>API</strong>, ale i <strong>bezpečnosti</strong> - vidím tam velký potenciál pro
@@ -29,13 +29,13 @@
 
             <!-- Obrázek -->
             <div class="col-lg-4 col-md-4 order-2 order-md-2 text-center text-md-end">
-                <img src="profile.jpg" alt="O mně" class="img-fluid rounded shadow mx-auto d-block d-md-inline"
-                    style="max-width: 100%; height: auto">
+                <img src="portfolio/img/profile.jpg" alt="O mně"
+                    class="img-fluid rounded shadow mx-auto d-block d-md-inline" style="max-width: 100%; height: auto">
             </div>
 
             <!-- Collapse obsah -->
             <div class="collapse order-3" id="collapseAbout">
-                <h3 class="sub-section-title fs-5 fw-bold mt-1">🧒 Moje cesta k programování</h3>
+                <h3 class="sub-section-title fs-5 fw-bold mt-1">Moje cesta k programování</h3>
                 <p class="section-content">Už od dětství mě programování přitahovalo – svoboda tvořit vlastní logiku a
                     stavět malé digitální světy.
                     Později jsem zjistil, jak spojit radost z tvorby s reálným dopadem, ať už pro firmy, v podnikání,
@@ -47,23 +47,12 @@
                     <a href="/blog/" class="btn-link collapse-link">[Zobrazit článek]</a>
                 </div>
                 -->
-                <h3 class="sub-section-title fs-5 fw-bold">🧠 Růstové myšlení místo rutiny</h3>
-                <p class="section-content">Nebojím se jít proti proudu, když to vede k lepšímu řešení. Je to díky období
-                    na
-                    střední škole, kde jsem se soustředil na budování růstového myšlení namísto
-                    programování –
-                    učil jsem se přijímat výzvy, zkoušet nové cesty a učit se z vlastních chyb.
-                </p>
-                <!--
-                <div class="text-end">
-                    <a href="/blog/" class="btn-link collapse-link">[Zobrazit článek]</a>
-                </div>
-                -->
-                <h3 class="sub-section-title fs-5 fw-bold">🔄 Přechod ke kódu</h3>
-                <p class="section-content">
-                    Původně jsem studoval netechnický obor, ale zájem o programování mě provázel už tehdy. Nakonec jsem
-                    se rozhodl pro rekvalifikaci, která mi umožnila naplno se ponořit do
-                    světa vývoje.
+                <h3 class="sub-section-title fs-5 fw-bold">Růstové myšlení místo rutiny</h3>
+                <p class="section-content">Nebojím se jít proti proudu, když to vede k lepšímu řešení. Na střední škole
+                    jsem se soustředil na budování růstového myšlení – učil jsem se přijímat výzvy, zkoušet nové cesty a
+                    učit se z vlastních chyb. Přestože jsem původně studoval netechnický obor, zájem o programování mě
+                    provázel už tehdy a nakonec jsem se rozhodl pro rekvalifikaci, která mi umožnila naplno se ponořit
+                    do světa vývoje.
                 </p>
                 <!--
                 <div class="text-end">
@@ -71,28 +60,41 @@
                 </div>
                 -->
 
-                <h3 class="sub-section-title fs-5 fw-bold">🚀 Co hledám v práci</h3>
-                <p class="section-content">
-                   Chci týmově spolupracovat, argumentovat a sdílet nápady. Věřím, že vývoj je o komunikaci stejně jako
-                    o kódu. Hledám prostředí, kde se technické výzvy potkávají s růstem – jak profesně, tak i v osobním životě.
-                </p>
-                <!--
-                <div class="text-end">
-                    <a href="/blog/" class="btn-link collapse-link">[Zobrazit článek]</a>
+                <div class="row">
+                    <div class="col-md-4 col-12 order-1 text-center">
+                        <img src="portfolio/img/library.jpg" class="img-fluid m-0 me-1 mt-4" loading="lazy" />
+                        <a href="library/" class="d-inline-block mt-2">[Knihovna - Easter egg]</a>
+                    </div>
+                    <div class="col-12 col-md-8 order-2">
+                        <h3 class="sub-section-title fs-5 fw-bold">Co hledám v práci</h3>
+                        <p class="section-content">
+                            Chci týmově spolupracovat, argumentovat a sdílet nápady. Věřím, že vývoj je o komunikaci
+                            stejně
+                            jako
+                            o kódu. Hledám prostředí, kde se technické výzvy potkávají s růstem – jak profesně, tak i v
+                            osobním
+                            životě.
+                        </p>
+                        <!--
+                    <div class="text-end">
+                        <a href="/blog/" class="btn-link collapse-link">[Zobrazit článek]</a>
+                    </div>
+                    -->
+                        <h3 class="sub-section-title fs-5 fw-bold">Kde chci ideálně působit?</h3>
+                        <p class="section-content" style="margin-bottom: 10px">
+                            Věřím, že kvalitní kód nestačí: klíčová je empatie, komunikace, <strong>schopnost
+                                debatovat</strong> i hledat nové cesty k cíli.
+                            Rád bych působil v okolí Prahy – v místě, které nabízí nejen technické výzvy, ale i živou
+                            odbornou a
+                            komunitní scénu.
+                        </p>
+                        <!--
+                    <div class="text-end">
+                        <a href="/blog/" class="btn-link collapse-link">[Zobrazit článek]</a>
+                    </div>
+                    -->
+                    </div>
                 </div>
-                -->
-                <h3 class="sub-section-title fs-5 fw-bold">🌍 Kde chci ideálně působit?</h3>
-                <p class="section-content" style="margin-bottom: 10px">
-                    Věřím, že kvalitní kód nestačí: klíčová je empatie, komunikace, <strong>schopnost
-                        debatovat</strong> i hledat nové cesty k cíli.
-                    Rád bych působil v okolí Prahy – v místě, které nabízí nejen technické výzvy, ale i živou odbornou a
-                    komunitní scénu.
-                </p>
-                <!--
-                <div class="text-end">
-                    <a href="/blog/" class="btn-link collapse-link">[Zobrazit článek]</a>
-                </div>
-                -->
 
             </div>
             <div class="mt-4 order-4 row d-flex align-items-center" style="padding-right: 0px;">

@@ -29,14 +29,23 @@
                 </script>
 
             </div>
-            <!-- Pravá část pro GitHub -->
+            <!-- Pravá část pro GitHub a další odkazy -->
             <div class="col-md-5 text-right">
                 <p>Nebo navštivte můj GitHub profil:</p>
                 <p>
                     <a href="https://github.com/danixek" rel="noopener noreferrer" target="_blank"
-                        class="github-link d-flex align-items-center">
+                        class="contacts-links d-flex align-items-center">
                         <i class="bi bi-github" style="font-size: 35px; margin-right: 15px;"></i> <b>GitHub: danixek
                         </b>
+                    </a>
+
+                </p>
+                <p class="gap-3 d-flex">
+                    <a href="https://www.linkedin.com/in/d-kefurt/" rel="noopener noreferrer" target="_blank" class="contacts-links">
+                        <i class="bi bi-linkedin" style="font-size: 35px;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/danixek" rel="noopener noreferrer" target="_blank" class="contacts-links">
+                        <i class="bi bi-facebook" style="font-size: 35px;"></i>
                     </a>
 
                 </p>

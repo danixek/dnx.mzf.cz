@@ -21,15 +21,18 @@
       </span>
     </a>
 
-
     <!-- Vyhledávač -->
     <form id="searchForm" method="get" target="_parent" action="https://search.brave.com/search">
-      <div class="search-section">
-        <div class="search-wrapper">
-          <ul class="autocomplete-list"></ul>
-          <input type="text" class="search-input" type="text" name="q" placeholder="Hledat na webu..."
-            autocomplete="off">
-        </div>
+      <div class="search-section" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+      <div class="search-logo" style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 4em">
+        <h1 style="font-size: 8rem; color: #fff !important; margin: 0; text-align: center; width: 100%; font-family: Arial">
+        <span style="position: relative; bottom: 4px">[</span> <span style="font-size: 80%">d</span><span style="position: relative; bottom: 4px">]</span>
+        </h1>
+      </div>
+      <div class="search-wrapper" style="width: 100%; display: flex; justify-content: center;">
+        <ul class="autocomplete-list"></ul>
+        <input type="text" class="search-input" name="q" placeholder="Hledat na webu..." autocomplete="off" style="width: 100%; max-width: 570px;">
+      </div>
       </div>
     </form>
 
@@ -87,9 +90,11 @@
       <a href="https://isibalo.com/matematika" class="bookmark" data-category="uceni">Isibalo</a>
       <a href="https://jakserychlenaucit.cz" class="bookmark" data-category="uceni">Jak se rychle naučit</a>
       <a href="https://rubesz.cz" class="bookmark" data-category="uceni">Rubesz Sbírka</a>
-      <a href="https://fit.cvut.cz/cs/uchazeci/prijimaci-rizeni/bakalarsky-studijni-program" class="bookmark" data-category="uceni">FIT ČVUT</a>
+      <a href="https://fit.cvut.cz/cs/uchazeci/prijimaci-rizeni/bakalarsky-studijni-program" class="bookmark"
+        data-category="uceni">FIT ČVUT</a>
       <a href="https://www.matweb.cz" class="bookmark" data-category="uceni">Matweb.cz</a>
-      <a href="https://michalheczko.cz/kombinatorika/index.php?p=kombinatorika" class="bookmark" data-category="uceni">Kombinatorika</a>
+      <a href="https://michalheczko.cz/kombinatorika/index.php?p=kombinatorika" class="bookmark"
+        data-category="uceni">Kombinatorika</a>
       <a href="https://www.realisticky.cz/ucebnice.php?id=4" class="bookmark" data-category="uceni">Realisticky</a>
 
       <!-- Osobní (záliby, organizace, seznamy) -->
@@ -99,76 +104,76 @@
       <!-- Další záložky -->
 
       <?php /*
-      <a href="https://webadmin.endora.cz/user/filemanager/edit/dnx.mzf.cz/web?file=%2Fdnx.mzf.cz%2Fweb%2Fhomepage.php"
-        data-tags="endora dnx" class="bookmark" data-category="personal">
-        editace homepage.php
-      </a>
+<a href="https://webadmin.endora.cz/user/filemanager/edit/dnx.mzf.cz/web?file=%2Fdnx.mzf.cz%2Fweb%2Fhomepage.php"
+data-tags="endora dnx" class="bookmark" data-category="personal">
+editace homepage.php
+</a>
 
-      <a href="https://webadmin.endora.cz/user/filemanager/edit/dnx.mzf.cz/web?file=%2Fdnx.mzf.cz%2Fweb%2Fdesktop.php"
-        data-tags="endora dnx" class="bookmark" data-category="personal">
-        editace desktop.php
-      </a>
+<a href="https://webadmin.endora.cz/user/filemanager/edit/dnx.mzf.cz/web?file=%2Fdnx.mzf.cz%2Fweb%2Fdesktop.php"
+data-tags="endora dnx" class="bookmark" data-category="personal">
+editace desktop.php
+</a>
 
-      <a href="https://webadmin.endora.cz/user/filemanager/default/dnx.mzf.cz/web?file=%2Fdnx.mzf.cz%2Fweb%2Fhomepage.php"
-        data-tags="endora dnx" class="bookmark" data-category="personal">
-        Správa dnx.mzf.cz</a>
+<a href="https://webadmin.endora.cz/user/filemanager/default/dnx.mzf.cz/web?file=%2Fdnx.mzf.cz%2Fweb%2Fhomepage.php"
+data-tags="endora dnx" class="bookmark" data-category="personal">
+Správa dnx.mzf.cz</a>
 
-      <a href="https://eshop.scio.cz/Profil/OPBH/Online_Priprava_VS" data-tags="matika matematika přijímačky"
-        class="bookmark" data-category="uceni">
-        SCIO testy na VŠ</a>
+<a href="https://eshop.scio.cz/Profil/OPBH/Online_Priprava_VS" data-tags="matika matematika přijímačky"
+class="bookmark" data-category="uceni">
+SCIO testy na VŠ</a>
 
-      <a href="https://moodle-ostatni.cvut.cz/course/view.php?id=134" data-tags="matika matematika přijímačky"
-        class="bookmark" data-category="uceni">
-        ČVUT moodle</a>
+<a href="https://moodle-ostatni.cvut.cz/course/view.php?id=134" data-tags="matika matematika přijímačky"
+class="bookmark" data-category="uceni">
+ČVUT moodle</a>
 
-      <a href="http://www.realisticky.cz/ucebnice.php?id=4" data-tags="matika matematika učebnice" class="bookmark"
-        data-category="uceni" style="font-size: 90%;">
-        učebnice Realisticky</a>
+<a href="http://www.realisticky.cz/ucebnice.php?id=4" data-tags="matika matematika učebnice" class="bookmark"
+data-category="uceni" style="font-size: 90%;">
+učebnice Realisticky</a>
 
-      <a href="https://www.deepl.com/cs/translator" data-tags="překladač translate" class="bookmark"
-        data-category="uceni">
-        DeepL</a>
+<a href="https://www.deepl.com/cs/translator" data-tags="překladač translate" class="bookmark"
+data-category="uceni">
+DeepL</a>
 
-      <a href="https://englishfile4e.oxfordonlinepractice.com/app/dashboard"
-        data-tags="angličtina oxford minidiv english" class="bookmark" data-category="uceni">
-        Eng File</a>
+<a href="https://englishfile4e.oxfordonlinepractice.com/app/dashboard"
+data-tags="angličtina oxford minidiv english" class="bookmark" data-category="uceni">
+Eng File</a>
 
-      <a href="https://slovniky.lingea.cz/anglicko-cesky/" data-tags="angličtina" class="bookmark"
-        data-category="uceni">
-        slovník</a>
+<a href="https://slovniky.lingea.cz/anglicko-cesky/" data-tags="angličtina" class="bookmark"
+data-category="uceni">
+slovník</a>
 
-      <a href="http://www.english-practice.at/" data-tags="angličtina" class="bookmark" data-category="uceni">
-        english-practice.at</a>
+<a href="http://www.english-practice.at/" data-tags="angličtina" class="bookmark" data-category="uceni">
+english-practice.at</a>
 
-      <a href="https://www.english-grammar.at/online_exercises/tenses/tenses_index.htm" data-tags="angličtina english"
-        class="bookmark" data-category="uceni">
-        eng grammar</a>
+<a href="https://www.english-grammar.at/online_exercises/tenses/tenses_index.htm" data-tags="angličtina english"
+class="bookmark" data-category="uceni">
+eng grammar</a>
 
-      <a href="https://www.engblocks.com/grammar/exercises/#google_vignette" data-tags="angličtina english"
-        class="bookmark" data-category="uceni">
-        EngBlocks</a>
+<a href="https://www.engblocks.com/grammar/exercises/#google_vignette" data-tags="angličtina english"
+class="bookmark" data-category="uceni">
+EngBlocks</a>
 
-      <a href="https://chat.openai.com" data-tags="AI umělá inteligence" class="bookmark" data-category="technologie">
-        ChatGPT</a>
+<a href="https://chat.openai.com" data-tags="AI umělá inteligence" class="bookmark" data-category="technologie">
+ChatGPT</a>
 
-      <a href="https://gemini.google.com" data-tags="AI umělá inteligence" class="bookmark" data-category="technologie">
-        Gemini</a>
+<a href="https://gemini.google.com" data-tags="AI umělá inteligence" class="bookmark" data-category="technologie">
+Gemini</a>
 
-      <a href="https://www.pirati.cz/" data-tags="liberální politická pirátská strana" class="bookmark"
-        data-category="zpravy">
-        Piráti</a>
+<a href="https://www.pirati.cz/" data-tags="liberální politická pirátská strana" class="bookmark"
+data-category="zpravy">
+Piráti</a>
 
-      <a href="https://svobodni.cz/" data-tags="konzervativní libertariánská politická strana sso" class="bookmark"
-        data-category="zpravy">
-        Svobodní</a>
+<a href="https://svobodni.cz/" data-tags="konzervativní libertariánská politická strana sso" class="bookmark"
+data-category="zpravy">
+Svobodní</a>
 
-      <a href="https://yayponies.no/books/book.php?category=Friendship+is+Magic&amp;format=PDF"
-        data-tags="mlp comics komiksy my little pony" class="bookmark" data-category="geek">
-        MLP komiksy</a>
-      <a href="https://www.obchod.crew.cz/kategorie-21646/komiks/crew-manga/" data-tags="crew comics komiksy anime"
-        class="bookmark" data-category="geek">
-        CREW komiksy</a>
-      */ ?>
+<a href="https://yayponies.no/books/book.php?category=Friendship+is+Magic&amp;format=PDF"
+data-tags="mlp comics komiksy my little pony" class="bookmark" data-category="geek">
+MLP komiksy</a>
+<a href="https://www.obchod.crew.cz/kategorie-21646/komiks/crew-manga/" data-tags="crew comics komiksy anime"
+class="bookmark" data-category="geek">
+CREW komiksy</a>
+*/ ?>
 
 
     </section>

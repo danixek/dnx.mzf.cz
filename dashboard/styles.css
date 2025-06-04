@@ -149,7 +149,7 @@ body.scrolled::before {
 }
 
 .search-section {
-    margin-top: 450px;
+    margin-top: 200px;
     display: flex;
     justify-content: center;
 }

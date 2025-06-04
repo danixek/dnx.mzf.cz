@@ -12,8 +12,10 @@
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="danixek – Portfolio">
     <meta property="og:description" content="Moje práce, dovednosti a kontakt.">
-<!--<meta property="og:image" content="https://dnx.mzf.cz/path/to/preview.jpg"> -->
+    <meta property="og:image" content="/portfolio/img/preview.jpg">
     <meta property="og:url" content="https://dnx.mzf.cz">
     <meta name="twitter:card" content="summary_large_image">
 </head>    
+
+
 
