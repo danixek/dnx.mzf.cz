@@ -30,7 +30,7 @@
         <section id="library" class="<?= getBgClass() ?> text-center text-white">
             Stránka se připravuje, brzy bude dostupná. <br>
             <p>Zde by měli být zajímavé odkazy a doporučení; ať už jde o odborná/zajímavá youtube videa či filmy/seriály a hry.</p>
-            <a href="/" class="btn btn-outline-primary mt-3">Zpět na domovskou stránku</a>
+            <a href="/" class="btn btn-themed mt-3">Zpět na domovskou stránku</a>
         </section>
     </main>
 

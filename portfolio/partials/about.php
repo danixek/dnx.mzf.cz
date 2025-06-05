@@ -3,7 +3,7 @@
     <div class="container align-items-center">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h2 class="section-title mb-0">O mně</h2>
-            <a class="btn btn-link p-0 collapse-link" data-bs-toggle="collapse" href="#collapseAbout" role="button"
+            <a class="btn-link p-0 collapse-link" data-bs-toggle="collapse" href="#collapseAbout" role="button"
                 aria-expanded="false" aria-controls="collapseContent">
                 [Zobrazit více]
             </a>
@@ -63,7 +63,8 @@
                 <div class="row">
                     <div class="col-md-4 col-12 order-1 text-center">
                         <img src="portfolio/img/library.jpg" class="img-fluid m-0 me-1 mt-4" loading="lazy" />
-                        <a href="library/" class="d-inline-block mt-2">[Knihovna - Easter egg]</a>
+                        <a href="library/" class="d-inline-block mt-2 collapse-link btn-link">[Knihovna - Easter
+                            egg]</a>
                     </div>
                     <div class="col-12 col-md-8 order-2">
                         <h3 class="sub-section-title fs-5 fw-bold">Co hledám v práci</h3>
@@ -107,26 +108,29 @@
                     -->
                 </div>
                 <!-- Životopis ke stažení a zobrazení -->
-                <div class="justify-content-end ms-auto col-6 text-end d-flex align-items-center justify-content-end">
+                <div class="justify-content-end ms-auto col-6 text-end d-flex align-items-center">
                     <div class="btn-group">
                         <a href="/portfolio/CV_Daniel-Kefurt_Csharp.pdf" download
-                            class="btn btn-outline-success d-flex align-items-center">
+                            class="btn btn-themed d-flex align-items-center">
                             <i class="bi bi-download me-2"></i> Stáhnout životopis
                         </a>
-                        <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <button type="button" class="btn btn-themed dropdown-toggle dropdown-toggle-split"
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"
+                            aria-label="Další akce">
                             <span class="visually-hidden">Další akce</span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark bg-dark">
                             <li>
-                                <a class="dropdown-item d-flex align-items-center me-4"
-                                    href="/portfolio/CV_Daniel-Kefurt_Csharp.pdf" target="_blank">
+                                <a class="dropdown-item d-flex align-items-center"
+                                    href="/portfolio/CV_Daniel-Kefurt_Csharp.pdf" target="_blank"
+                                    rel="noopener noreferrer">
                                     <i class="bi bi-file-earmark-pdf me-2"></i> Zobrazit životopis
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
 

@@ -83,7 +83,7 @@
                                     <tr>
                                         <td>
                                             <span
-                                                class="badge bg-<?= htmlspecialchars($badge['statusBackgroundColor']) ?> text-<?= htmlspecialchars($badge['statusTextColor']) ?>">
+                                                class="badge fw-bold bg-<?= htmlspecialchars($badge['statusBackgroundColor']) ?> text-<?= htmlspecialchars($badge['statusTextColor']) ?>">
                                                 <?= htmlspecialchars($badge['statusLabel']) ?>
                                             </span>
                                         </td>
@@ -223,7 +223,7 @@
                                                 <label for="filter<?= ucfirst($badgeKey) ?>-checkbox"
                                                     data-bs-tooltip="tooltip"
                                                     title="<?= htmlspecialchars($badge['statusDescription']) ?>">
-                                                    <span class="badge bg-<?= htmlspecialchars($badge['statusBackgroundColor']) ?>
+                                                    <span class="badge fw-bold bg-<?= htmlspecialchars($badge['statusBackgroundColor']) ?>
                                                     text-<?= htmlspecialchars($badge['statusTextColor']) ?> mb-1">
                                                         <?= htmlspecialchars($badge['statusLabel']) ?>
                                                     </span>
@@ -311,8 +311,8 @@
                                         <?php if (isset($badgesMap[$key])):
                                             $b = $badgesMap[$key]; ?>
                                             <span
-                                                class="badge bg-<?= htmlspecialchars($b['statusBackgroundColor']) ?> text-<?= htmlspecialchars($b['statusTextColor']) ?> mt-1 me-1"
-                                                data-bs-tooltip="tooltip" data-bs-placement="left"
+                                                class="badge fw-bold bg-<?= htmlspecialchars($b['statusBackgroundColor']) ?> text-<?= htmlspecialchars($b['statusTextColor']) ?> mt-1 me-1"
+                                                data-bs-tooltip="tooltip" data-bs-placement="left" style="font-weight: bold"
                                                 title="<?= htmlspecialchars($b['statusDescription']) ?>">
                                                 <?= htmlspecialchars($b['statusLabel']) ?>
                                             </span>

@@ -28,6 +28,23 @@
                     document.getElementById("e_m_l").innerHTML = link;
                 </script>
 
+                <button id="bmc-button-dark" class="btn btn-themed" aria-label="Buy me a coffee"
+                    onclick="window.open('https://www.buymeacoffee.com/danixek', '_blank', 'noopener,noreferrer')">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="width: 24px; height: 24px; margin-right: 10px;">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                    </svg>
+
+                    Buy me a coffee
+                </button>
+
+
+
             </div>
             <!-- Pravá část pro GitHub a další odkazy -->
             <div class="col-md-5 text-right">
@@ -41,10 +58,12 @@
 
                 </p>
                 <p class="gap-3 d-flex">
-                    <a href="https://www.linkedin.com/in/d-kefurt/" rel="noopener noreferrer" target="_blank" class="contacts-links">
+                    <a href="https://www.linkedin.com/in/d-kefurt/" rel="noopener noreferrer" target="_blank"
+                        class="contacts-links">
                         <i class="bi bi-linkedin" style="font-size: 35px;"></i>
                     </a>
-                    <a href="https://www.facebook.com/danixek" rel="noopener noreferrer" target="_blank" class="contacts-links">
+                    <a href="https://www.facebook.com/danixek" rel="noopener noreferrer" target="_blank"
+                        class="contacts-links">
                         <i class="bi bi-facebook" style="font-size: 35px;"></i>
                     </a>
 

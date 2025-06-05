@@ -30,7 +30,7 @@ body {
 .bg-light-gray {
     background-color: var(--secondary-color);
     /* Tmavě šedé pozadí pro sekce */
-    color: rgb(220,220,220);
+    color: rgb(220, 220, 220);
     padding: 60px 0;
 }
 
@@ -39,6 +39,74 @@ body {
     /* Tmavší pozadí pro sekce */
     padding: 60px 0;
 }
+
+.btn-themed {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #eee;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+/* Doladění paddingu a font-size dle velikostí, pokud chceš přepsat Bootstrap hodnoty */
+.btn-themed.btn-sm {
+    padding: 0.25rem 0.5rem; /* menší padding */
+    font-size: 0.875rem;
+}
+
+.btn-themed.btn-md {
+    padding: 0.5rem 1rem; /* střední velikost, může být default */
+    font-size: 1rem;
+}
+
+.btn-themed.btn-lg {
+    padding: 0.75rem 1.5rem; /* větší padding */
+    font-size: 1.25rem;
+}
+.dropdown-menu-dark {
+    min-width: 100%; /* šířka podle tlačítka */
+    max-width: none;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+    padding: 0.25rem 0;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #eee;
+}
+
+.dropdown-menu-dark .dropdown-item {
+    padding: 0.5rem 1.5rem;
+    color: #eee;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu-dark .dropdown-item:hover,
+.dropdown-menu-dark .dropdown-item:focus {
+    color: #ffffff !important;
+    background-color: rgba(75, 75, 75, 0.151) !important;
+    outline: none;
+}
+
+.dropdown-menu-dark .dropdown-item i {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+}
+
+/* Když je dropdown aktivní, lehce ztmav pozadí tlačítka */
+.btn.button-themed.dropdown-toggle.show {
+    background-color: #2f343a;
+    color: #f0e68c;
+}
+
 
 .text-muted-darkmode {
     color: #5c5c5c;
@@ -200,8 +268,9 @@ body {
 .section-title {
     color: #f1f3f5;
     font-size: 2rem;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
+
 .sub-section-title {
     color: #f1f3f5;
     font-size: 1.5rem;
@@ -364,14 +433,14 @@ a:hover {
 }
 
 .modal-body .btn-gallery {
-  width: 40px;
-  height: 40px;
-  opacity: 0.3;
-  transition: opacity 0.5s;
+    width: 40px;
+    height: 40px;
+    opacity: 0.3;
+    transition: opacity 0.5s;
 }
 
 .modal-body .btn-gallery:hover {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 
@@ -598,13 +667,17 @@ img.img-thumbnail {
 }
 
 #portfolioBadgeInfoModal th,
-#portfolioBadgeInfoModal td, #portfolioBadgeInfoModal tbody td:first-child {
-  border-bottom: 0px solid rgba(100, 100, 100, 0); /* jemná linka pod každou řádkou */
+#portfolioBadgeInfoModal td,
+#portfolioBadgeInfoModal tbody td:first-child {
+    border-bottom: 0px solid rgba(100, 100, 100, 0);
+    /* jemná linka pod každou řádkou */
 }
+
 span.bg-orange {
     background-color: #ff9800 !important;
     /* oranžová barva pro badge */
 }
+
 span.bg-secondary {
     background-color: #4f565c !important;
 }

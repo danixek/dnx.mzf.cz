@@ -126,8 +126,8 @@
                                     <?php if (isset($badgesMap[$key])):
                                         $b = $badgesMap[$key]; ?>
                                         <span
-                                            class="badge bg-<?= htmlspecialchars($b['statusBackgroundColor']) ?> text-<?= htmlspecialchars($b['statusTextColor']) ?> me-2"
-                                            data-bs-tooltip="tooltip" data-bs-placement="top"
+                                            class="badge fw-bold bg-<?= htmlspecialchars($b['statusBackgroundColor']) ?> text-<?= htmlspecialchars($b['statusTextColor']) ?> me-2"
+                                            data-bs-tooltip="tooltip" data-bs-placement="top" style="font-weight: bold"
                                             title="<?= htmlspecialchars($b['statusDescription']) ?>">
                                             <?= htmlspecialchars($b['statusLabel']) ?>
                                         </span>
@@ -202,7 +202,7 @@
                                 <?php endif; ?>
 
                                 <?php foreach (explode(',', $selectedProject['tags']) as $tag): ?>
-                                    <span class="badge bg-secondary"><?= htmlspecialchars(trim($tag)) ?></span>
+                                    <span class="badge fw-bold bg-secondary"><?= htmlspecialchars(trim($tag)) ?></span>
                                 <?php endforeach; ?>
 
                             </div>
@@ -236,21 +236,21 @@
                                     $gitLabel = 'Externí Repo';  // Nebo jakýkoli jiný název
                                 }
 
-                                echo '<a href="' . htmlspecialchars($gitUrl) . '" target="_blank" rel="noopener noreferrer" class="btn btn-md btn-outline-light me-2">';
+                                echo '<a href="' . htmlspecialchars($gitUrl) . '" target="_blank" rel="noopener noreferrer" class="btn btn-md btn-themed me-2">';
                                 echo '<i class="bi ' . $gitIcon . ' me-1"></i>' . $gitLabel . '</a>';
                             }
 
                             // Preview má přednost před Download – velké tlačítko
                             if (!empty($linkMap['preview'])) {
-                                echo '<a href="' . htmlspecialchars($linkMap['preview']) . '" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-primary ms-3">';
+                                echo '<a href="' . htmlspecialchars($linkMap['preview']) . '" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-themed ms-3">';
                                 echo '<i class="bi bi-box-arrow-up-right me-1"></i>Náhled</a>';
                             } elseif (!empty($linkMap['download'])) {
-                                echo '<a href="' . htmlspecialchars($linkMap['download']) . '" download class="btn btn-lg btn-success ms-3">';
+                                echo '<a href="' . htmlspecialchars($linkMap['download']) . '" download class="btn btn-lg btn-themed ms-3">';
                                 echo '<i class="bi bi-download me-1"></i>Stáhnout projekt</a>';
                             }
                             ?>
                             <!-- Collapse tlačítko na odkrytí changelogu -->
-                            <button class="btn btn-outline-secondary ms-auto" type="button" data-bs-tooltip="tooltip"
+                            <button class="btn btn-themed ms-auto" type="button" data-bs-tooltip="tooltip"
                                 data-bs-placement="top" title="changelog" data-bs-toggle="collapse"
                                 data-bs-target="#changelogCollapse" aria-expanded="false"
                                 aria-controls="changelogCollapse">
