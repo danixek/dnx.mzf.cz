@@ -1,0 +1,730 @@
+:root {
+    --primary-color: #212529;
+    --secondary-color: #343a40;
+    --gallery-border-color: rgb(60, 60, 60);
+    --gallery-background-color: rgb(40, 40, 40) !important;
+}
+
+.theme-darker {
+    --primary-color: #121212;
+    --secondary-color: #222;
+}
+
+.theme-softlight {
+    --primary-color: #373737;
+    --secondary-color: #505050;
+}
+
+body {
+    --primary-color: #212529;
+    --secondary-color: #343a40;
+    --bs-success: rgb(23, 73, 23) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Arial', sans-serif, 'Calibri', 'Roboto';
+    background-color: var(--primary-color);
+    /* Tmavé pozadí pro tělo stránky */
+    color: #f8f9fa;
+    /* Světlejší barva textu pro lepší čitelnost */
+}
+
+.bg-light-gray {
+    background-color: var(--secondary-color);
+    /* Tmavě šedé pozadí pro sekce */
+    color: rgb(220, 220, 220);
+    padding: 60px 0;
+}
+
+.bg-dark-gray {
+    background-color: var(--primary-color);
+    /* Tmavší pozadí pro sekce */
+    padding: 60px 0;
+}
+
+.btn-themed {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #eee;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+/* Doladění paddingu a font-size dle velikostí, pokud chceš přepsat Bootstrap hodnoty */
+.btn-themed.btn-sm {
+    padding: 0.25rem 0.5rem; /* menší padding */
+    font-size: 0.875rem;
+}
+
+.btn-themed.btn-md {
+    padding: 0.5rem 1rem; /* střední velikost, může být default */
+    font-size: 1rem;
+}
+
+.btn-themed.btn-lg {
+    padding: 0.75rem 1.5rem; /* větší padding */
+    font-size: 1.25rem;
+}
+.dropdown-menu-dark {
+    min-width: 100%; /* šířka podle tlačítka */
+    max-width: none;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+    padding: 0.25rem 0;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #eee;
+}
+
+.dropdown-menu-dark .dropdown-item {
+    padding: 0.5rem 1.5rem;
+    color: #eee;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu-dark .dropdown-item:hover,
+.dropdown-menu-dark .dropdown-item:focus {
+    color: #ffffff !important;
+    background-color: rgba(75, 75, 75, 0.151) !important;
+    outline: none;
+}
+
+.dropdown-menu-dark .dropdown-item i {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+}
+
+/* Když je dropdown aktivní, lehce ztmav pozadí tlačítka */
+.btn.button-themed.dropdown-toggle.show {
+    background-color: #2f343a;
+    color: #f0e68c;
+}
+
+
+.text-muted-darkmode {
+    color: #5c5c5c;
+}
+
+#changelogCollapse .card {
+    box-shadow: none;
+}
+
+/* Pomlčky místo odrážek u vnořeného seznamu */
+ul.notes-list {
+    list-style-type: none;
+    /* odstraníme default odrážky */
+    padding-left: 1.25rem;
+}
+
+ul.notes-list li::before {
+    content: "-";
+    /* pomlčka */
+    color: #aaa;
+    /* můžeš zvolit světlejší barvu */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    /* posunutí pomlčky do odrážkového prostoru */
+}
+
+.bg-dark {
+    background-color: var(--primary-color) !important;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+    /* obsah vyplní prostor mezi hlavičkou a patičkou */
+}
+
+.footer {
+    padding-bottom: 10px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #eeeeee;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: transparent;
+    /* případně přidat pro čistý vzhled */
+}
+
+/* celostránkový vzhled posuvného menu navbaru
+   ( po rozkliknutí ) */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0px !important;
+        right: 0px !important;
+        background-color: var(--secondary-color);
+    }
+}
+
+.logo-img {
+    width: 25px;
+    height: auto;
+    display: block;
+    margin-left: 10px;
+    transition: filter 0.3s ease;
+}
+
+.logo-text {
+    padding-left: 10px;
+}
+
+/* Zvětšení textu */
+.logo-text b {
+    text-transform: uppercase;
+}
+
+/* Zmenšení textu */
+.logo-text l {
+    text-transform: lowercase;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        text-align: center;
+        padding-right: 2rem;
+        z-index: 999;
+    }
+}
+
+
+/* HOVER efekt na celek */
+.navbar-brand:hover {
+    color: #ffffff;
+}
+
+/* Efekt na obrázek */
+.navbar-brand:hover .logo-img {
+    filter: grayscale(100%) brightness(0.8);
+    /* ZEŠEDIVĚNÍ + ZTMAVENÍ */
+}
+
+
+.navbar,
+.navbar-nav {
+    background-color: var(--secondary-color) !important;
+    /* Světle šedá pro navbar */
+}
+
+.navbar-nav .nav-link {
+    color: #f8f9fa;
+    /* Světlejší barva pro odkazy */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d1d5db;
+    /* Jemně světlejší odstín na hover */
+}
+
+/* Toggler - tlačítko - na změnu CSS vzhledu */
+#theme-toggle {
+    background-color: transparent !important;
+}
+
+#theme-toggle i {
+    color: rgb(206, 206, 206);
+    transition: color 0.2s ease;
+}
+
+#theme-toggle:hover i {
+    color: gray;
+}
+
+.section-title {
+    color: #f1f3f5;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.sub-section-title {
+    color: #f1f3f5;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 20px
+}
+
+.section-content {
+    margin-bottom: 10px;
+    margin-left: 15px
+}
+
+.img-fluid {
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 30px
+}
+
+.card-img-top,
+.detail-mainimg {
+    aspect-ratio: 16 / 9 !important;
+    background-color: #00000000;
+}
+
+img[alt] {
+    position: relative;
+}
+
+img[alt]:empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: #ccc;
+    /* Nastavení barvy textu */
+    font-size: 1.2rem;
+    /* Velikost textu */
+    line-height: 2.5;
+}
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1 1 50%;
+}
+
+.about-image {
+    flex: 1 1 40%;
+    max-width: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column !important;
+    }
+}
+
+/* Karty v portfoliu s jemným stínem */
+.card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    border: none;
+    background-color: var(--primary-color);
+    /* Tmavší pozadí pro karty */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.card-body h5,
+.card-body p {
+    margin-bottom: 10px;
+    /* Mezera mezi nadpisem a popiskem */
+}
+
+.card-body .d-flex {
+    margin-top: auto;
+    /* Zajistí, že spodní část bude na spodku */
+}
+
+.card-img-top {
+    object-fit: cover;
+    /* Pokryje celý prostor obrázku bez deformace */
+    width: 100%;
+    height: 200px;
+    /* Nastavíme pevnou výšku pro obrázek, můžeš upravit */
+}
+
+.card-body .d-flex {
+    justify-content: space-between;
+}
+
+
+/* Vylepšení textů pro lepší čitelnost */
+h1,
+h2 {
+    font-weight: bold;
+}
+
+a {
+    color: #f1f1f1
+}
+
+/* Odkazy v sekci kontakt */
+a:link:not(.collapse-link) {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b4b4b4 !important;
+    text-decoration: none;
+    transition: 200ms
+}
+
+.collapse-link:link {
+    color: #f1f1f1 !important;
+    text-decoration: none;
+}
+
+.collapse-link:hover {
+    color: #b4b4b4 !important;
+    text-decoration: underline !important;
+}
+
+/* Styly pro span, aby vypadal jako odkaz */
+.project-link {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+    font-size: 80% !important;
+}
+
+.project-link:hover {
+    color: #b4b4b4 !important;
+    text-decoration: underline;
+    transition: 200ms
+}
+
+.modal-body .btn-gallery {
+    width: 40px;
+    height: 40px;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+}
+
+.modal-body .btn-gallery:hover {
+    opacity: 0.5;
+}
+
+
+.thumb-wrapper {
+    width: 106.66px;
+    /* = 60 * 16 / 9 */
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 0.375rem;
+    /* match Bootstrap thumbnail rounding */
+    cursor: pointer;
+}
+
+.thumb-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+#quote-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* zarovnání dolů */
+    min-height: 150px;
+    padding-bottom: 0.5rem;
+    /* mezera odspodu */
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+
+    /* quote-box, aneb oprava přeskakování stránky
+       způsobená přepínáním citátů   */
+    #quote-box {
+        min-height: 220px !important;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* quote-box, aneb oprava přeskakování stránky
+       způsobená přepínáním citátů   */
+    #quote-box {
+        min-height: 280px !important;
+    }
+}
+
+#quote-box.fade-out {
+    opacity: 0;
+}
+
+img.img-thumbnail {
+    background-color: rgb(40, 40, 40) !important;
+    border-color: rgb(60, 60, 60)
+}
+
+.contacts-links {
+    text-decoration: none;
+    color: #B0B0B0 !important;
+    /* Světle šedá pro text */
+    transition: color 0.3s ease;
+    /* Plynulý přechod pro text */
+}
+
+.contacts-links i {
+    color: #B0B0B0 !important;
+    /* Světle šedá pro ikonu */
+    transition: color 0.3s ease;
+    /* Plynulý přechod pro ikonu */
+}
+
+.contacts-links:hover {
+    color: #ffffff !important;
+    /* Bílá barva textu při hoveru */
+}
+
+.contacts-links:hover i {
+    color: #ffffff !important;
+    /* Bílá barva ikony při hoveru */
+}
+
+.filter-tristate-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 0.7rem;
+    gap: 0.5rem;
+    color: #ccc;
+}
+
+.filter-tristate-wrapper .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    border-radius: 4px;
+    background-color: transparent;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+    flex-shrink: 0;
+}
+
+.filter-tristate-wrapper[data-filter-state="null"] .custom-checkbox {
+    border-color: #666;
+    background-color: transparent;
+}
+
+.filter-tristate-wrapper[data-filter-state="true"] .custom-checkbox {
+    border-color: green;
+    background-color: green;
+}
+
+.filter-tristate-wrapper[data-filter-state="false"] .custom-checkbox {
+    border-color: red;
+    background-color: red;
+}
+
+/* Případný checkmark nebo křížek lze přidat jako pseudo-element */
+
+.filter-tristate-wrapper[data-filter-state="true"] .custom-checkbox::after {
+    content: '✓';
+    color: white;
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.filter-tristate-wrapper[data-filter-state="false"] .custom-checkbox::after {
+    content: '✗';
+    color: white;
+    position: absolute;
+    top: -4px;
+    left: 1px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Label */
+.filter-tristate-wrapper label {
+    cursor: pointer;
+    margin: 0;
+}
+
+.filter-legend {
+    margin-top: 7px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* zajistí, že prvek zabere celou šířku rodiče */
+    white-space: nowrap;
+    gap: 8px;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.legend-item.checked::before {
+    content: '✓';
+    color: green;
+    font-weight: bold;
+}
+
+.legend-item.unchecked::before {
+    content: '✗';
+    color: red;
+    font-weight: bold;
+}
+
+.legend-item.neutral::before {
+    content: '–';
+    color: gray;
+    font-weight: bold;
+}
+
+.filter-grid>div {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.filter-grid h5 {
+    white-space: normal;
+    /* umožní zalamování */
+    overflow-wrap: break-word;
+    font-weight: 600;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 480px;
+    justify-items: start;
+}
+
+.form-check.filter-tristate-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+.modal-content {
+    /* hlavní modal wrapper */
+    max-width: 100vw;
+    /* nebo konkrétní šířka */
+    overflow-x: auto;
+    /* umožní horizontální scroll pokud bude potřeba */
+}
+
+#portfolioBadgeInfoModal th,
+#portfolioBadgeInfoModal td,
+#portfolioBadgeInfoModal tbody td:first-child {
+    border-bottom: 0px solid rgba(100, 100, 100, 0);
+    /* jemná linka pod každou řádkou */
+}
+
+span.bg-orange {
+    background-color: #ff9800 !important;
+    /* oranžová barva pro badge */
+}
+
+span.bg-secondary {
+    background-color: #4f565c !important;
+}
+
+.project {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* styl je použit v contacts v patičce */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.contacts-text {
+    gap: 4px;
+    /* zmenší mezery mezi prvky */
+    font-size: 15px;
+    /* případně menší */
+}
+
+.contacts-heart {
+    font-size: x-large;
+    margin-bottom: 2px
+}
+
+.contacts-name {
+    margin-left: -8px;
+    /* přiblíží jméno k logu */
+    display: inline-block;
+}
+
+/* bootstrap verze 'nápovědy' při hoveru */
+.tooltip-inner {
+    max-width: 300px;
+    /* větší maximální šířka */
+    white-space: normal;
+    /* povolit zalamování textu */
+    text-align: left;
+    /* lepší zarovnání při víc řádcích */
+    padding: 0.5rem 1rem;
+    /* můžeš upravit padding podle chuti */
+}

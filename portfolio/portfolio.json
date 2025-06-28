@@ -1,0 +1,367 @@
+{
+  "badges": {
+    "alpha": {
+      "statusLabel": "Alpha",
+      "statusBackgroundColor": "secondary",
+      "statusTextColor": "light",
+      "statusDescription": "Velmi raná fáze vývoje či pouze myšlenkový koncept; zatím neuspokojivý výsledek, který neplní ani má očekávání."
+    },
+    "beta": {
+      "statusLabel": "Beta",
+      "statusBackgroundColor": "warning",
+      "statusTextColor": "dark",
+      "statusDescription": "Funkční a pokročilý, ale stále s nedostatky a potenciálem k vylepšení; očekávání částečně splněna."
+    },
+    "completed": {
+      "statusLabel": "Completed",
+      "statusBackgroundColor": "success",
+      "statusTextColor": "light",
+      "statusDescription": "Považovaný za dokončený a uspokojivě hotový projekt - vlastní očekávání splněna."
+    },
+    "forRemake": {
+      "statusLabel": "For Remake",
+      "statusBackgroundColor": "danger",
+      "statusTextColor": "light",
+      "statusDescription": "Projekt určený k přepracování nebo úplné náhradě; s větším důrazem na detaily a vizi, kterou jsem dříve opomíjel."
+    },
+    "tester": {
+      "statusLabel": "Tester",
+      "statusBackgroundColor": "secondary",
+      "statusTextColor": "light",
+      "statusDescription": "Testoval funkčnost. Nezasahoval do kódu, ale přispěl zpětnou vazbou; kód generoval ChatGPT."
+    },
+    "chatgpt": {
+      "statusLabel": "S ChatGPT",
+      "statusBackgroundColor": "warning",
+      "statusTextColor": "dark",
+      "statusDescription": "Junior používá ChatGPT jako interaktivní dokumentaci. A učí se při tom přemýšlet."
+    },
+    "documentation": {
+      "statusLabel": "S dokumentací",
+      "statusBackgroundColor": "orange",
+      "statusTextColor": "dark",
+      "statusDescription": "Medior čte oficiální dokumentaci a implementuje řešení samostatně."
+    },
+    "nohelp": {
+      "statusLabel": "Bez nápovědy",
+      "statusBackgroundColor": "success",
+      "statusTextColor": "light",
+      "statusDescription": "Senior nepotřebuje nápovědu – většinou; spoléhá na zkušenosti a kontext."
+    }
+  },
+  "projects": [
+    {
+      "id": 0,
+      "title": "Taskami",
+      "description": "WPF aplikace pro správu úkolů, která kombinuje funkce Pomodoro a To-Do Listu pro zvýšení produktivity.",
+      "shortDescription": "WPF To-Do s Pomodoro funkcí",
+      "note": "Projekt je ve velmi rané (alpha) fázi vývoje.",
+      "completionDate": null,
+      "version": "0.1 Alpha",
+      "tags": "C#, WPF",
+      "status": [
+        "alpha"
+      ],
+      "thumbnail": "taskami_thumb.png",
+      "gallery": [
+        "taskami1.png",
+        "taskami2.png",
+        "taskami3.png"
+      ],
+      "changelog": [
+        {
+          "version": "0.1 Alpha",
+          "date": "2025-05",
+          "notes": "Náčrt uživatelského rozhraní"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Todoist Widget",
+      "description": "Widget pro integraci s aplikací Todoist pro lepší správu úkolů přímo z domácí obrazovky.",
+      "shortDescription": "Todoist widget na plochu",
+      "note": "Na projektu jsem působil jako tester a zadavatel – využil jsem ChatGPT k vygenerování kódu, který jsem ladil podle chování aplikace. Chtěl jsem si vytvořit nástroj pro vlastní potřebu a ukázat, že i s pomocí AI lze vytvořit praktické řešení.",
+      "completionDate": "2024-06",
+      "version": "1.0",
+      "tags": "Python",
+      "links": [
+        {
+          "type": "download",
+          "url": "https://github.com/danixek/todoist-widget/releases/download/todoist/TodoistWidget.exe"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/todoist-widget"
+        }
+      ],
+      "status": [
+        "completed",
+        "tester"
+      ],
+      "thumbnail": "todoistWidget_thumb.png",
+      "gallery": [
+        "todoistWidget1.png",
+        "todoistWidget2.png"
+      ],
+      "changelog": [
+        {
+          "version": "1.0",
+          "date": "2024-06",
+          "notes": "Podpora Todoist API a synchronizace\nPřidáno přemístění widgety\nPřidáno průhledné pozadí\n Přidána možnost označit úkol jako splněný kliknutím na kolečko."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Pojišťák.NET",
+      "description": "Správa pojištěnců a pojištění v C# a ASP.NET za pomocí MS-SQL, Entity Frameworku a Bootstrapu.",
+      "shortDescription": "Správce pojištěnců a pojištění v C# .NET",
+      "note": "Projekt vznikl jako závěrečný úkol během rekvalifikace, ale původní verze mi přišla nedotažená a nevhodná pro portfolio – částečně kvůli omezením slabšího notebooku a nemožnosti využít placené nástroje jako MidJourney či ChatGPT. Rád bych jej vizuálně i technicky posunul dál, aby lépe odrážel můj potenciál pro budoucího zaměstnavatele.",
+      "completionDate": "2025-06",
+      "version": "0.57 Hotfix",
+      "tags": "C#, ASP.NET, Bootstrap, Entity Framework, SQL",
+      "links": [
+        {
+          "type": "download",
+          "url": "https://github.com/danixek/PojistakNET/archive/refs/heads/master.zip"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/PojistakNET"
+        }
+      ],
+      "status": [
+        "beta",
+        "forRemake",
+        "chatgpt"
+      ],
+      "thumbnail": "pojistakNET_thumb.webp",
+      "gallery": [
+        "pojistakNET1.png",
+        "pojistakNET2.png",
+        "pojistakNET3.png",
+        "pojistakNET4.png",
+        "pojistakNET5.png",
+        "pojistakNET6.png"
+      ],
+      "changelog": [
+        {
+          "version": "0.60",
+          "date": "2025-06",
+          "notes": "Drobná úprava ve vzhledovém redesingu - zarovnány formuláře\nNyní se nad patičkou webu zobrazují články."
+        },
+        {
+          "version": "0.58",
+          "date": "2025-06",
+          "notes": "Mírný pokrok ve vzhledovém redesingu.\n předělána sekce kontakt - patička webu"
+        },
+        {
+          "version": "0.57 Hotfix",
+          "date": "2025-06",
+          "notes": "Opraveny chyby v URL routách – už se nezobrazují chyby 404 kvůli špatnému směrování.\nZnovu zavedené URL routování bez specifikace souboru (pouze složka v URL).\nMírný pokrok ve vzhledovém redesingu – stránka působí čistěji a přehledněji."
+        },
+        {
+          "version": "0.56 Tech debt release",
+          "date": "2025-06",
+          "notes": "URL Routy převedeny na lowercase, a URL názvy byly zjednodušeny.\nPo úpravách URL si aplikace neprošla testováním => Tech debt release\nVylepšeno UI úvodní stránky\nPřidána dočasná stránka Under Development"
+        },
+        {
+          "version": "0.54",
+          "date": "2025-05",
+          "notes": "Změněn název aplikace na Pojišťák.NET.\nOznámeno oficiální zahájení fáze revize – projekt bude postupně modernizován a přizpůsoben jako silná ukázka pro IT portfolio."
+        },
+        {
+          "version": "0.53",
+          "date": "2025-03",
+          "notes": "Přidáno automatické formátování finančních částek, PSČ pojištěnce a telefonních čísel pro lepší čitelnost dat.\nKontrola dobrých praktik."
+        },
+        {
+          "version": "0.50",
+          "date": "2025-03",
+          "notes": "Doplněna základní dokumentace k metodám kontrolerů.\nRevize části kontrolerů pro větší přehlednost.\nZavedena základní validace vstupních polí na frontendu.\nProvedena úprava uživatelského rozhraní za pomocí Bootstrapu.\nDoladěny chyby na backendu související s pojmenováním a sladěním proměnných id, insurerId a insuranceId."
+        },
+        {
+          "version": "0.40",
+          "date": "2025-03",
+          "notes": "Přidána možnost přidávat, upravovat a mazat pojištění.\nNyní se při stisknutí tlačítka 'Smazat' zobrazí potvrzovací dialog.\nPři kliknutí na pojištěnce se zobrazí detail s informacemi o jeho pojištění."
+        },
+        {
+          "version": "0.30",
+          "date": "2025-02",
+          "notes": "Přidána základní MVC architektura a načítání z databáze MS-SQL.\nPřidána možnost přidávat, upravovat a mazat pojištěnce"
+        },
+        {
+          "version": "0.20",
+          "date": "2025-02",
+          "notes": "Vytvořen základ projektu v ASP.NET Core MVC.\nZaložen repozitář a inicializována databáze."
+        },
+        {
+          "version": "0.10",
+          "date": "2025-02",
+          "notes": "Vytvořeny základní modely pro pojištěnce a pojištění."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "DEV portfolio",
+      "description": "Webové portfolio vytvořené pomocí Bootstrapu, s důrazem na responzivitu, přehlednost a snadnou rozšiřitelnost.",
+      "shortDescription": "Webové portfolio k prezentaci",
+      "note": "Stránka reprezentuje můj pokrok ve vývoji - v technickém i designovém smyslu. V galerii je také patrné přijmení 'Černý', které mi přijde zvučné a sémanticky natolik blízké, až zvažuji jeho přijetí jako osobní značky.",
+      "completionDate": "2025-06",
+      "version": "1.00",
+      "tags": "PHP, Bootstrap, Javascript, HTML, CSS",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://dnx.mzf.cz"
+        },
+        {
+          "type": "github",
+          "url": ""
+        }
+      ],
+      "status": [
+        "completed",
+        "chatgpt"
+      ],
+      "thumbnail": "devPortfolio_thumb.webp",
+      "gallery": [
+        "devPortfolio1.png",
+        "devPortfolio2.png",
+        "devPortfolio3.png",
+        "devPortfolio4.png",
+        "devPortfolio5.png",
+        "devPortfolio6.png"
+      ],
+      "changelog": [
+        {
+          "version": "1.10",
+          "date": "2025-06",
+          "notes": "Vylepšena sekce „O mně“: přidány podnadpisy a text upraven pro lepší čitelnost a vyšší úspěšnost u HR.\nDůvod úpravy: HR specialisté často nestíhají číst dlouhé slohovky a přitom snadno přehlédnou klíčovou motivaci uchazeče.\nOpravena drobná UI chyba s výpisem verze (u nadpisu) na mobilních zařízeních - nyní se zalamuje.\nProblém s tlačítkem zpět byl již vyřešen - stačí použít tlačítko prohlížeče (odstraněn target _blank z odkazu)."
+        },
+        {
+          "version": "1.07",
+          "date": "2025-06",
+          "notes": "Status štítky rozšířeny - kromě verzovacích jsou dostupné i dle úrovně zapojení ve vývoji.\nDo detailu projektu stále nebylo přidáno tlačítko zpět (UX) pro netechnické HR.\nDosud nebyl opraven bug, kdy aktuální verze v detailu na mobilech se schová mimo obrazovku."
+        },
+        {
+          "version": "1.00",
+          "date": "2025-05",
+          "notes": "Přidán životopis do sekce about-me na hlavní stránce; web již plní základní funkčnost v0.70 --> v1.00."
+        },
+        {
+          "version": "0.70",
+          "date": "2025-05",
+          "notes": "Nyní jsou k dispozici tři motivy vzhledu - 'dark', 'darker' a 'softlight'. Všechny jsou variace tmavých témat.\nVylepšen filtr portfolia - nyní lze filtrovat i podle vývojových štítků (Alpha,Beta,Completed,ForRemake).\nPřidána zpětná vazba filtru: vypisování aktivních filtrů a počet aktuálně zobrazených výsledků.\nPřidán changelog."
+        },
+        {
+          "version": "0.65",
+          "date": "2025-05",
+          "notes": "Vylepšeno UI v detailech\nPřidán přepínač motivů stránky - kromě defaultního 'dark' vzhledu je dostupný i vzhled 'darker'.\nPřidáno nové logo.\nNyní lze galerii zvětšit a přepínat mezi obrázky ve zvětšeném režimu.\nOprava rozbitého UI v detailu projektu.\nPřidán do patičky webu anti-bot dešifrovač emailu."
+        },
+        {
+          "version": "0.60",
+          "date": "2025-05",
+          "notes": "Vylepšen filtr portfolia - nyní je třístavový.\nPřidána v detailu žlutá poznámka, datum a verze projektu.\nV detailu byla vylepšena tlačítka 'Stáhnout' a 'GitHub'; přidáno tlačítko 'Zobrazit'.\nOprava bugů."
+        },
+        {
+          "version": "0.55",
+          "date": "2025-04",
+          "notes": "Přidán detail projektu i s galerií a tagy.\nDále - jednoduchý filtr technologií k portfoliu a verzovací štítky.\nPřidány citáty."
+        },
+        {
+          "version": "0.50",
+          "date": "2025-04",
+          "notes": "Stránka je celá postavena responzivně a po částech - sekcích čili partials.\nPřidán navbar, hlavička, patička, about-me, a citáty.\nPřidáno bylo i portfolio - výpis projektů na hlavní stránce."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Dashboard",
+      "description": "Vlastní domovská stránka vytvořená v HTML, CSS a JS - bez frameworků. Obsahuje jednoduchý javascriptový našeptávač, který je založen na záložkách.",
+      "shortDescription": "Vlastní domovská stránka bez frameworků",
+      "note": "Tento projekt vznikl během studia na učilišti jako osobní responzivní domovská stránka prohlížeče.",
+      "completionDate": "2025-05",
+      "version": "2.0",
+      "tags": "Javascript, HTML, CSS",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://dnx.mzf.cz/dashboard/"
+        },
+        {
+          "type": "github",
+          "url": ""
+        }
+      ],
+      "status": [
+        "beta"
+      ],
+      "thumbnail": "dashboard_thumb.webp",
+      "gallery": [
+        "dashboard1.png",
+        "dashboard2.png"
+      ],
+      "changelog": [
+        {
+          "version": "2.0",
+          "date": "2025-05",
+          "notes": "Web prošel kompletním redesignem a nově je koncipován jako multifunkční aplikace.\nVyhledávání zahrnuje našeptávač i živé filtrování zobrazených záložek.\nPodpora tagů zatím znovu nebyla implementována.\nPřidány přepínatelné kategorie."
+        },
+        {
+          "version": "1.2",
+          "date": "2024-03",
+          "notes": "Přidán jednoduchý systém záložek s pomocí javascriptu a podporou tagů.\nDo vyhledávacího pole stačí napsat část názvu nebo tagu, a výsledek se objeví v našeptávači."
+        },
+        {
+          "version": "1.1",
+          "date": "2019-03",
+          "notes": "Přidána podpora pro pozadí na hlavní plochu; prozatím bez uživatelské přizpůsobivosti pozadí."
+        },
+        {
+          "version": "1.0",
+          "date": "2018-03",
+          "notes": "Vytvořena hlavní plocha s vyhledávacím formulářem - po scrollování jsou dostupné i záložky, které se responzivně přizpůsobují velikosti okna."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "[ d] blog",
+      "description": "Blog je víc než jen doplněk portfolia - je to prostor pro mé myšlenky. Od programování, přes školství, motivaci a MBTI, až po psychologii a společenská témata. Tvořím ho jako vývojář, který hledá smysl i mimo klávesnici.",
+      "shortDescription": "Blog nejen k portfoliu, ale i pro mé myšlenky",
+      "note": "Články [ d] blogu jsou vytvořené v Markdownu",
+      "completionDate": "2025-05",
+      "version": "0.85",
+      "tags": "PHP, Bootstrap, Markdown, HTML, CSS",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://dnx.mzf.cz/blog"
+        },
+        {
+          "type": "github",
+          "url": ""
+        }
+      ],
+      "status": [
+        "beta"
+      ],
+      "thumbnail": "dBlog_thumb.png",
+      "gallery": [
+        "dBlog1.png",
+        "dBlog2.png"
+      ],
+      "changelog": [
+        {
+          "version": "0.85",
+          "date": "2025-05",
+          "notes": "Blog vytvořen - sdílí vzhled portfolia.\nPokročilé filtry dosud nepřidány\nImprovizované UI rozhraní"
+        }
+      ]
+    }
+  ]
+}
