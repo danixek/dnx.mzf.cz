@@ -282,7 +282,7 @@
       "id": 4,
       "title": "Dashboard",
       "description": "Vlastní domovská stránka vytvořená v PHP, HTML, CSS a JS. Používá jednoduchý javascriptový našeptávač založený na záložkách a využívá vybrané PHP (Composer) balíčky pro lepší funkčnost a bezpečnost.",
-      "shortDescription": "Personalizovaná domovská stránka s Google přihlášením, správou záložek, RSS a možností nastavení tapety.",
+      "shortDescription": "Domovská stránka s Google přihlášením, záložkami, RSS a tapetou.",
       "note": "Projekt vznikl během studia na učilišti jako osobní responzivní domovská stránka prohlížeče. Dnes je připravená k použití i pro ostatní uživatele.",
       "completionDate": "2025-07",
       "version": "1.85",
@@ -304,7 +304,11 @@
       "thumbnail": "dashboard_thumb.webp",
       "gallery": [
         "dashboard1.png",
-        "dashboard2.png"
+        "dashboard2.png",
+        "dashboard3.png",
+        "dashboard4.png",
+        "dashboard5.png",
+        "dashboard6.png"
       ],
       "changelog": [
         {
