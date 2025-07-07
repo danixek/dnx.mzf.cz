@@ -281,12 +281,12 @@
     {
       "id": 4,
       "title": "Dashboard",
-      "description": "Vlastní domovská stránka vytvořená v HTML, CSS a JS - bez frameworků. Obsahuje jednoduchý javascriptový našeptávač, který je založen na záložkách.",
-      "shortDescription": "Vlastní domovská stránka bez frameworků",
-      "note": "Tento projekt vznikl během studia na učilišti jako osobní responzivní domovská stránka prohlížeče.",
-      "completionDate": "2025-05",
-      "version": "2.0",
-      "tags": "Javascript, HTML, CSS",
+      "description": "Vlastní domovská stránka vytvořená v PHP, HTML, CSS a JS. Používá jednoduchý javascriptový našeptávač založený na záložkách a využívá vybrané PHP (Composer) balíčky pro lepší funkčnost a bezpečnost.",
+      "shortDescription": "Personalizovaná domovská stránka s Google přihlášením, správou záložek, RSS a možností nastavení tapety.",
+      "note": "Projekt vznikl během studia na učilišti jako osobní responzivní domovská stránka prohlížeče. Dnes je připravená k použití i pro ostatní uživatele.",
+      "completionDate": "2025-07",
+      "version": "1.85",
+      "tags": "Javascript, PHP, HTML, CSS",
       "links": [
         {
           "type": "preview",
@@ -298,7 +298,8 @@
         }
       ],
       "status": [
-        "beta"
+        "completed",
+        "chatgpt"
       ],
       "thumbnail": "dashboard_thumb.webp",
       "gallery": [
@@ -307,7 +308,12 @@
       ],
       "changelog": [
         {
-          "version": "2.0",
+          "version": "1.85",
+          "date": "2025-07",
+          "notes": "Přidány tapety, včetně možnosti pozicování tapety (např. left center apod.)\nPřidáno přihlašování přes Google účet\nDo nastavení přidána správa záložek a RSS kanálů\nPřidány RSS zprávy do dashboardu\nPřidán náhled tapety — při výběru se pozadí mění ještě před uložením\nPřidán výběr, který externí vyhledávač se má použít při užití vestavěného vyhledávacího pole.\nDosud NEBYLA přidána možnost měnit pořadí záložek (Drag & Drop)\nDosud NEBYLO přidáno zobrazení záložky už z nastavení s atributem target _blank\nDosud NEBYLA přidána možnost záložku deaktivovat (skrýt bez smazání)."
+        },
+        {
+          "version": "1.5",
           "date": "2025-05",
           "notes": "Web prošel kompletním redesignem a nově je koncipován jako multifunkční aplikace.\nVyhledávání zahrnuje našeptávač i živé filtrování zobrazených záložek.\nPodpora tagů zatím znovu nebyla implementována.\nPřidány přepínatelné kategorie."
         },

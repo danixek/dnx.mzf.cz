@@ -22,7 +22,7 @@ if (defined('IS_DEV') && IS_DEV) {
         'search_engine' => 'google', // výchozí
     ];
 
-    header('Location: index.php?set'); // přesměrování na hlavní stránku
+    header('Location: ../index.php?set'); // přesměrování na hlavní stránku
     exit;
 } else {
     $client = new Google_Client();
