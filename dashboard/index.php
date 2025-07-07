@@ -2,197 +2,408 @@
 <html lang="cs" class="theme-dark">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="shortcut icon" href="../logo/dnx-logo_mini.ico" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="../logo/dnx-logo_mini.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
-  <div class="background-overlay"></div>
-
-  <main>
     <a class="logo-wrapper" href="index.php">
-      <img src="../logo/dnx-logo_mini_60px.png" alt="Logo">
-      <span class="logo-text">
-        <span class="visually-hidden">d</span>
-        <span class="logo_text-show" id="logo-text">nx</span>
-      </span>
+        <img src="../logo/dnx-logo_mini_60px.png" alt="Logo">
+        <span class="logo-text">
+            <span class="visually-hidden">d</span>
+            <span class="logo_text-show" id="logo-text">nx</span>
+        </span>
     </a>
+    <?php
+    session_start();
+    define('IS_DEV', in_array($_SERVER['SERVER_NAME'], ['localhost', 'dnx.test']));
 
-    <!-- Vyhledávač -->
-    <form id="searchForm" method="get" target="_parent" action="https://search.brave.com/search">
-      <div class="search-section" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-      <div class="search-logo" style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 4em">
-        <h1 style="font-size: 8rem; color: #fff !important; margin: 0; text-align: center; width: 100%; font-family: Arial">
-        <span style="position: relative; bottom: 4px">[</span> <span style="font-size: 80%">d</span><span style="position: relative; bottom: 4px">]</span>
-        </h1>
-      </div>
-      <div class="search-wrapper" style="width: 100%; display: flex; justify-content: center;">
-        <ul class="autocomplete-list"></ul>
-        <input type="text" class="search-input" name="q" placeholder="Hledat na webu..." autocomplete="off" style="width: 100%; max-width: 570px;">
-      </div>
-      </div>
-    </form>
+    if (isset($_SESSION['user'])) {
+        $googleId = $_SESSION['user']['id'] ?? null;
+        $settingsFile = __DIR__ . "/data/users/{$googleId}.json";
 
+        if ($googleId && file_exists($settingsFile)) {
+        $settingsJson = file_get_contents($settingsFile);
+        $settings = json_decode($settingsJson, true);
+        } else {
+            $settings = [
+                'wallpaper' => '05-wallpaper.jpg',
+                'bookmarks' => [],
+                'rss' => [],
+            ];
+        }
+        $_SESSION['settings'] = $settings;
 
-    <!-- Filtry -->
-    <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">Vše</button>
-      <button class="filter-btn" data-filter="sluzby">Služby</button>
-      <button class="filter-btn" data-filter="zpravy">Zprávy</button>
-      <button class="filter-btn" data-filter="technologie">Technologie</button>
-      <button class="filter-btn" data-filter="geek">Geek</button>
-      <button class="filter-btn" data-filter="uceni">Učení</button>
-      <button class="filter-btn" data-filter="personal">Osobní</button>
+        echo "<style>";
+        echo ".background-overlay {";
+        echo "background: url('img/" . htmlspecialchars($settings['wallpaper']) . "') no-repeat " . htmlspecialchars($settings['wallpaper_position']) . "/cover;";
+        echo "} </style>";
+    }
+    
+    if (isset($_GET['rss'])) {
+        // 'rss'
+        $feedUrls = $settings['rss'] ?? [];
+
+        $items = [];
+
+        foreach ($feedUrls as $url) {
+            $xml = @simplexml_load_file($url);
+            if (!$xml) continue;
+
+            foreach ($xml->channel->item as $entry) {
+                $title = (string) $entry->title;
+                $link = (string) $entry->link;
+                $description = (string) $entry->description;
+                $pubDate = strtotime((string) $entry->pubDate);
+                $image = '';
+
+                if (isset($entry->enclosure)) {
+                    $image = (string) $entry->enclosure['url'];
+                }
+
+                $items[] = [
+                    'title' => $title,
+                    'link' => $link,
+                    'description' => $description,
+                    'pubDate' => $pubDate,
+                    'image' => $image
+                ];
+
+            }
+        }
+
+        // Seřazení sestupně podle data
+        usort($items, function ($a, $b) {
+        return $b['pubDate'] - $a['pubDate'];
+        }); ?>
+    <div class="background-overlay"></div>
+    <?php
+        echo "<img src='../logo/dnx-logo_mini_120px.png' 
+        style='
+            opacity: 0.6;
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        ' 
+        alt='Logo'>";
+        echo '<div class="rss-feed" style="position: absolute; top: 400px; margin: 0px 70px">';
+        foreach ($items as $article) {
+            $title = htmlspecialchars($article['title']);
+            $link = htmlspecialchars($article['link']);
+            $image = htmlspecialchars($article['image']); // např. enclosure nebo default obrázek
+
+            $date = new DateTime("@{$article['pubDate']}"); // "@" říká, že jde o timestamp
+            $date->setTimezone(new DateTimeZone('Europe/Prague')); // časové pásmo
+
+            echo "<div class='article'>
+                    <img src='{$image}' alt='náhled' class='article-image'>
+                    <a href='{$link}' target='_blank' class='article-title'>{$title}</a>" . 
+                    $date->format('j. n. Y') . 
+                  "</div>";
+            
+        }
+        echo '</div>';
+
+    } 
+    elseif (isset($_GET['set'])) {
+      // 'settings'
+      ?>
+    <div style="position: absolute; z-index: 5; top: 20px; right: 20px; display: flex; align-items: center">
+
+        <?php if (isset($_SESSION['user'])): ?>
+        <img src="<?= htmlspecialchars($_SESSION['user']['picture']) ?>" width="40" style="border-radius:50%">
+        <strong style="margin-left: 12px"><?= htmlspecialchars($_SESSION['user']['name']) ?></strong> <?php
+            else: ?>
+        <a href="account/login.php" class="href-btn">
+            <?= IS_DEV ? 'Přihlásit se (test)' : 'Přihlásit se přes Google' ?>
+        </a>
+        <?php
+            endif;
+        ?>
     </div>
 
-    <!-- Záložky -->
-    <section class="bookmarks">
-      <!-- Služby (primárně nástroje, platformy, kde se něco dělá nebo spravuje) -->
-      <a href="https://gmail.com" class="bookmark" data-category="sluzby">Gmail</a>
-      <a href="https://youtube.com" class="bookmark" data-category="sluzby">YouTube</a>
-      <a href="https://facebook.com" class="bookmark" data-category="sluzby">Facebook</a>
-      <a href="https://discord.com/app" class="bookmark" data-category="sluzby">Discord</a>
 
-      <!-- Technologie (čistě IT nástroje a zdroje pro programátory, vývojáře) -->
-      <a href="https://stackoverflow.com" class="bookmark" data-category="technologie">Stack Overflow</a>
-      <a href="https://github.com" class="bookmark" data-category="technologie">GitHub</a>
+    <div class="background-overlay"></div>
+    <div class="background-overlay-color"></div>
+    <style>
+    .background-overlay-color {
+        background: rgba(0, 0, 0, 0.40) !important;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        position: fixed;
+        z-index: 1;
+    }
+    </style>
 
-      <!-- Zprávy (informace, média, zpravodajství) -->
-      <a href="https://ct24.ceskatelevize.cz" class="bookmark" data-category="zpravy">Česká televize</a>
-      <a href="https://irozhlas.cz" class="bookmark" data-category="zpravy">iRozhlas</a>
-      <a href="https://aktualne.cz" class="bookmark" data-category="zpravy">Aktuálně.cz</a>
-      <a href="https://reflex.cz" class="bookmark" data-category="zpravy">Institut VK</a>
-      <a href="https://piratskyinstitut.cz" class="bookmark" data-category="zpravy">Institut π</a>
-      <a href="https://root.cz" class="bookmark" data-category="zpravy">root.cz</a>
-      <a href="https://mandaty.cz" class="bookmark" data-category="zpravy">mandaty.cz</a>
-      <a href="https://irozhlas.cz" class="bookmark" data-category="zpravy">irozhlas.cz</a>
-      <a href="https://hn.cz" class="bookmark" data-category="zpravy">Hospodářské noviny</a>
-      <a href="https://www.respekt.cz" class="bookmark" data-category="zpravy">RESPEKT</a>
-      <a href="https://www.reflex.cz" class="bookmark" data-category="zpravy">Reflex</a>
-      <a href="https://www.e15.cz" class="bookmark" data-category="zpravy">E15</a>
-      <a href="https://www.info.cz" class="bookmark" data-category="zpravy">info.cz</a>
-      <a href="https://echo24.cz" class="bookmark" data-category="zpravy">echo24</a>
-      <a href="https://parlamentnilisty.cz" class="bookmark" data-category="zpravy">Parlamentní listy</a>
+    <div style="position: absolute; z-index: 5; top: 150px; margin: 0 100px">
 
-      <!-- Geek (fandom, seriály, IT i zábava) -->
-      <a href="https://equestriadaily.cz" class="bookmark" data-category="geek">Equestria Daily</a>
-      <a href="https://itnetwork.cz" class="bookmark" data-category="geek">ITnetwork</a>
-      <a href="https://svetserialu.to" class="bookmark" data-category="geek">Svět Seriálů</a>
-      <a href="https://www.soom.cz" class="bookmark" data-category="geek">Soom.cz</a>
-      <a href="https://najserialy.to" class="bookmark" data-category="geek">NAJserialy.io</a>
-      <a href="https://www.disneyplus.com/cs-cz/home" class="bookmark" data-category="geek">Disney+</a>
-      <a href="https://www.crunchyroll.com" class="bookmark" data-category="geek">CrunchyRoll</a>
+        <h2>Profil</h2>
+        <?php if (!isset($_SESSION['user'])): ?>
+        <a href="account/login.php" class="href-btn">
+            <?= IS_DEV ? 'Přihlásit se (test)' : 'Přihlásit se přes Google' ?>
+        </a>
+        <?php else: ?>
+        <div style="display: flex; align-items: center;">
+            <p>Přihlášen jako <strong><?= htmlspecialchars($_SESSION['user']['name']) ?></strong></p>
+            <a href="account/logout.php" class="href-btn" style="margin-left: auto;">Odhlásit se</a>
+        </div>
+        <?php endif; ?>
 
-      <!-- Učení (školení, studium, matika) -->
-      <a href="https://isibalo.com/matematika" class="bookmark" data-category="uceni">Isibalo</a>
-      <a href="https://jakserychlenaucit.cz" class="bookmark" data-category="uceni">Jak se rychle naučit</a>
-      <a href="https://rubesz.cz" class="bookmark" data-category="uceni">Rubesz Sbírka</a>
-      <a href="https://fit.cvut.cz/cs/uchazeci/prijimaci-rizeni/bakalarsky-studijni-program" class="bookmark"
-        data-category="uceni">FIT ČVUT</a>
-      <a href="https://www.matweb.cz" class="bookmark" data-category="uceni">Matweb.cz</a>
-      <a href="https://michalheczko.cz/kombinatorika/index.php?p=kombinatorika" class="bookmark"
-        data-category="uceni">Kombinatorika</a>
-      <a href="https://www.realisticky.cz/ucebnice.php?id=4" class="bookmark" data-category="uceni">Realisticky</a>
+        <?php
+            if (!isset($_SESSION['user'])) {
+            echo '<p>Pro úpravu nastavení se prosím <a href="account/login.php" class="href-btn">přihlaš</a>.</p>';
+            exit;
+        }
+        // Načtení nastavení uživatele
+        $googleId = $_SESSION['user']['id'] ?? null;
+        $settingsFile = __DIR__ . "/data/users/{$googleId}.json";
 
-      <!-- Osobní (záliby, organizace, seznamy) -->
-      <a href="https://myanimelist.net" class="bookmark" data-category="personal">MyAnimeList</a>
+        if ($googleId && file_exists($settingsFile)) {
+            $settingsJson = file_get_contents($settingsFile);
+            $settings = json_decode($settingsJson, true);
+        } else {
+            $settings = [
+                'wallpaper' => 'tokyo-city-wallpaper.jpg',
+                'wallpaper_position' => 'center center',
+                'bookmarks' => [],
+                'rss' => [],
+                'search_engine' => 'google', // výchozí
+            ];
+        }
 
+        $_SESSION['settings'] = $settings;
 
-      <!-- Další záložky -->
+        $wallpaperDir = __DIR__ . '/img/';
+        $wallpapers = glob($wallpaperDir . '*.jpg');
+        $selectedTheme = $settings['wallpaper'] ?? 'tokyo-city-wallpaper.jpg';
+        $bookmarks = $settings['bookmarks'] ?? [];
+        $rssFeeds = $settings['rss'] ?? [];
+        ?>
 
-      <?php /*
-<a href="https://webadmin.endora.cz/user/filemanager/edit/dnx.mzf.cz/web?file=%2Fdnx.mzf.cz%2Fweb%2Fhomepage.php"
-data-tags="endora dnx" class="bookmark" data-category="personal">
-editace homepage.php
-</a>
+        <form method="post" action="account/save-settings.php">
+            <h2>Tapety</h2>
+            <p class="form-description">Vyberte pozadí domovské obrazovky.</p>
+            <div class="wallpaper-selection">
+                <?php foreach ($wallpapers as $file):
+            $filename = basename($file);
+            $selectedClass = ($filename === $selectedTheme) ? 'checked' : '';
+        ?>
+                <div class="wallpaper-thumb">
+                    <input type="radio" id="wp-<?= htmlspecialchars($filename) ?>" name="wallpaper"
+                        value="<?= htmlspecialchars($filename) ?>" <?= $selectedClass ?> hidden>
+                    <label for="wp-<?= htmlspecialchars($filename) ?>">
+                        <img src="img/<?= htmlspecialchars($filename) ?>"
+                            alt="Tapeta <?= htmlspecialchars($filename) ?>" width="100"
+                            style="cursor:pointer; border:2px solid transparent; border-radius:8px;">
+                    </label>
+                </div>
+                <?php endforeach; ?>
+            </div>
+            <h2>Pozice tapety</h2>
+            <p class="form-description">
+                Určuje, která část obrázku bude vycentrovaná. Např. „Na střed“ zobrazí střed tapety.
+            </p>
+            <select name="wallpaper_position" id="wallpaperPosition">
+                <?php
+                $positions = [
+                    'center center' => 'Na střed',
+                    'left center' => 'Vlevo',
+                    'right center' => 'Vpravo'
+                ];
+                $selectedPosition = $settings['wallpaper_position'] ?? 'center center';
+                foreach ($positions as $value => $label): ?>
+                <option value="<?= $value ?>" <?= $selectedPosition === $value ? 'selected' : '' ?>>
+                    <?= $label ?>
+                </option>
+                <?php endforeach; ?>
+            </select>
 
-<a href="https://webadmin.endora.cz/user/filemanager/edit/dnx.mzf.cz/web?file=%2Fdnx.mzf.cz%2Fweb%2Fdesktop.php"
-data-tags="endora dnx" class="bookmark" data-category="personal">
-editace desktop.php
-</a>
+            <h2>Vyhledávač</h2>
+            <p class="form-description">
+                Určuje, který vyhledávač se použije při zadání dotazu do vyhledávacího pole.
+            </p>
+            <select name="search_engine" required>
+                <?php
+                $engines = [
+                    'google' => 'Google',
+                    'duckduckgo' => 'DuckDuckGo',
+                    'bing' => 'Bing',
+                    'seznam' => 'Seznam',
+                    'brave' => 'Brave'
+                ];
+                $selectedEngine = $settings['search_engine'] ?? 'google';
+                foreach ($engines as $value => $label): ?>
+                    <option value="<?= $value ?>" <?= $selectedEngine === $value ? 'selected' : '' ?>>
+                        <?= $label ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
 
-<a href="https://webadmin.endora.cz/user/filemanager/default/dnx.mzf.cz/web?file=%2Fdnx.mzf.cz%2Fweb%2Fhomepage.php"
-data-tags="endora dnx" class="bookmark" data-category="personal">
-Správa dnx.mzf.cz</a>
+            <h2>Záložky</h2>
+            <p class="form-description">
+                Záložky slouží k rychlému přístupu k oblíbeným webům. Zobrazují se pod vyhledávačem na hlavní stránce.
+            </p>
 
-<a href="https://eshop.scio.cz/Profil/OPBH/Online_Priprava_VS" data-tags="matika matematika přijímačky"
-class="bookmark" data-category="uceni">
-SCIO testy na VŠ</a>
-
-<a href="https://moodle-ostatni.cvut.cz/course/view.php?id=134" data-tags="matika matematika přijímačky"
-class="bookmark" data-category="uceni">
-ČVUT moodle</a>
-
-<a href="http://www.realisticky.cz/ucebnice.php?id=4" data-tags="matika matematika učebnice" class="bookmark"
-data-category="uceni" style="font-size: 90%;">
-učebnice Realisticky</a>
-
-<a href="https://www.deepl.com/cs/translator" data-tags="překladač translate" class="bookmark"
-data-category="uceni">
-DeepL</a>
-
-<a href="https://englishfile4e.oxfordonlinepractice.com/app/dashboard"
-data-tags="angličtina oxford minidiv english" class="bookmark" data-category="uceni">
-Eng File</a>
-
-<a href="https://slovniky.lingea.cz/anglicko-cesky/" data-tags="angličtina" class="bookmark"
-data-category="uceni">
-slovník</a>
-
-<a href="http://www.english-practice.at/" data-tags="angličtina" class="bookmark" data-category="uceni">
-english-practice.at</a>
-
-<a href="https://www.english-grammar.at/online_exercises/tenses/tenses_index.htm" data-tags="angličtina english"
-class="bookmark" data-category="uceni">
-eng grammar</a>
-
-<a href="https://www.engblocks.com/grammar/exercises/#google_vignette" data-tags="angličtina english"
-class="bookmark" data-category="uceni">
-EngBlocks</a>
-
-<a href="https://chat.openai.com" data-tags="AI umělá inteligence" class="bookmark" data-category="technologie">
-ChatGPT</a>
-
-<a href="https://gemini.google.com" data-tags="AI umělá inteligence" class="bookmark" data-category="technologie">
-Gemini</a>
-
-<a href="https://www.pirati.cz/" data-tags="liberální politická pirátská strana" class="bookmark"
-data-category="zpravy">
-Piráti</a>
-
-<a href="https://svobodni.cz/" data-tags="konzervativní libertariánská politická strana sso" class="bookmark"
-data-category="zpravy">
-Svobodní</a>
-
-<a href="https://yayponies.no/books/book.php?category=Friendship+is+Magic&amp;format=PDF"
-data-tags="mlp comics komiksy my little pony" class="bookmark" data-category="geek">
-MLP komiksy</a>
-<a href="https://www.obchod.crew.cz/kategorie-21646/komiks/crew-manga/" data-tags="crew comics komiksy anime"
-class="bookmark" data-category="geek">
-CREW komiksy</a>
-*/ ?>
-
-
-    </section>
-  </main>
-
-  <nav class="bottom-navbar">
-    <a href="index.php" class="nav-icon active" title="Dashboard">
-      <img src="../logo/dnx-logo_mini.ico" alt="Logo">
-    </a>
-    <a href="rss.php" class="nav-icon" title="RSS feed">📡</a>
-    <a href="settings.php" class="nav-icon" title="Settings">⚙️</a>
-  </nav>
+            <div id="bookmarks-container">
+                <?php
+        $categories = [
+            'sluzby' => 'Služby',
+            'zpravy' => 'Zprávy',
+            'technologie' => 'Tech',
+            'geek' => 'Geek',
+            'uceni' => 'Učení'
+        ];
 
 
-  <script src="js/filter-bookmark.js"></script>
-  <script src="js/scroll-wallpaper.js"></script>
-  <script src="js/navbar-hide.js"></script>
-  <script src="js/logo-animated.js"></script>
+        if (empty($bookmarks)) {
+            $bookmarks = [['title' => '', 'url' => '', 'category' => '']];
+        }
+        foreach ($bookmarks as $i => $bookmark): 
+                $currentCategory = $bookmark['category'] ?? ''; ?>
+                <div class="bookmark-item">
+                    <input type="text" name="bookmarks[<?= $i ?>][title]" placeholder="Název záložky"
+                        value="<?= htmlspecialchars($bookmark['title'] ?? '') ?>" required>
+                    <input type="url" name="bookmarks[<?= $i ?>][url]" placeholder="URL"
+                        value="<?= htmlspecialchars($bookmark['url'] ?? '') ?>" required>
+                    <select name="bookmarks[<?= $i ?>][category]">
+                        <option value="">Vše</option>
+                        <?php foreach ($categories as $value => $label): ?>
+                        <option value="<?= $value ?>" <?= $value === $currentCategory ? 'selected' : '' ?>>
+                            <?= $label ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <button type="button" class="remove-bookmark delete-btn">Smazat</button>
+                </div>
+                <?php endforeach; ?>
+            </div>
+            <button type="button" id="add-bookmark" class="add-btn">Přidat záložku</button>
+
+            <h2>RSS (Zprávy)</h2>
+            <p class="form-description">
+                Seznam zdrojů zpráv, ze kterých se načítají články na hlavní stránku.
+            </p>
+            <div id="rss-container">
+                <?php
+        if (empty($rssFeeds)) {
+            $rssFeeds = [''];
+        }
+        foreach ($rssFeeds as $i => $rss): ?>
+                <div class="rss-item">
+                    <input type="url" name="rss[<?= $i ?>]" placeholder="RSS URL" value="<?= htmlspecialchars($rss) ?>"
+                        required>
+                    <button type="button" class="remove-rss delete-btn">Smazat</button>
+                </div>
+                <?php endforeach; ?>
+            </div>
+            <button type="button" id="add-rss" class="add-btn">Přidat RSS</button>
+
+            <div style="margin-top: 50px; margin-bottom: 150px">
+                <button type="submit" class="save-btn">Uložit</button>
+                <a href="?dash" class="href-btn" style="padding-left: 10px">Zpět na dashboard</a>
+            </div>
+        </form>
+
+    </div>
+    <?php
+
+    } 
+    else {
+      // 'dashboard' - výchozí ?>
+    <div class="background-overlay"></div>
+
+    <main>
+        <?php
+            $engine = $_SESSION['settings']['search_engine'] ?? 'google';
+
+            $searchUrls = [
+                'google' => 'https://www.google.com/search?q=',
+                'duckduckgo' => 'https://duckduckgo.com/?q=',
+                'bing' => 'https://www.bing.com/search?q=',
+                'seznam' => 'https://search.seznam.cz/?q=',
+                'brave' => 'https://search.brave.com/search?q='
+            ];
+
+            $searchBase = $searchUrls[$engine] ?? $searchUrls['google'];
+
+        ?>
+
+        <!-- Vyhledávač -->
+        <form id="searchForm" method="get" target="_parent" action="<?= htmlspecialchars($searchBase) ?>">
+            <div class="search-section"
+                style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+                <div class="search-logo"
+                    style="display: flex; justify-content: center; opacity: 0.5; align-items: center; width: 100%; margin-bottom: 4em">
+                    <img src="../logo/dnx-logo_mini_120px.png" alt="Logo">
+                </div>
+                <div class="search-wrapper" style="width: 100%; display: flex; justify-content: center;">
+                    <ul class="autocomplete-list"></ul>
+                    <input type="text" class="search-input" name="q" placeholder="Hledat na webu..." autocomplete="off"
+                        style="width: 100%; max-width: 570px;">
+                </div>
+            </div>
+        </form>
+
+
+        <!-- Filtry -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Vše</button>
+            <button class="filter-btn" data-filter="sluzby">Služby</button>
+            <button class="filter-btn" data-filter="zpravy">Zprávy</button>
+            <button class="filter-btn" data-filter="technologie">Technologie</button>
+            <button class="filter-btn" data-filter="geek">Geek</button>
+            <button class="filter-btn" data-filter="uceni">Učení</button>
+        </div>
+
+        <!-- Záložky -->
+        <section class="bookmarks">
+            <?php if (!empty($settings['bookmarks'])): ?>
+            <?php foreach ($settings['bookmarks'] as $bookmark): ?>
+            <?php
+                    // Bezpečné zpracování
+                    $title = htmlspecialchars($bookmark['title'] ?? '');
+                    $url = htmlspecialchars($bookmark['url'] ?? '#');
+                    $category = htmlspecialchars($bookmark['category'] ?? '');
+                    ?>
+            <a href="<?= $url ?>" class="bookmark" data-category="<?= $category ?>"><?= $title ?></a>
+            <?php endforeach; ?>
+            <?php else: ?>
+            <p>Žádné záložky nejsou uložené.</p>
+            <?php endif; ?>
+
+        </section>
+        <?php
+    }
+  ?>
+    </main>
+
+    <nav class="bottom-navbar">
+        <a href="?dash" class="nav-icon <?php if (isset($_GET['dash'])) { echo "active"; } ?>" title="Dashboard">
+            <img src="../logo/dnx-logo_mini.ico" alt="Logo">
+        </a>
+        <a href="?rss" class="nav-icon <?php if (isset($_GET['rss'])) { echo "active"; } ?>" title="RSS feed">📡</a>
+        <a href="?set" class="nav-icon <?php if (isset($_GET['set'])) { echo "active"; } ?>" title="Settings">⚙️</a>
+    </nav>
+
+    <!-- Javascript pro dash -->
+    <?php if (!(isset($_GET['rss']) || isset($_GET['set'])))
+    { echo "<script src='js/filter-bookmark.js'></script>"; } ?>
+    <script src="js/scroll-wallpaper.js"></script>
+    <!-- Javascript - Obecné -->
+    <script src="js/navbar-hide.js"></script>
+    <script src="js/logo-animated.js"></script>
+    <!-- Javascript pro nastavení -->
+    <?php if (isset($_GET['set']))
+    { echo '<script src="js/settings-add.js"></script>
+            <script src="js/settings-wallpaper.js"></script>'; } ?>
 
 </body>
+
 
 </html>

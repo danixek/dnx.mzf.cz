@@ -1,0 +1,3 @@
+<FilesMatch "\.secret\.php$">
+    Require all denied
+</FilesMatch>

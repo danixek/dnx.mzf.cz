@@ -1,0 +1,3 @@
+*.secret.php
+/dashboard/data/users/*
+!/dashboard/data/users/.gitkeep

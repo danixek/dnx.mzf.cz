@@ -119,7 +119,7 @@
       "shortDescription": "Správce pojištěnců a pojištění v C# .NET",
       "note": "Projekt vznikl jako závěrečný úkol během rekvalifikace, ale původní verze mi přišla nedotažená a nevhodná pro portfolio – částečně kvůli omezením slabšího notebooku a nemožnosti využít placené nástroje jako MidJourney či ChatGPT. Rád bych jej vizuálně i technicky posunul dál, aby lépe odrážel můj potenciál pro budoucího zaměstnavatele.",
       "completionDate": "2025-06",
-      "version": "0.57 Hotfix",
+      "version": "0.60",
       "tags": "C#, ASP.NET, Bootstrap, Entity Framework, SQL",
       "links": [
         {
@@ -147,14 +147,14 @@
       ],
       "changelog": [
         {
-          "version": "0.60",
-          "date": "2025-06",
-          "notes": "Drobná úprava ve vzhledovém redesingu - zarovnány formuláře\nNyní se nad patičkou webu zobrazují články."
+          "version": "0.62",
+          "date": "2025-07",
+          "notes": "Přidána základní registrace uživatelů.\nProzatím není možné přidávat ani upravovat role (úrovně oprávnění) uživatelských účtů (superadmin).\nAdministrace stále není oddělena od uživatelské části webu.\nDo registračního formuláře bylo přidáno datum narození, které dříve chybělo, ačkoliv bylo požadováno v kódu."
         },
         {
-          "version": "0.58",
+          "version": "0.60",
           "date": "2025-06",
-          "notes": "Mírný pokrok ve vzhledovém redesingu.\n předělána sekce kontakt - patička webu"
+          "notes": "Byl proveden vzhledový redesing\nNyní se na hlavní stránce zobrazují články\nPředělána sekce Kontakt - patička webu"
         },
         {
           "version": "0.57 Hotfix",
