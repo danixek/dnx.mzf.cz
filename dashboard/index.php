@@ -90,7 +90,7 @@
             transform: translate(-50%, -50%);
         ' 
         alt='Logo'>";
-        echo '<div class="rss-feed" style="position: absolute; top: 400px; margin: 0px 70px">';
+        echo '<div class="rss-feed" style="position: absolute; top: 400px; margin: 0px 20%">';
         foreach ($items as $article) {
             $title = htmlspecialchars($article['title']);
             $link = htmlspecialchars($article['link']);
