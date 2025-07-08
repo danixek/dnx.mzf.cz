@@ -1,3 +1,7 @@
 <FilesMatch "\.secret\.php$">
     Require all denied
 </FilesMatch>
+
+# Zákaz přímého přístupu do /vendor a /data složek
+RedirectMatch 403 ^/vendor/
+RedirectMatch 403 ^/data/
