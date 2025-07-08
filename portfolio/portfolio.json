@@ -285,7 +285,7 @@
       "shortDescription": "Domovská stránka s Google přihlášením, záložkami, RSS a tapetou.",
       "note": "Projekt vznikl během studia na učilišti jako osobní responzivní domovská stránka prohlížeče. Dnes je připravená k použití i pro ostatní uživatele.",
       "completionDate": "2025-07",
-      "version": "1.80",
+      "version": "1.8",
       "tags": "Javascript, PHP, HTML, CSS",
       "links": [
         {
@@ -312,12 +312,12 @@
       ],
       "changelog": [
         {
-          "version": "1.85",
+          "version": "1.8",
           "date": "2025-07",
           "notes": "Přidány tapety, včetně možnosti pozicování tapety (např. left center apod.)\nPřidáno přihlašování přes Google účet\nDo nastavení přidána správa záložek a RSS kanálů\nPřidány RSS zprávy do dashboardu\nPřidán náhled tapety — při výběru se pozadí mění ještě před uložením\nPřidán výběr, který externí vyhledávač se má použít při užití vestavěného vyhledávacího pole.\nDosud NEBYLA přidána možnost měnit pořadí záložek (Drag & Drop)\nDosud NEBYLO přidáno zobrazení záložky už z nastavení s atributem target _blank\nDosud NEBYLA přidána možnost záložku deaktivovat (skrýt bez smazání)."
         },
         {
-          "version": "1.5",
+          "version": "1.4",
           "date": "2025-05",
           "notes": "Web prošel kompletním redesignem a nově je koncipován jako multifunkční aplikace.\nVyhledávání zahrnuje našeptávač i živé filtrování zobrazených záložek.\nPodpora tagů zatím znovu nebyla implementována.\nPřidány přepínatelné kategorie."
         },
