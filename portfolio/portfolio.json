@@ -62,11 +62,11 @@
       "status": [
         "alpha"
       ],
-      "thumbnail": "taskami_thumb.png",
+      "thumbnail": "taskami_thumb.webp",
       "gallery": [
-        "taskami1.png",
-        "taskami2.png",
-        "taskami3.png"
+        "taskami1.webp",
+        "taskami2.webp",
+        "taskami3.webp"
       ],
       "changelog": [
         {
@@ -99,10 +99,10 @@
         "completed",
         "tester"
       ],
-      "thumbnail": "todoistWidget_thumb.png",
+      "thumbnail": "todoistWidget_thumb.webp",
       "gallery": [
-        "todoistWidget1.png",
-        "todoistWidget2.png"
+        "todoistWidget1.webp",
+        "todoistWidget2.webp"
       ],
       "changelog": [
         {
@@ -138,12 +138,12 @@
       ],
       "thumbnail": "pojistakNET_thumb.webp",
       "gallery": [
-        "pojistakNET1.png",
-        "pojistakNET2.png",
-        "pojistakNET3.png",
-        "pojistakNET4.png",
-        "pojistakNET5.png",
-        "pojistakNET6.png"
+        "pojistakNET1.webp",
+        "pojistakNET2.webp",
+        "pojistakNET3.webp",
+        "pojistakNET4.webp",
+        "pojistakNET5.webp",
+        "pojistakNET6.webp"
       ],
       "changelog": [
         {
@@ -228,12 +228,12 @@
       ],
       "thumbnail": "devPortfolio_thumb.webp",
       "gallery": [
-        "devPortfolio1.png",
-        "devPortfolio2.png",
-        "devPortfolio3.png",
-        "devPortfolio4.png",
-        "devPortfolio5.png",
-        "devPortfolio6.png"
+        "devPortfolio1.webp",
+        "devPortfolio2.webp",
+        "devPortfolio3.webp",
+        "devPortfolio4.webp",
+        "devPortfolio5.webp",
+        "devPortfolio6.webp"
       ],
       "changelog": [
         {
@@ -303,12 +303,12 @@
       ],
       "thumbnail": "dashboard_thumb.webp",
       "gallery": [
-        "dashboard1.png",
-        "dashboard2.png",
-        "dashboard3.png",
-        "dashboard4.png",
-        "dashboard5.png",
-        "dashboard6.png"
+        "dashboard1.webp",
+        "dashboard2.webp",
+        "dashboard3.webp",
+        "dashboard4.webp",
+        "dashboard5.webp",
+        "dashboard6.webp"
       ],
       "changelog": [
         {
@@ -360,10 +360,10 @@
       "status": [
         "beta"
       ],
-      "thumbnail": "dBlog_thumb.png",
+      "thumbnail": "dBlog_thumb.webp",
       "gallery": [
-        "dBlog1.png",
-        "dBlog2.png"
+        "dBlog1.webp",
+        "dBlog2.webp"
       ],
       "changelog": [
         {
