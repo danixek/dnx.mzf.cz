@@ -118,8 +118,8 @@
       "description": "Správa pojištěnců a pojištění v C# a ASP.NET za pomocí MS-SQL, Entity Frameworku a Bootstrapu.",
       "shortDescription": "Správce pojištěnců a pojištění v C# .NET",
       "note": "Projekt vznikl jako závěrečný úkol během rekvalifikace, ale původní verze mi přišla nedotažená a nevhodná pro portfolio – částečně kvůli omezením slabšího notebooku a nemožnosti využít placené nástroje jako MidJourney či ChatGPT. Rád bych jej vizuálně i technicky posunul dál, aby lépe odrážel můj potenciál pro budoucího zaměstnavatele.",
-      "completionDate": "2025-06",
-      "version": "0.60",
+      "completionDate": "2025-07",
+      "version": "0.64",
       "tags": "C#, ASP.NET, Bootstrap, Entity Framework, SQL",
       "links": [
         {
@@ -132,8 +132,7 @@
         }
       ],
       "status": [
-        "beta",
-        "forRemake",
+        "completed",
         "chatgpt"
       ],
       "thumbnail": "pojistakNET_thumb.webp",
@@ -147,9 +146,29 @@
       ],
       "changelog": [
         {
-          "version": "0.62",
+          "version": "0.80",
           "date": "2025-07",
-          "notes": "Přidána základní registrace uživatelů.\nProzatím není možné přidávat ani upravovat role (úrovně oprávnění) uživatelských účtů (superadmin).\nAdministrace stále není oddělena od uživatelské části webu.\nDo registračního formuláře bylo přidáno datum narození, které dříve chybělo, ačkoliv bylo požadováno v kódu."
+          "notes": "Nyní již i superadmin může registrovat nové uživatele. Upraveno logování, čištění kódu a oprava chyb v backend logice."
+        },
+        {
+          "version": "0.75",
+          "date": "2025-07",
+          "notes": "Přidáno logování do aplikace.\nNyní lze přidávat, upravovat a mazat články - nově se ukládají do databáze.\nDosud nebylo přidáno stránkování v administrativě superadmina, a ani ve výpisu článků."
+        },
+        {
+          "version": "0.70",
+          "date": "2025-07",
+          "notes": "Byl proveden redesign administračního navbaru - nyní plně začleněn do navbaru namísto tlačítek.\nSuperadminovi se již zobrazuje možnost přiřazovat a odebírat uživatelům admin práva.\nNyní se superadminovi zobrazuje možnost přidávat/mazat/editovat uživatele a adminy.\nByl navržen základ pro přidávání článků a napojení do databáze.\nPřidáno UI pro prohlížení logu superadminem (vedoucím); díky kterému může kontrolovat činnost adminů (pracovníků pojištovny)."
+        },
+        {
+          "version": "0.65",
+          "date": "2025-07",
+          "notes": "Byly uživatelským účtům přiřazeny role - user, admin, superadmin\nPrvní registrovaný uživatel se stane superadminem; správcem admin účtů (ještě neimplementováno) a editorem článků (též neimplementováno).\nAdmin správa byla oddělena od uživatelské části webu."
+        },
+        {
+          "version": "0.61",
+          "date": "2025-07",
+          "notes": "Přidána základní registrace uživatelů.\nProzatím není možné přidávat ani upravovat role (úrovně oprávnění) uživatelských účtů (superadmin).\nDo registračního formuláře bylo přidáno datum narození, které dříve chybělo, ačkoliv bylo požadováno v kódu."
         },
         {
           "version": "0.60",

@@ -1,0 +1,9 @@
+Nápady na projekty do portfolia:
+
+* Taskami - kombinace self-hostingu, Todoistu a Redmine.
+* DarkWave Player (alternativní název: Aether)
+    - Přehrávač hudby (a videí)
+    - Koncipované jako mobilní aplikace (a možná i jako desktop)
+    - Flutter vs Kotlin; není lepší Flutter pro jednotnou (mobilní i desktop) backend logiku?
+* Rozšíření prohlížeče "Candyroll" pro Crunchyroll, který by fetchoval fan suby přímo do přehrávače crunchyrollu
+* Rozšíření přidávající český překlad z karaoketexty přímo do titulků youtube videí.
