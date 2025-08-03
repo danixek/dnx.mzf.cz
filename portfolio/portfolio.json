@@ -57,8 +57,18 @@
       "shortDescription": "To-Do List s Pomodoro funkcí",
       "note": "Projekt je ve velmi rané (alpha) fázi vývoje.",
       "completionDate": null,
-      "version": "0.1 Alpha",
+      "version": "0.2 Alpha",
       "tags": "C#, WPF, API, ASP.NET",
+      "links": [
+        {
+          "type": "download",
+          "url": "https://github.com/danixek/Taskami/archive/refs/heads/master.zip"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/Taskami"
+        }
+      ],
       "status": [
         "alpha"
       ],
