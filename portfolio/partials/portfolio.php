@@ -181,6 +181,17 @@
                                                 title="C# technologie pro tvorbu UI programů">WPF</label>
                                         </div>
                                         <div class="form-check filter-tristate-wrapper" tabindex="0"
+                                            aria-checked="mixed" role="checkbox" data-tech="api"
+                                            data-filter-state="null" id="filterApi">
+                                            <input type="checkbox" class="form-check-input filter-tristate-checkbox"
+                                                id="filterApi-checkbox" hidden>
+                                            <span class="custom-checkbox"></span>
+                                            <label for="filterApi-checkbox" data-bs-tooltip="tooltip"
+                                                title="Rozhraní pro komunikaci mezi aplikacemi">API</label>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-grid">
+                                        <div class="form-check filter-tristate-wrapper" tabindex="0"
                                             aria-checked="mixed" role="checkbox" data-tech="bootstrap"
                                             data-filter-state="null" id="filterBootstrap">
                                             <input type="checkbox" class="form-check-input filter-tristate-checkbox"
@@ -189,8 +200,6 @@
                                             <label for="filterBootstrap-checkbox" data-bs-tooltip="tooltip"
                                                 title="CSS framework pro rychlou tvorbu moderních a responzivních webů">Bootstrap</label>
                                         </div>
-                                    </div>
-                                    <div class="checkbox-grid">
                                         <div class="form-check filter-tristate-wrapper" tabindex="0"
                                             aria-checked="mixed" role="checkbox" data-tech="sql"
                                             data-filter-state="null" id="filterSQL">

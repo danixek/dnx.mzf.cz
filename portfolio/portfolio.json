@@ -53,12 +53,12 @@
     {
       "id": 0,
       "title": "Taskami",
-      "description": "WPF aplikace pro správu úkolů, která kombinuje funkce Pomodoro a To-Do Listu pro zvýšení produktivity.",
-      "shortDescription": "WPF To-Do s Pomodoro funkcí",
+      "description": "Aplikace pro správu úkolů, která kombinuje funkce Pomodoro a To-Do Listu pro zvýšení produktivity.",
+      "shortDescription": "To-Do List s Pomodoro funkcí",
       "note": "Projekt je ve velmi rané (alpha) fázi vývoje.",
       "completionDate": null,
       "version": "0.1 Alpha",
-      "tags": "C#, WPF",
+      "tags": "C#, WPF, API, ASP.NET",
       "status": [
         "alpha"
       ],
@@ -70,9 +70,14 @@
       ],
       "changelog": [
         {
+          "version": "0.2 Alpha",
+          "date": "2025-08",
+          "notes": "Vygenerovány Taskami.API a Taskami.Client dle Todoist OpenAPI JSON specification šablony za pomocí openapi-generator-cli\nProjekt rozšířen - kromě WPF je v plánu vytvořit i webovou verzi."
+        },
+        {
           "version": "0.1 Alpha",
           "date": "2025-05",
-          "notes": "Náčrt uživatelského rozhraní"
+          "notes": "Náčrt uživatelského rozhraní (WPF)"
         }
       ]
     },
