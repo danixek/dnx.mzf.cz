@@ -55,9 +55,9 @@
       "title": "Taskami",
       "description": "Aplikace pro správu úkolů, která kombinuje funkce Pomodoro a To-Do Listu pro zvýšení produktivity.",
       "shortDescription": "To-Do List s Pomodoro funkcí",
-      "note": "Projekt je ve velmi rané (alpha) fázi vývoje.",
+      "note": "Projektu stále chybí vlastní API backend. Nicméně napojení na Todoist API funguje.",
       "completionDate": null,
-      "version": "0.2 Alpha",
+      "version": "0.2",
       "tags": "C#, WPF, API, ASP.NET",
       "links": [
         {
@@ -70,7 +70,7 @@
         }
       ],
       "status": [
-        "alpha"
+        "beta"
       ],
       "thumbnail": "taskami_thumb.webp",
       "gallery": [
@@ -80,7 +80,27 @@
       ],
       "changelog": [
         {
-          "version": "0.2 Alpha",
+          "version": "0.35 Alpha",
+          "date": "2025-08",
+          "notes": "Přidáno měsíční zobrazení úkolů.\nPřidán inbox pro nezařazené projekty.\nUpraveno řazení úkolů pro dnešní den.\nStránka s dnešními úkoly byla nastavena jako defaultní (Index) stránkou místo Inboxu."
+        },        
+        {
+          "version": "0.30 Alpha",
+          "date": "2025-08",
+          "notes": "Barva času u úkolů se mění dle toho, zda projekt je zmeškaný (červená), je na čase jej plnit (oranžová) či je ještě dostatek času (zelená).\nZákladní šablona úkolů upravena."
+        },
+        {
+          "version": "0.25 Alpha",
+          "date": "2025-08",
+          "notes": "Ladění UI pro úkoly dnešního dne\nVytvořena základní šablona zobrazování úkolů k znovuužití.\nNyní po kliknutí na kolečko se označí úkol za dokončený.\nKolečko mění barvu dle důležitosti úkolu."
+        },
+        {
+          "version": "0.20 Alpha",
+          "date": "2025-08",
+          "notes": "Navrhnuto uživatelské rozhraní ASP.NET webové aplikace.\nImplementováno Todoist API, ačkoliv zatím Taskami nemá vlastní alternativu pro Todoist API backend.\nPřidáno zobrazení úkolů pro dnešní den."
+        },
+        {
+          "version": "0.15 Alpha",
           "date": "2025-08",
           "notes": "Vygenerovány Taskami.API a Taskami.Client dle Todoist OpenAPI JSON specification šablony za pomocí openapi-generator-cli\nProjekt rozšířen - kromě WPF je v plánu vytvořit i webovou verzi."
         },
