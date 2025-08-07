@@ -55,7 +55,7 @@
       "title": "Taskami",
       "description": "Aplikace pro správu úkolů, která kombinuje funkce Pomodoro a To-Do Listu pro zvýšení produktivity.",
       "shortDescription": "To-Do List s Pomodoro funkcí",
-      "note": "Projektu stále chybí vlastní API backend. Nicméně napojení na Todoist API funguje.",
+      "note": "Projektu stále chybí vlastní API backend; nicméně napojení na Todoist API funguje. Tato ASP.NET verze stále neumožňuje self-hosting a příhlašování google účtem. Je v plánu vytvořit i WPF (exe) verzi.",
       "completionDate": "2025-08",
       "version": "0.30",
       "tags": "C#, WPF, API, ASP.NET",
@@ -261,11 +261,11 @@
     {
       "id": 3,
       "title": "DEV portfolio",
-      "description": "Webové portfolio vytvořené pomocí Bootstrapu, s důrazem na responzivitu, přehlednost a snadnou rozšiřitelnost.",
+      "description": "Webové portfolio vytvořené pomocí Bootstrapu, s důrazem na responzivitu, přehlednost a snadnou rozšiřitelnost. Můj [ d] blog je víc než jen doplněk portfolia - je to prostor pro mé myšlenky. Od programování, přes školství, motivaci a MBTI, až po psychologii a společenská témata. Tvořím ho jako vývojář, který hledá smysl i mimo klávesnici.",
       "shortDescription": "Webové portfolio k prezentaci",
-      "note": "Stránka reprezentuje můj pokrok ve vývoji - v technickém i designovém smyslu. V galerii je také patrné přijmení 'Černý', které mi přijde zvučné a sémanticky natolik blízké, až zvažuji jeho přijetí jako osobní značky.",
+      "note": "Stránka reprezentuje můj pokrok ve vývoji - v technickém i designovém smyslu. V galerii je také patrné přijmení 'Černý', které mi přijde zvučné a sémanticky natolik blízké, až zvažuji jeho přijetí jako osobní značky. Články [ d] blogu jsou vytvořené v Markdownu",
       "completionDate": "2025-06",
-      "version": "1.00",
+      "version": "1.11",
       "tags": "PHP, Bootstrap, Javascript, HTML, CSS",
       "links": [
         {
@@ -291,6 +291,16 @@
         "devPortfolio6.webp"
       ],
       "changelog": [
+        {
+          "version": "1.11",
+          "date": "2025-08",
+          "notes": "Blog sloučen s DEV portfoliem."
+        },
+        {
+          "version": "1.11 - [ d] blog",
+          "date": "2025-05",
+          "notes": "Blog vytvořen - sdílí vzhled portfolia.\nPokročilé filtry dosud nepřidány\nImprovizované UI rozhraní"
+        },
         {
           "version": "1.10",
           "date": "2025-06",
@@ -390,41 +400,6 @@
           "version": "1.0",
           "date": "2018-03",
           "notes": "Vytvořena hlavní plocha s vyhledávacím formulářem - po scrollování jsou dostupné i záložky, které se responzivně přizpůsobují velikosti okna."
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "[ d] blog",
-      "description": "Blog je víc než jen doplněk portfolia - je to prostor pro mé myšlenky. Od programování, přes školství, motivaci a MBTI, až po psychologii a společenská témata. Tvořím ho jako vývojář, který hledá smysl i mimo klávesnici.",
-      "shortDescription": "Blog nejen k portfoliu, ale i pro mé myšlenky",
-      "note": "Články [ d] blogu jsou vytvořené v Markdownu",
-      "completionDate": "2025-05",
-      "version": "0.85",
-      "tags": "PHP, Bootstrap, Markdown, HTML, CSS",
-      "links": [
-        {
-          "type": "preview",
-          "url": "https://dnx.mzf.cz/blog"
-        },
-        {
-          "type": "github",
-          "url": ""
-        }
-      ],
-      "status": [
-        "beta"
-      ],
-      "thumbnail": "dBlog_thumb.webp",
-      "gallery": [
-        "dBlog1.webp",
-        "dBlog2.webp"
-      ],
-      "changelog": [
-        {
-          "version": "0.85",
-          "date": "2025-05",
-          "notes": "Blog vytvořen - sdílí vzhled portfolia.\nPokročilé filtry dosud nepřidány\nImprovizované UI rozhraní"
         }
       ]
     }
