@@ -81,6 +81,11 @@
       ],
       "changelog": [
         {
+          "version": "0.35",
+          "date": "2025-08",
+          "notes": "Todoist API klíč se nyní načítá a ukládá za pomocí databáze - z bezpečnostních důvodů\nBylo přidáno logo"
+        }, 
+        {
           "version": "0.30",
           "date": "2025-08",
           "notes": "Přidáno měsíční zobrazení úkolů.\nPřidán inbox pro nezařazené projekty.\nUpraveno řazení úkolů pro dnešní den.\nStránka s dnešními úkoly byla nastavena jako defaultní (Index) stránkou místo Inboxu."
