@@ -270,7 +270,7 @@
       "shortDescription": "Webové portfolio k prezentaci",
       "note": "Stránka reprezentuje můj pokrok ve vývoji - v technickém i designovém smyslu. V galerii je také patrné přijmení 'Černý', které mi přijde zvučné a sémanticky natolik blízké, až zvažuji jeho přijetí jako osobní značky. Články [ d] blogu jsou vytvořené v Markdownu",
       "completionDate": "2025-06",
-      "version": "1.11",
+      "version": "1.12",
       "tags": "PHP, Bootstrap, Javascript, HTML, CSS",
       "links": [
         {
@@ -296,6 +296,11 @@
         "devPortfolio6.webp"
       ],
       "changelog": [
+        {
+          "version": "1.12",
+          "date": "2025-08",
+          "notes": "Rozšířen a vylepšen životopis - nyní má dvě stránky, a je ATS a Copy&Paste kompatibilní\nPřidána anglická verze životopisu"
+        },
         {
           "version": "1.11",
           "date": "2025-08",
