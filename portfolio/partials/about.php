@@ -127,6 +127,19 @@
                                     <i class="bi bi-file-earmark-pdf me-2"></i> Zobrazit životopis
                                 </a>
                             </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center"
+                                    href="/portfolio/CV_EN_Csharp_Daniel-Kefurt.pdf" download>
+                                    <i class="bi bi-download me-2"></i> Download CV
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center"
+                                    href="/portfolio/CV_EN_Csharp_Daniel-Kefurt.pdf" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-file-earmark-pdf me-2"></i> View CV
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
