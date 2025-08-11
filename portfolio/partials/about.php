@@ -110,7 +110,7 @@
                 <!-- Životopis ke stažení a zobrazení -->
                 <div class="justify-content-end ms-auto col-6 text-end d-flex align-items-center">
                     <div class="btn-group">
-                        <a href="/portfolio/CV_Daniel-Kefurt_Csharp.pdf" download
+                        <a href="/portfolio/CV_Csharp_Daniel-Kefurt.pdf" download
                             class="btn btn-themed d-flex align-items-center">
                             <i class="bi bi-download me-2"></i> Stáhnout životopis
                         </a>
