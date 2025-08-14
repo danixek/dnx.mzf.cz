@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs" class="theme-dark">
-
+<?php include '../logging.php'; ?>
 <head>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="../logo/dnx-logo_mini.ico" type="image/x-icon">

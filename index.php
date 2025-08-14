@@ -2,6 +2,7 @@
 <html lang="cs">
 
 <?php include 'partials/header.php'; ?>
+<?php include 'logging.php'; ?>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLWMMCFJX5"></script>

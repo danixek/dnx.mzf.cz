@@ -2,6 +2,7 @@
 <html lang="cs">
 
 <?php include 'partials/header.php'; ?>
+<?php include 'logging.php'; ?>
 
 <body>
 
