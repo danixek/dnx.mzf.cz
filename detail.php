@@ -2,7 +2,6 @@
 <html lang="cs">
 
 <?php include 'partials/header.php'; ?>
-<?php include 'logging.php'; ?>
 
 <body>
 
@@ -49,6 +48,7 @@
             exit;
         }
         ?>
+        <?php include 'logging.php'; ?>
 
         <!-- Sekce Detail - detail portfolia -->
         <section id="detail" class="<?= getBgClass() ?> py-5 text-white">

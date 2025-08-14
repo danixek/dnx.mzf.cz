@@ -11,9 +11,20 @@ $userLocation = $_SERVER['REQUEST_URI'];
 // IP adresa a prohlížeč
 $ip = $_SERVER['REMOTE_ADDR'];
 $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
-// řádek do logu
-$logLine = "[$date] - $userLocation - IP: $ip - UA: $ua" . PHP_EOL;
 
-// přidání do souboru
-file_put_contents($logFile, $logLine, FILE_APPEND | LOCK_EX);
+if (basename($_SERVER['PHP_SELF']) === "detail.php" && isset($_GET['id']) && htmlspecialchars($selectedProject['title']) !== null) {
+    // řádek do logu, i s názvem projektu
+    $logLine = "[$date] - " . htmlspecialchars($selectedProject['title']) . "$userLocation - IP: $ip - UA: $ua" . PHP_EOL;
+} else {
+    // řádek do logu - univerzální
+    $logLine = "[$date] - $userLocation - IP: $ip - UA: $ua" . PHP_EOL;
+}
+
+if ($ip !== "2001:1ae9:15e:bc00:a437:bf78:53d5:d7eb") {
+
+    // přidání do souboru
+    file_put_contents($logFile, $logLine, FILE_APPEND | LOCK_EX);
+
+}
+
 ?>
