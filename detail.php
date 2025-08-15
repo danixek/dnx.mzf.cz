@@ -48,7 +48,7 @@
             exit;
         }
         ?>
-        <?php include 'logging.php'; ?>
+        <?php include 'logger.php'; ?>
 
         <!-- Sekce Detail - detail portfolia -->
         <section id="detail" class="<?= getBgClass() ?> py-5 text-white">

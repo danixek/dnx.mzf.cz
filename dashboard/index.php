@@ -40,7 +40,7 @@
         echo ".background-overlay {";
         echo "background: url('img/" . htmlspecialchars($settings['wallpaper']) . "') no-repeat " . htmlspecialchars($settings['wallpaper_position']) . "/cover;";
         echo "} </style>";
-    } else { include '../logging.php'; }
+    } else { include '../logger.php'; }
     
     if (isset($_GET['rss'])) {
         // 'rss'
