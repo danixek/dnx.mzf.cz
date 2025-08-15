@@ -2,7 +2,7 @@
 <section id="home" class="<?= getBgClass() ?> text-center text-white">
     <div class="container pt-5">
         <h1 id="typewriter" class="typing-js display-4"></h1>
-        <p class="lead mt-4">Vytvářím řešení pomocí C#, ASP.NET a WPF;<br> od backendu po rozhraní</p>
+        <p class="lead mt-4">Vytvářím řešení pomocí C#, ASP.NET; zajímám se i o WPF<br>- od backendu po rozhraní</p>
     </div>
     <noscript>
         <p class="text-warning fw-bold">! Pro správné fungovnání stránky si zapněte Javascript !</p>

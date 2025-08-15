@@ -13,16 +13,16 @@
             <!-- Text -->
             <div class="col-lg-8 col-md-8 order-1 order-md-1">
                 <h3 class="fs-5 fw-bold">Technologie, které mě oslovují</h3>
-                <p class="section-content">Nejblíže mám k <strong>C#</strong> technologiím jako
-                    <strong>ASP.NET</strong> a <strong>WPF</strong>. Zároveň mám blízko k <strong>Linuxu</strong>,
+                <p class="section-content">Nejblíže mám k <strong>C#</strong> technologiím, zejména k <strong>ASP.NET</strong>. 
+                    Postupně se učím i <strong>WPF</strong>, které mě oslovilo pro vývoj desktopových aplikací. Zároveň mám blízko k <strong>Linuxu</strong>,
                     návrhu <strong>API</strong>, ale i <strong>bezpečnosti</strong> - vidím tam velký potenciál pro
                     další rozvoj.
                     Sleduji vývoj technologií i potřeb uživatelů – chci růst v kreativního, praktického
                     vývojáře s přesahem.
                     <br><br>
-                    Umím navrhnout databázový model, upravit UI pomocí <strong>Bootstrapu</strong> nebo
-                    složit moderní responzivní web – ať už v <strong>JavaScriptu</strong>, <strong>PHP</strong>, nebo s
-                    pomocí hotového UI frameworku.
+                    Vlastními projekty jsem se naučil navrhovat databázové modely, pracovat s UI v <strong>Bootstrapu</strong> a
+                    vytvářet moderní responzivní weby – ať už v <strong>JavaScriptu</strong>, <strong>PHP</strong>, nebo s
+                    hotového UI frameworku.
                 </p>
 
             </div>
