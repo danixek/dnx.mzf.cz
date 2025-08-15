@@ -53,11 +53,11 @@
     {
       "id": 0,
       "title": "Taskami",
-      "description": "Aplikace pro správu úkolů, která kombinuje funkce Pomodoro a To-Do Listu pro zvýšení produktivity.",
+      "description": "Aplikace pro správu úkolů kombinuje principy Pomodoro a To-Do Listu, navržená pro zvýšení produktivity jednotlivců i týmů.\n\nProjekt je koncipován pro self-hosting, aby uživatelé mohli mít plnou kontrolu nad svými daty, i když současná ASP.NET verze tuto možnost ještě plně nepodporuje. Od začátku stavím aplikaci tak, aby frontend komunikoval přes REST API, což umožní pozdější napojení vlastního backendu.",
       "shortDescription": "To-Do List s Pomodoro funkcí",
-      "note": "Projektu stále chybí vlastní API backend; nicméně napojení na Todoist API funguje. Tato ASP.NET verze stále neumožňuje self-hosting a příhlašování google účtem. Je v plánu vytvořit i WPF (exe) verzi.",
+      "note": "Inspiraci pro self-hosting mi poskytl Mastodon - kopie twitteru, kterou lze nainstalovat na vlastní web. Současná verze ještě neobsahuje plnohodnotný backend ani přihlašování přes Google účet, ale tyto funkce jsou plánovány. Je v plánu i WPF (exe) verze pro lokální použití.\n\nProjekt klade důraz na modulární architekturu a komunikaci přes API, což podporuje škálovatelnost a flexibilitu při rozšiřování funkcí. Uživatelé získávají nástroj pro organizaci úkolů s možností synchronizace se službou Todoist a s výhledem na budoucí self-hosting nasazení.",
       "completionDate": "2025-08",
-      "version": "0.30",
+      "version": "0.35",
       "tags": "C#, WPF, API, ASP.NET",
       "links": [
         {
@@ -120,12 +120,12 @@
     {
       "id": 1,
       "title": "Todoist Widget",
-      "description": "Widget pro integraci s aplikací Todoist pro lepší správu úkolů přímo z domácí obrazovky.",
+      "description": "Widget je nástroj pro rychlou správu úkolů přímo z domácí obrazovky, který usnadňuje práci s Todoist úkoly bez nutnosti otevírat hlavní aplikaci.",
       "shortDescription": "Todoist widget na plochu",
-      "note": "Na projektu jsem působil jako tester a zadavatel – využil jsem ChatGPT k vygenerování kódu, který jsem ladil podle chování aplikace. Chtěl jsem si vytvořit nástroj pro vlastní potřebu a ukázat, že i s pomocí AI lze vytvořit praktické řešení.",
+      "note": "Na projektu jsem působil primárně jako tester a zadavatel, zatímco samotný kód byl generován pomocí ChatGPT v Pythonu a následně upravován a laděn podle chování aplikace. Tato zkušenost mi umožnila procvičit testování funkcionality, ladění kódu a integraci AI-generovaného řešení do praktického nástroje.\n\nTechnické výzvy zahrnovaly porozumění API Todoist, správné zpracování dat a zabezpečení widgetu při zobrazení úkolů. Dále jsem se zaměřil na přehlednost a rychlou použitelnost nástroje, aby byl maximálně praktický pro každodenní použití.\n\nV budoucnu plánuji přidat kompatibilitu s Taskami, mým self-hosting klonem Todoistu, aby bylo možné synchronizovat úkoly mezi oběma platformami a rozšířit funkčnost widgetu.",
       "completionDate": "2024-06",
       "version": "1.0",
-      "tags": "Python",
+      "tags": "Python, API",
       "links": [
         {
           "type": "download",
@@ -156,9 +156,9 @@
     {
       "id": 2,
       "title": "Pojišťák.NET",
-      "description": "Správa pojištěnců a pojištění v C# a ASP.NET za pomocí MS-SQL, Entity Frameworku a Bootstrapu.",
+      "description": "Správa pojištěnců a pojištění v C#, ASP.NET, MS SQL, Entity Framework a Bootstrapu. Projekt zahrnuje autentizaci uživatelů, včetně správy pracovníků pojišťovny a moderní responzivní uživatelské rozhraní.",
       "shortDescription": "Správce pojištěnců a pojištění v C# .NET",
-      "note": "Projekt vznikl jako závěrečný úkol během rekvalifikace, ale původní verze mi přišla nedotažená a nevhodná pro portfolio – částečně kvůli omezením slabšího notebooku a nemožnosti využít placené nástroje jako MidJourney či ChatGPT. Rád bych jej vizuálně i technicky posunul dál, aby lépe odrážel můj potenciál pro budoucího zaměstnavatele.",
+      "note": "Původní projekt vznikl jako závěrečný úkol během rekvalifikačního kurzu a byl omezen technickými podmínkami (slabý hardware počítače) a pocitu nutnosti dodržet vizuální náhledy zadání. Rozhodl jsem se jej proto refaktorovat, a výsledkem je modernější aplikace.\n\nUž samotné rozhodnutí projekt refaktorovat a nespokojit se s výsledkem je známkou předčasné seniority u juniorního programátora.\n\nHrdý jsem na vlastní implementaci backendové logiky - přidání role správce webu pro administraci účtů uživatelů, včetně pracovníků pojišťovny. ChatGPT jsem využíval cíleně namísto dokumentace - juniornímu programátorovi totiž trvá, než se zorientuje v tom, proč to stále nejde (např. chybějící napojení v Program.cs) - projekt tak může být časově a motivačně náročný.\n\nStále se učím oblast kyberbezpečnosti, validaci formulářů a ochranu proti XSS či SQL injekcím – například práce s regulárními výrazy pro validaci polí je pro mě zatím výzvou. Navíc jsem chtěl i přidat možnost uživateli editovat vlastní profil, ale rozhodl jsem se projekt uzavřít a posunout se k jinému – dva menší projekty jsou v CV hodnotnější než jeden větší.",
       "completionDate": "2025-07",
       "version": "0.64",
       "tags": "C#, ASP.NET, Bootstrap, Entity Framework, SQL",
@@ -266,11 +266,11 @@
     {
       "id": 3,
       "title": "DEV portfolio",
-      "description": "Webové portfolio vytvořené pomocí Bootstrapu, s důrazem na responzivitu, přehlednost a snadnou rozšiřitelnost. Můj [ d] blog je víc než jen doplněk portfolia - je to prostor pro mé myšlenky. Od programování, přes školství, motivaci a MBTI, až po psychologii a společenská témata. Tvořím ho jako vývojář, který hledá smysl i mimo klávesnici.",
+      "description": "Webové portfolio vytvořené pomocí Bootstrapu, s důrazem na responzivitu, přehlednost a snadnou rozšiřitelnost.\nHlavní částí je seznam projektů s třístavovým filtrem (checkboxy), který umožňuje rychle vyhledat projekty podle technologie a typu – backendový výpis projektů je plně mé vlastní řešení a odráží moje architektonické myšlení.\n\nPortfolio obsahuje také [ d] blog, kde sdílím své postřehy od programování, přes školství a motivaci, až po psychologii a společenská témata.",
       "shortDescription": "Webové portfolio k prezentaci",
-      "note": "Stránka reprezentuje můj pokrok ve vývoji - v technickém i designovém smyslu. V galerii je také patrné přijmení 'Černý', které mi přijde zvučné a sémanticky natolik blízké, až zvažuji jeho přijetí jako osobní značky. Články [ d] blogu jsou vytvořené v Markdownu",
+      "note": "Portfolio reflektuje můj pokrok ve vývoji a designu.\nChatGPT jsem využil cíleně k urychlení dokončení portfolia, aby mi umožnil věnovat více času dalším projektům – přitom hlavní architektura, backend a třístavový filtr jsou zcela mé vlastní práce.\nUI a texty jsou vyladěné záměrně pro lepší úspěšnost u HR, ale primární zaměření zůstává na backendu a správné logice výpisu dat. Blogové články jsou psané v Markdownu pro snadnou správu a aktualizaci obsahu.\n\nV galerii je také patrné přijmení 'Černý', které mi přijde zvučné a sémanticky natolik blízké, až zvažuji jeho přijetí jako osobní značky.",
       "completionDate": "2025-06",
-      "version": "1.12",
+      "version": "1.13",
       "tags": "PHP, Bootstrap, Javascript, HTML, CSS",
       "links": [
         {
@@ -279,7 +279,7 @@
         },
         {
           "type": "github",
-          "url": ""
+          "url": "https://github.com/danixek/dnx.mzf.cz"
         }
       ],
       "status": [
@@ -296,6 +296,11 @@
         "devPortfolio6.webp"
       ],
       "changelog": [
+        {
+          "version": "1.13",
+          "date": "2025-08",
+          "notes": "Aktualizovány popisky projektů."
+        },
         {
           "version": "1.12",
           "date": "2025-08",
@@ -356,12 +361,12 @@
     {
       "id": 4,
       "title": "Dashboard",
-      "description": "Vlastní domovská stránka vytvořená v PHP, HTML, CSS a JS. Používá jednoduchý javascriptový našeptávač založený na záložkách a využívá vybrané PHP (Composer) balíčky pro lepší funkčnost a bezpečnost.",
+      "description": "Vlastní domovská stránka vytvořená v PHP, HTML, CSS a JavaScriptu, která umožňuje uživatelům ukládat záložky, měnit pozadí, nastavit výchozí vyhledávač a sledovat RSS kanály.\n\nProjekt využívá jednoduchý JavaScriptový našeptávač založený na záložkách a vybrané PHP balíčky přes Composer pro zvýšení bezpečnosti a rozšíření funkcionality. Dnes je připraven k použití pro ostatní uživatele a slouží jako platforma, kde si mohou upravit své prostředí podle vlastních preferencí.",
       "shortDescription": "Domovská stránka s Google přihlášením, záložkami, RSS a tapetou.",
-      "note": "Projekt vznikl během studia na učilišti jako osobní responzivní domovská stránka prohlížeče. Dnes je připravená k použití i pro ostatní uživatele.",
+      "note": "Jsem opravdu rád, že se mi podařilo implementovat form POSTy a Google OAuth přímo v PHP– dlouho jsem hledal funkční řešení a až díky ChatGPT jsem ho dokázal realizovat.\nPřed tímto projektem jsem se cítil omezen technickými podmínkami (neznalost Composer balíčků, free hosting nepodporoval https - podmínka pro Google OAuth), což mě zpočátku vedlo k tomu, že jsem se od projektů a pravidelného programování odkláněl a věnoval se jiným zájmům.",
       "completionDate": "2025-07",
       "version": "1.8",
-      "tags": "Javascript, PHP, HTML, CSS",
+      "tags": "Javascript, PHP, HTML, CSS, Composer, Google OAuth",
       "links": [
         {
           "type": "preview",
