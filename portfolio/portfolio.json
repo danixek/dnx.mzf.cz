@@ -120,7 +120,7 @@
     {
       "id": 1,
       "title": "Todoist Widget",
-      "description": "Widget je nástroj pro rychlou správu úkolů přímo z domácí obrazovky, který usnadňuje práci s Todoist úkoly bez nutnosti otevírat hlavní aplikaci.",
+      "description": "Widget je nástroj pro rychlou správu úkolů přímo z domácí obrazovky, který usnadňuje práci s Todoist úkoly bez nutnosti otevírat hlavní aplikaci.\n\nV nastavení lze měnit souřadnice umístění widgetu, a díky živému náhledu uživatel okamžitě vidí, kde se widget na ploše zobrazí.\n\n<strong>Interakce s úkoly je intuitivní:</strong>\nKliknutím na odrážku se úkol označí jako splněný. Barva odrážky zároveň vyjadřuje prioritu úkolu a barva času ukazuje jeho stav – červená znamená zmeškaný projekt, oranžová označuje, že je čas začít na úkolu pracovat, a zelená signalizuje, že je ještě dostatek času.",
       "shortDescription": "Todoist widget na plochu",
       "note": "Na projektu jsem působil primárně jako tester a zadavatel, zatímco samotný kód byl generován pomocí ChatGPT v Pythonu a následně upravován a laděn podle chování aplikace. Tato zkušenost mi umožnila procvičit testování funkcionality, ladění kódu a integraci AI-generovaného řešení do praktického nástroje.\n\nTechnické výzvy zahrnovaly porozumění API Todoist, správné zpracování dat a zabezpečení widgetu při zobrazení úkolů. Dále jsem se zaměřil na přehlednost a rychlou použitelnost nástroje, aby byl maximálně praktický pro každodenní použití.\n\nV budoucnu plánuji přidat kompatibilitu s Taskami, mým self-hosting klonem Todoistu, aby bylo možné synchronizovat úkoly mezi oběma platformami a rozšířit funkčnost widgetu.",
       "completionDate": "2024-06",
@@ -149,7 +149,7 @@
         {
           "version": "1.0",
           "date": "2024-06",
-          "notes": "Podpora Todoist API a synchronizace\nPřidáno přemístění widgety\nPřidáno průhledné pozadí\n Přidána možnost označit úkol jako splněný kliknutím na kolečko."
+          "notes": "Podpora Todoist API a synchronizace\nPřidáno přemístění widgety - změnou souřadnic se zobrazuje náhled, kam se widgeta umístí.\nBarva času u úkolů se mění dle toho, zda projekt je zmeškaný (červená), je na čase jej plnit (oranžová) či je ještě dostatek času (zelená).\nPřidáno průhledné pozadí\nPřidána možnost označit úkol jako splněný kliknutím na kolečko."
         }
       ]
     },
