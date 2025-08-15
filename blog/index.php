@@ -164,7 +164,6 @@
                                     $tags = $data['meta']['tags'] ?? [];
 
                                     echo "<h1>" . htmlspecialchars($title) . "</h1>";
-                                    echo "<p style='font-size: 120%'>" . htmlspecialchars($subtitle) . "</p>";
 
                                     echo "<div class='ms-4'>";
                                     echo $Parsedown->text($data['content']);

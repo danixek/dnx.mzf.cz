@@ -1,11 +1,10 @@
 ---
 title: "Moje cesta k programování"
 subtitle: "Od dětství ke kódu"
+image: "moje_cesta_k_programovani.png"
 date: 2025-06-03
 tags: [O mně]
 ---
-
-# Moje cesta k programování
 
 Každý, kdo se dnes živí programováním, má jiný příběh. Někdo začal kvůli videohrám, jiný přes matematiku, další úplně náhodou – třeba díky kamarádovi. U mě to byl dětský sen. Už tehdy mi připadalo zvláštní, že někdo touží být astronautem, policistou nebo hasičem – mně dávalo smysl být programátorem. Jako jediný obor totiž spojoval to, co mě fascinovalo: kreativitu, praktičnost a vnitřní estetiku logiky.
 
