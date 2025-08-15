@@ -20,7 +20,8 @@ if (basename($_SERVER['PHP_SELF']) === "detail.php" && isset($_GET['id']) && htm
     $logLine = "[$date] - $userLocation - IP: $ip - UA: $ua" . PHP_EOL;
 }
 
-if ($ip !== "2001:1ae9:15e:bc00:a437:bf78:53d5:d7eb") {
+if ($ip !== ("2001:1ae9:15e:bc00:a437:bf78:53d5:d7eb"
+|| "2001:1ae9:15e:bc00:34b2:24c1:bda8:b9a9")) {
 
     // přidání do souboru
     file_put_contents($logFile, $logLine, FILE_APPEND | LOCK_EX);

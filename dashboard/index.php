@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="cs" class="theme-dark">
-<?php include '../logging.php'; ?>
 <head>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="../logo/dnx-logo_mini.ico" type="image/x-icon">
@@ -41,7 +40,7 @@
         echo ".background-overlay {";
         echo "background: url('img/" . htmlspecialchars($settings['wallpaper']) . "') no-repeat " . htmlspecialchars($settings['wallpaper_position']) . "/cover;";
         echo "} </style>";
-    }
+    } else { include '../logging.php'; }
     
     if (isset($_GET['rss'])) {
         // 'rss'
