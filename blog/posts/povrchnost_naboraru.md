@@ -1,6 +1,7 @@
 ---
 title: "Povrchnost náboru a přehlížení skutečné hodnoty juniora"
-subtitle: "přehlížení skutečné hodnoty juniora""
+subtitle: "přehlížení skutečné hodnoty juniora"
+image: "povrchnost_naboraru.jpg"
 date: 2025-08-16
 tags: [O mně, Psychologie & MBTI]
 ---
