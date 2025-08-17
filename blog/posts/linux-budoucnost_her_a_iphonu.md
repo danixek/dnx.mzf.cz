@@ -1,12 +1,10 @@
 ---
-title: "Linux – budoucnost her a designu operačních systémů?"
+title: "Linux – budoucnost her a IPhonů?"
 subtitle: "Že by budoucnost Ubuntu Touch?"
 image: "linux-budoucnost_her_a_iphonu.png"
 date: 2025-08-16
 tags: [O mně, Psychologie & MBTI]
 ---
-
-# Linux – budoucnost her a designu operačních systémů?
 
 Linux, často vnímán spíše jako systém pro seriózní programátory, servery a nadšence, má všechny předpoklady stát se klíčovým hráčem i v oblasti her a designu. S příchodem zařízení jako **Steam Deck** se z Linuxu začíná stávat platforma, která nejen umožňuje hraní moderních her, ale zároveň nabízí vysokou míru přizpůsobitelnosti, výkonu a stability, kterou konzole či mainstreamové systémy často nemohou nabídnout.
 

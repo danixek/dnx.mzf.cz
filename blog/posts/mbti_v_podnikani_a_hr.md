@@ -6,8 +6,6 @@ date: 2025-08-16
 tags: [O mně, Psychologie & MBTI]
 ---
 
-## Jak porozumět lidem, kteří tvoří tým
-
 V dnešní době se stále častěji mluví o významu „soft skills“ a osobnostních typech při řízení týmů, budování firemní kultury nebo plánování kariéry. Jedním z nejrozšířenějších nástrojů, který umožňuje porozumět lidskému chování a preferencím, je **MBTI – Myers-Briggs Type Indicator**. 
 
 Pro mnoho lidí je MBTI stále tajemným pojmem – je to tajemné jako horoskopy, ale ve skutečnosti se jedná o dobře propracovanou pomůcku z psychologie, využívanou nejen v terapii, ale i v podnikání a HR. Je založeno na práci **C. G. Junga**, který zkoumal, jak lidé vnímají svět a jak se rozhodují, a přetváří tuto znalost do praktických dimenzí, které nám pomáhají lépe chápat rozdílné způsoby myšlení.
