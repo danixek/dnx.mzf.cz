@@ -18,7 +18,15 @@
     </a>
     <?php
     session_start();
-    define('IS_DEV', in_array($_SERVER['SERVER_NAME'], ['localhost', 'dnx.test']));
+    define('IS_DEV', in_array($_SERVER['SERVER_NAME'], ['localhost', 'dnx.test']) || isset($_GET['dev']));
+    $devFlagFile  = __DIR__ . "/data/users/test-user.json";
+    $devFlagTemplate = __DIR__ . '/test-user.template';
+// kontrola souboru – pokud existuje a je starší než 10 min → obnov z template
+if (IS_DEV && (time() - filemtime($devFlagFile) > 600)) {
+    if (file_exists($devFlagTemplate)) {
+        copy($devFlagTemplate, $devFlagFile); // překopíruje se vzor -> nový timestamp
+    }
+}
 
     if (isset($_SESSION['user'])) {
         $googleId = $_SESSION['user']['id'] ?? null;
@@ -29,18 +37,25 @@
         $settings = json_decode($settingsJson, true);
         } else {
             $settings = [
-                'wallpaper' => '05-wallpaper.jpg',
+                'wallpaper' => 'sanabi-wallpaper.jpg',
+                'wallpaper_position' => 'center',
                 'bookmarks' => [],
                 'rss' => [],
             ];
         }
         $_SESSION['settings'] = $settings;
+        $wallpaper = htmlspecialchars($settings['wallpaper']);
+        $wallpaperPosition = htmlspecialchars($settings['wallpaper_position']);
 
+    } else { 
+        include '../logger.php';
+        $wallpaper = "sanabi-wallpaper.jpg";
+        $wallpaperPosition = "center";
+    }
         echo "<style>";
         echo ".background-overlay {";
-        echo "background: url('img/" . htmlspecialchars($settings['wallpaper']) . "') no-repeat " . htmlspecialchars($settings['wallpaper_position']) . "/cover;";
+        echo "background: url('img/" . $wallpaper . "') no-repeat " . $wallpaperPosition . "/cover;";
         echo "} </style>";
-    } else { include '../logger.php'; }
     
     if (isset($_GET['rss'])) {
         // 'rss'
@@ -157,6 +172,7 @@
         <?php
             if (!isset($_SESSION['user'])) {
             echo '<p>Pro úpravu nastavení se prosím <a href="account/login.php" class="href-btn">přihlaš</a>.</p>';
+            echo '<p>A nebo si aplikaci můžeš i jen vyzkoušet pro <a href="account/login.php?dev" class="href-btn">testovací účely</a>.</p>';
             exit;
         }
         // Načtení nastavení uživatele
@@ -166,14 +182,6 @@
         if ($googleId && file_exists($settingsFile)) {
             $settingsJson = file_get_contents($settingsFile);
             $settings = json_decode($settingsJson, true);
-        } else {
-            $settings = [
-                'wallpaper' => 'tokyo-city-wallpaper.jpg',
-                'wallpaper_position' => 'center center',
-                'bookmarks' => [],
-                'rss' => [],
-                'search_engine' => 'google', // výchozí
-            ];
         }
 
         $_SESSION['settings'] = $settings;
@@ -373,7 +381,13 @@
             <a href="<?= $url ?>" class="bookmark" data-category="<?= $category ?>"><?= $title ?></a>
             <?php endforeach; ?>
             <?php else: ?>
-            <p>Žádné záložky nejsou uložené.</p>
+            <a href="https://youtube.com" class="bookmark" data-category="sluzby">YouTube</a>
+            <a href="https://facebook.com" class="bookmark" data-category="sluzby">Facebook</a>
+            <a href="https://irozhlas.cz" class="bookmark" data-category="zpravy">iRozhlas</a>
+            <a href="https://www.respekt.cz" class="bookmark" data-category="zpravy">RESPEKT</a>
+            <a href="https://www.reflex.cz" class="bookmark" data-category="zpravy">Reflex</a>
+            <a href="https://www.disneyplus.com/cs-cz/home" class="bookmark" data-category="geek">Disney+</a>
+            <p style="display: flex; flex-wrap: nowrap">Pro vlastní nastavení se musíte přihlásit.</p>
             <?php endif; ?>
 
         </section>

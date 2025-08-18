@@ -1,13 +1,13 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/google.secret.php';
-define('IS_DEV', in_array($_SERVER['SERVER_NAME'], ['localhost', 'dnx.test']));
+define('IS_DEV', in_array($_SERVER['SERVER_NAME'], ['localhost', 'dnx.test']) || isset($_GET['dev']));
 session_start();
 
 if (defined('IS_DEV') && IS_DEV) {
     // Falešný uživatel
     $_SESSION['user'] = [
-        'id' => '1234567890',
+        'id' => 'test-user',
         'name' => 'Testovací Uživatel',
         'email' => 'test@example.com',
         'picture' => 'default_avatar.jpg' // náhradní avatar
@@ -15,7 +15,7 @@ if (defined('IS_DEV') && IS_DEV) {
 
     // Výchozí nastavení
     $_SESSION['settings'] = [
-        'wallpaper' => '05-wallpaper.jpg',
+        'wallpaper' => 'sanabi-wallpaper.jpg',
         'wallpaper_position' => 'center center',
         'bookmarks' => [],
         'rss' => [],

@@ -1,0 +1,96 @@
+{
+  "wallpaper": "sanabi-wallpaper.jpg",
+  "wallpaper_position": "center center",
+  "search_engine": "google",
+  "rss": [
+    "https://www.irozhlas.cz/rss/irozhlas",
+    "https://www.root.cz/rss/clanky/"
+  ],
+  "bookmarks": [
+    {
+      "title": "YouTube",
+      "url": "https://youtube.com",
+      "category": "sluzby"
+    },
+    {
+      "title": "Facebook",
+      "url": "https://facebook.com",
+      "category": "sluzby"
+    },
+    {
+      "title": "Discord",
+      "url": "https://discord.com/app",
+      "category": "sluzby"
+    },
+    {
+      "title": "iRozhlas",
+      "url": "https://irozhlas.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "Aktuálně.cz",
+      "url": "https://aktualne.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "mandaty.cz",
+      "url": "https://mandaty.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "irozhlas.cz",
+      "url": "https://irozhlas.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "Hospodářské noviny",
+      "url": "https://hn.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "RESPEKT",
+      "url": "https://www.respekt.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "Reflex",
+      "url": "https://www.reflex.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "E15",
+      "url": "https://www.e15.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "info.cz",
+      "url": "https://www.info.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "echo24",
+      "url": "https://echo24.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "Parlamentní listy",
+      "url": "https://parlamentnilisty.cz",
+      "category": "zpravy"
+    },
+    {
+      "title": "Disney+",
+      "url": "https://www.disneyplus.com/cs-cz/home",
+      "category": "geek"
+    },
+    {
+      "title": "CrunchyRoll",
+      "url": "https://www.crunchyroll.com",
+      "category": "geek"
+    },
+    {
+      "title": "MyAnimeList",
+      "url": "https://myanimelist.net",
+      "category": "geek"
+    }
+  ]
+}
