@@ -13,7 +13,7 @@
                         $whitelist = [
                             'mbti_v_podnikani_a_hr.md',
                             'linux-budoucnost_her_a_iphonu.md',
-                            'proc_firmy_ztraci_kdyz_lpi_na_juniorech.md'
+                            'proc_firmy_ztraci.md'
                         ];
 
                         // vybrat jen soubory, které jsou ve whitelistu
