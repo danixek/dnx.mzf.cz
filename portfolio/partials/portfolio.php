@@ -332,7 +332,7 @@
                             <div class="justify-content-between align-items-center mt-auto flex-wrap" style="display: flex">
                                 <div class="flex-wrap w-100" style="display: flex">
                                     <?php foreach ($badgeKeys as $key): ?>
-                                        <?php if (isset($badgesMap[$key])):
+                                        <?php if (isset($badgesMap[$key]) && $badgesMap[$key]['statusVisible'] == "visible"):
                                             $b = $badgesMap[$key]; ?>
                                             <span
                                                 class="badge fw-bold bg-<?= htmlspecialchars($b['statusBackgroundColor']) ?> text-<?= htmlspecialchars($b['statusTextColor']) ?> mt-1 me-1"

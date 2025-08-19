@@ -124,7 +124,7 @@
                             <!-- Status badge, aneb verze projektu -->
                             <?php if (!empty($selectedProject['status'])): ?>
                                 <?php foreach ($selectedProject['status'] as $key): ?>
-                                    <?php if (isset($badgesMap[$key])):
+                                    <?php if (isset($badgesMap[$key]) && $badgesMap[$key]['statusVisible'] == "visible"):
                                         $b = $badgesMap[$key]; ?>
                                         <span
                                             class="badge fw-bold bg-<?= htmlspecialchars($b['statusBackgroundColor']) ?> text-<?= htmlspecialchars($b['statusTextColor']) ?> me-2"
