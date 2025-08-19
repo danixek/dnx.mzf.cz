@@ -15,7 +15,9 @@ Dva junioři mohou mít podobné znalosti. Jeden má formálně 12 let praxe, dr
 I bez dlouhé praxe může mít kandidát pevný přehled o oboru a chápat principy, které dokáže uplatnit v praxi. Motivace a zvídavost umožňují rychle dorovnat technické mezery a přinášet výsledky na úrovni zkušenějších kolegů.
 
 # Znát obor v souvislostech je důležitější
-Známka předčasné seniority u juniora se pozná podle toho, že chápe obor v souvislostech – umí řešit problémy, i když nezná všechny detaily. Takový člověk se nebojí hledat odpovědi, využít dokumentaci či nástroje jako ChatGPT a učí se přímo během práce. Fixace na „bezchybné znalosti před nástupem“ tedy nedává smysl – mnozí i zkušení kolegové řeší problémy za pochodu.
+Známka předčasné seniority u juniora se pozná podle toho, že chápe obor v souvislostech – umí řešit problémy, i když nezná všechny detaily. Takový člověk se nebojí hledat odpovědi, využít dokumentaci či nástroje jako ChatGPT a učí se přímo během práce.
+
+Fixace na „bezchybné znalosti před nástupem“ tedy nedává smysl – mnozí i zkušení kolegové řeší problémy za pochodu.
 
 # Loajalita není vždy ctnost
 Dlouhodobá věrnost jediné firmě se často přeceňuje. Ti, kdo prošli různými prostředími, přinášejí inspiraci a postupy, které mohou fungovat lépe. Přílišná fixace na „věrnost“ ochuzuje firmy o inovace a nové přístupy.
