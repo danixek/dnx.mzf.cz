@@ -11,6 +11,12 @@ Mnohé firmy si představují „ideálního juniora“ – několik let praxe, 
 # Roky praxe ≠ schopnosti
 Dva junioři mohou mít podobné znalosti. Jeden má formálně 12 let praxe, druhý jen pár projektů. Přesto může právě ten druhý překvapit rychlostí učení, otevřeností novým technologiím a schopností spolupracovat. Skutečná hodnota nevychází z počtu odpracovaných let, ale z drive a adaptability.
 
+Často se totiž setkáváme s tím, že požadavky v inzerátech neodpovídají realitě – například hledají juniora s 12 lety praxe. Autor nástroje FastAPI, Sebastián Ramírez, veřejně popsal situaci, kdy narazil na pracovní nabídku požadující více než 4 roky zkušeností s FastAPI – ale sám by se nemohl přihlásit, protože framework vytvořil jen 1,5 roku předtím. 🙂
+
+Junioři tak často nevědí, zda se mohou o danou pozici hlásit, když jsou nároky nesmyslně vysoké, očekává se od nich motivace a učenlivost - prý hledají někoho zkušenějšího s praxí či dali přednost někomu jinému; paradox spočívá v tom, že těch motivovaných je jak šafránu. A nebo jsou odmítnuti, i když požadavky působí nízko.
+
+Tento příklad ukazuje, že fixace na „počet let praxe“ může firmám bránit objevit skutečné talenty.
+
 # Přehled o oboru nemusí vyžadovat roky praxe
 I bez dlouhé praxe může mít kandidát pevný přehled o oboru a chápat principy, které dokáže uplatnit v praxi. Motivace a zvídavost umožňují rychle dorovnat technické mezery a přinášet výsledky na úrovni zkušenějších kolegů.
 
