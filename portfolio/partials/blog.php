@@ -1,4 +1,4 @@
-            <section id="blog" class="<?= getBgClass('bg-light-gray') ?> py-5 text-white">
+            <section id="blog" class="<?= getBgClass() ?> py-5 text-white">
                 <div class="container">
                     <div class="row g-3">
                         <h2 class="section-title mb-0 me-3">Články</h2>
