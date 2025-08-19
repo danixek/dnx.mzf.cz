@@ -32,7 +32,10 @@
         require('portfolio/partials/about.php');
 
         // Portfolio
-        require('portfolio/partials/portfolio.php'); ?>
+        require('portfolio/partials/portfolio.php');
+
+        // Blog
+        require('portfolio/partials/blog.php'); ?>
     </main>
 
     <footer>

@@ -1,16 +1,14 @@
 <?php
 $sectionIndex = 0;
 
-function getBgClass($exception = false) {
+function getBgClass($color = null) {
     global $sectionIndex;
 
-    if ($exception) {
-        return 'bg-white'; // nebo jiná pevná třída
-    }
+    if ($color) return $color;
 
     $class = ($sectionIndex % 2 === 0) ? 'bg-light-gray' : 'bg-dark-gray';
     $sectionIndex++;
-
     return $class;
 }
+
 ?>

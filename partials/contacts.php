@@ -1,5 +1,5 @@
 <!-- Sekce Kontakt -->
-<section id="contact" class="<?= getBgClass() ?> footer">
+<section id="contact" class="<?= getBgClass('') ?> footer">
     <div class="container">
         <h2 class="section-title">Kontakt</h2>
 
