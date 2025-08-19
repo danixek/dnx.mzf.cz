@@ -3,7 +3,7 @@ title: "MBTI v podnikání a HR"
 subtitle: "Jak porozumět lidem, kteří tvoří tým"
 image: "mbti_v_podnikani_a_hr.png"
 date: 2025-08-16
-tags: [O mně, Psychologie & MBTI]
+tags: [Nábor a hledání zaměstnání, Psychologie & MBTI]
 ---
 
 V dnešní době se stále častěji mluví o významu „soft skills“ a osobnostních typech při řízení týmů, budování firemní kultury nebo plánování kariéry. Jedním z nejrozšířenějších nástrojů, který umožňuje porozumět lidskému chování a preferencím, je **MBTI – Myers-Briggs Type Indicator**. 

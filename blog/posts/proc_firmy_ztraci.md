@@ -3,7 +3,7 @@ title: "Proč firmy ztrácí, když lpí na „dokonalých“ juniorech"
 subtitle: "přehlížení skutečné hodnoty juniora"
 image: "proc_firmy_ztraci.jpg"
 date: 2025-08-19
-tags: [Psychologie & MBTI]
+tags: [Nábor a hledání zaměstnání, Psychologie & MBTI]
 ---
 
 Mnohé firmy si představují „ideálního juniora“ – několik let praxe, perfektní portfolio a loajalitu k předchozím zaměstnavatelům. Tento ideál je ale vzácný, drahý a často kontraproduktivní. Náklady na jeho hledání prostřednictvím HR agentur převýší přínos, zatímco motivovaný junior bez praxe může být rychlejší, levnější a stejně efektivní volba.
