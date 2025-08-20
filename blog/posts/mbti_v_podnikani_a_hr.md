@@ -8,7 +8,7 @@ tags: [Nábor a hledání zaměstnání, Psychologie & MBTI]
 
 V dnešní době se stále častěji mluví o významu „soft skills“ a osobnostních typech při řízení týmů, budování firemní kultury nebo plánování kariéry. Jedním z nejrozšířenějších nástrojů, který umožňuje porozumět lidskému chování a preferencím, je **MBTI – Myers-Briggs Type Indicator**. 
 
-Pro mnoho lidí je MBTI stále tajemným pojmem – je to tajemné jako horoskopy, ale ve skutečnosti se jedná o dobře propracovanou pomůcku z psychologie, využívanou nejen v terapii, ale i v podnikání a HR. Je založeno na práci **C. G. Junga**, který zkoumal, jak lidé vnímají svět a jak se rozhodují, a přetváří tuto znalost do praktických dimenzí, které nám pomáhají lépe chápat rozdílné způsoby myšlení.
+Pro mnoho lidí je MBTI stále tajemným pojmem – připomíná horoskopy, ale ve skutečnosti jde o poměrně propracovanou pomůcku z psychologie, která se využívá nejen v terapii, ale i v podnikání a HR. Je založeno na práci C. G. Junga, jenž zkoumal, jak lidé vnímají svět a rozhodují se, a přetváří tuto znalost do praktických dimenzí, jež nám pomáhají lépe chápat různé způsoby myšlení, styly učení, komunikačních stylů či chování. MBTI není jedinou teorií – existují i další, propracovanější modely analytické psychologie – ale dokáže být užitečným nástrojem pro porozumění lidským preferencím a motivacím.
 
 ## Základní dimenze MBTI
 
@@ -58,4 +58,4 @@ MBTI totiž spíše kategorizuje určité preference (např. přemýšlivý, ana
 
 Například i v osobní rovině – jako INFJ jsem sledoval, k jakým typům bych měl mít romantický vztah. Nejčastěji se uvádí INFP (melancholička) nebo ENFP (sangvinička), oba zvídavé a analytické osobnosti se sklony k programování, což se v mém životě potvrzuje. Test už ale opomíjí, že i s ESFP (stereotyp sangviničky) může vztah dobře fungovat, pokud je tam opravdová motivace a ochota ke kompromisům; i snaha zaujmout politikou a programováním ji časem přestane bavit, pokud bude tento typ diskuze příliš častý, i když ji to bude ze začátku znít zajímavě.
 
-Takže ano – MBTI má určitý základ a při dobré interpretaci může dávat smysl. Problém je, že povrchní použití v HR spíše škodí, zatímco ten, kdo se v něm skutečně orientuje, dokáže vyčíst podstatu.
+Takže ano – MBTI má určitý základ a při dobré interpretaci může dávat smysl. Problém je, že povrchní použití v HR spíše škodí, zatímco ten, kdo se v něm skutečně orientuje, dokáže vyčíst podstatu – nebo případně využít jiné, propracovanější teorie.
