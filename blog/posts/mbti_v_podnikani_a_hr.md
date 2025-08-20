@@ -46,3 +46,16 @@ Praktické využití MBTI není o testech nebo výsledcích v papírové podobě
 ## Závěr
 
 Závěrem lze říci, že MBTI není kouzelný recept na úspěch, ale dobře využitý nástroj přináší výraznou přidanou hodnotu. Pomáhá firmám a týmům **pochopit, proč lidé jednají, jak jednají a jak s nimi efektivně spolupracovat**, a zároveň odhalit skrytý potenciál, který by jinak zůstal nevyužitý. Pro tech leady i HR profesionály je MBTI pozvánkou k tomu, aby více naslouchali, přizpůsobovali vedení a rozhodování individuálním potřebám a motivaci, čímž se zvyšuje produktivita, spokojenost i dlouhodobý růst týmu.
+
+# ----
+# Dodatek
+
+Pointou mého sdělení je, že MBTI – v kombinaci s analytickou psychologií – lze využít i ve firemním kontextu při náboru uchazečů. Sám jsem v minulosti, když jsem si prošel existenční krizí, použil analytickou psychologii k pozorování neuroticismu nebo reakcí typu Fight or Flight. Postupně jsem si všiml, že MBTI lze číst a analyzovat nejen terapeuticky, ale i v náborářském smyslu – pokud ho správně uchopíte a znáte jeho limity.
+
+Někdo by se samozřejmě mohl pozastavit nad tím, že přeci MBTI používá někdo spíše „rádoby HR“ na dogmatické úrovni; jenže zkušený personalista chápe i jeho omezení. Zkušené HR by mělo nejprve ujasnit, proč se daný uchazeč do firmy hodí nebo nehodí, a MBTI využít jen jako podpůrný nástroj k ověření. Často pak zjistí: vida, ono to sedí. Naopak rádoby HR se spokojí se šablonovitým přístupem – porovnává jen, jestli uchazeč odpovídá profilu již zaměstnaných, místo aby zkoumalo skutečný potenciál a motivaci.
+
+MBTI totiž spíše kategorizuje určité preference (např. přemýšlivý, analytický či empatický typ), ale nezachytí klíčovou věc: opravdovou touhu v dané práci něco dokázat. A právě tahle motivace a schopnost učit se bývá často silnějším faktorem úspěchu než „správně vyplněný dotazník“.
+
+Například i v osobní rovině – jako INFJ jsem sledoval, k jakým typům bych měl mít romantický vztah. Nejčastěji se uvádí INFP (melancholička) nebo ENFP (sangvinička), oba zvídavé a analytické osobnosti se sklony k programování, což se v mém životě potvrzuje. Test už ale opomíjí, že i s ESFP (stereotyp sangviničky) může vztah dobře fungovat, pokud je tam opravdová motivace a ochota ke kompromisům; i snaha zaujmout politikou a programováním ji časem přestane bavit, pokud bude tento typ diskuze příliš častý, i když ji to bude ze začátku znít zajímavě.
+
+Takže ano – MBTI má určitý základ a při dobré interpretaci může dávat smysl. Problém je, že povrchní použití v HR spíše škodí, zatímco ten, kdo se v něm skutečně orientuje, dokáže vyčíst podstatu.
