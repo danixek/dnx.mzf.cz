@@ -127,6 +127,13 @@
                             </li>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center"
+                                    href="/portfolio/CV_Csharp_Daniel-Kefurt_OLD.pdf" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-file-earmark-pdf me-2"></i> Varianta 2 (OLD)
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center"
                                     href="/portfolio/CV_EN_Csharp_Daniel-Kefurt.pdf" download>
                                     <i class="bi bi-download me-2"></i> Download CV
                                 </a>
