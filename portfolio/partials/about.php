@@ -42,11 +42,9 @@
                     pro ostatní, nebo v
                     každodenním životě.
                 </p>
-                <!--
                 <div class="text-end">
-                    <a href="/blog/" class="btn-link collapse-link">[Zobrazit článek]</a>
+                    <a href="/blog/?post=kdo_jsem_a_kam_smeruji" class="btn-link collapse-link">[Zobrazit článek]</a>
                 </div>
-                -->
                 <h3 class="sub-section-title fs-5 fw-bold">Růstové myšlení místo rutiny</h3>
                 <p class="section-content">Nebojím se jít proti proudu, když to vede k lepšímu řešení. Na střední škole
                     jsem se soustředil na budování růstového myšlení – učil jsem se přijímat výzvy, zkoušet nové cesty a
