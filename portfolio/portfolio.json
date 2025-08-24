@@ -75,6 +75,10 @@
         {
           "type": "github",
           "url": "https://github.com/danixek/Taskami"
+        },
+        {
+          "type": "preview",
+          "url": "https://taskami.tryasp.net/"
         }
       ],
       "status": [
@@ -178,6 +182,10 @@
         {
           "type": "github",
           "url": "https://github.com/danixek/PojistakNET"
+        },
+        {
+          "type": "preview",
+          "url": "https://pojistak.tryasp.net/"
         }
       ],
       "status": [
