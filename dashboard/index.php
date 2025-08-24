@@ -22,9 +22,9 @@
     $devFlagFile  = __DIR__ . "/data/users/test-user.json";
     $devFlagTemplate = __DIR__ . '/test-user.template';
 // kontrola souboru – pokud existuje a je starší než 10 min → obnov z template
-if (IS_DEV && (time() - filemtime($devFlagFile) > 600)) {
-    if (file_exists($devFlagTemplate)) {
-        copy($devFlagTemplate, $devFlagFile); // překopíruje se vzor -> nový timestamp
+if (IS_DEV && file_exists($devFlagTemplate)) {
+    if (!file_exists($devFlagFile) || (time() - filemtime($devFlagFile) > 600)) {
+        copy($devFlagTemplate, $devFlagFile); // překopíruje se dle vzoru -> nový timestamp
     }
 }
 
