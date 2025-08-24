@@ -159,7 +159,7 @@ body.scrolled::before {
     position: absolute;
     bottom: 100%;
     /* nad inputem */
-    left: 0;
+    max-width: 570px !important;
     width: 100%;
     /* důležité – roztáhne se na šířku wrapperu */
     box-sizing: border-box;
@@ -167,7 +167,7 @@ body.scrolled::before {
     color: var(--text-color);
     border: 1px solid #333;
     border-bottom: none;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 8px 8px;
     max-height: 200px;
     overflow-y: auto;
     z-index: 1000;
