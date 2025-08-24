@@ -1,23 +1,27 @@
 document.getElementById('add-bookmark').addEventListener('click', () => {
     const container = document.getElementById('bookmarks-container');
     const index = container.children.length;
+
     const div = document.createElement('div');
     div.className = 'bookmark-item';
+
+    // vezme options z hidden selectu
+    const optionsHtml = document.getElementById('category-template').innerHTML;
+
     div.innerHTML = `
         <input type="text" name="bookmarks[${index}][title]" placeholder="Název záložky" required>
         <input type="url" name="bookmarks[${index}][url]" placeholder="URL" required>
-                            <select name="bookmarks[<?= $i ?>][category]">
-                        <option value="">Vše</option>
-                        <?php foreach ($categories as $value => $label): ?>
-                        <option value="<?= $value ?>">
-                            <?= $label ?>
-                        </option>
-                        <?php endforeach; ?>
-                    </select>
+        <select name="bookmarks[${index}][category]">
+            ${optionsHtml}
+        </select>
         <button type="button" class="remove-bookmark delete-btn">Smazat</button>
     `;
+    const select = div.querySelector("select");
+    select.value = "";
+
     container.appendChild(div);
 });
+
 
 document.getElementById('bookmarks-container').addEventListener('click', e => {
     if (e.target.classList.contains('remove-bookmark')) {

@@ -267,7 +267,6 @@ if (IS_DEV && (time() - filemtime($devFlagFile) > 600)) {
             'uceni' => 'Učení'
         ];
 
-
         if (empty($bookmarks)) {
             $bookmarks = [['title' => '', 'url' => '', 'category' => '']];
         }
@@ -278,7 +277,7 @@ if (IS_DEV && (time() - filemtime($devFlagFile) > 600)) {
                         value="<?= htmlspecialchars($bookmark['title'] ?? '') ?>" required>
                     <input type="url" name="bookmarks[<?= $i ?>][url]" placeholder="URL"
                         value="<?= htmlspecialchars($bookmark['url'] ?? '') ?>" required>
-                    <select name="bookmarks[<?= $i ?>][category]">
+                    <select name="bookmarks[<?= $i ?>][category]" id="category-template">
                         <option value="">Vše</option>
                         <?php foreach ($categories as $value => $label): ?>
                         <option value="<?= $value ?>" <?= $value === $currentCategory ? 'selected' : '' ?>>
