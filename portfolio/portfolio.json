@@ -65,7 +65,7 @@
       "shortDescription": "To-Do List s Pomodoro funkcí",
       "note": "Inspiraci pro self-hosting mi poskytl Mastodon - kopie twitteru, kterou lze nainstalovat na vlastní web. Současná verze ještě neobsahuje plnohodnotný backend ani přihlašování přes Google účet, tyto funkce jsou však plánovány. Projekt podporuje flexibilní rozšiřování a připravuje prostor pro budoucí WPF verzi pro lokální použití.",
       "completionDate": "2025-08",
-      "version": "0.35",
+      "version": "0.40",
       "tags": "C#, WPF, API, ASP.NET",
       "links": [
         {
@@ -82,7 +82,7 @@
         }
       ],
       "status": [
-        "beta"
+        "alpha"
       ],
       "thumbnail": "taskami_thumb.webp",
       "gallery": [
@@ -93,12 +93,17 @@
       ],
       "changelog": [
         {
-          "version": "0.35",
+          "version": "0.40 Alpha",
+          "date": "2025-08",
+          "notes": "Added user accounts\nImplemented Settings page\nChanged API key storage\nCreated background color handler\nNow users can change app appearance from Settings\nRefactored project structure: Settings separated into its own controller, main controller cleaned up, task ordering moved from views to controller\nWeb deployment completed with free hosting\nRemoved appsettings.json from repo"
+        }, 
+        {
+          "version": "0.35 Alpha",
           "date": "2025-08",
           "notes": "Todoist API klíč se nyní načítá a ukládá za pomocí databáze - z bezpečnostních důvodů\nBylo přidáno logo"
         }, 
         {
-          "version": "0.30",
+          "version": "0.30 Alpha",
           "date": "2025-08",
           "notes": "Přidáno měsíční zobrazení úkolů.\nPřidán inbox pro nezařazené projekty.\nUpraveno řazení úkolů pro dnešní den.\nStránka s dnešními úkoly byla nastavena jako defaultní (Index) stránkou místo Inboxu."
         },        
