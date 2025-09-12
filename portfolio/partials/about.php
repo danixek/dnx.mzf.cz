@@ -130,13 +130,13 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center"
                                     href="/portfolio/CV_Csharp_Daniel-Kefurt_OLD.pdf" download>
-                                    <i class="bi bi-download me-2"></i> Stáhnout starou verzi
+                                    <i class="bi bi-download me-2"></i> Stáhnout staré CV
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center"
                                     href="/portfolio/CV_Csharp_Daniel-Kefurt_OLD.pdf">
-                                    <i class="bi bi-download me-2"></i> Zobrazit starou verzi CV
+                                    <i class="bi bi-download me-2"></i> Zobrazit staré CV
                                 </a>
                             </li>
                         </ul>
