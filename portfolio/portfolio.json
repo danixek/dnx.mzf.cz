@@ -173,11 +173,11 @@
     {
       "id": 2,
       "title": "Pojišťák.NET",
-      "description": "Webová aplikace pro správu pojištěnců a pojištění, postavená na C#, ASP.NET, MS SQL a Entity Frameworku. Umožňuje autentizaci uživatelů, správu pracovních rolí pojišťovny a moderní responzivní uživatelské rozhraní.\n\nSoučástí je role správce pro administraci uživatelských účtů a správy pojišťovny. Aplikace byla testována na Windows i Linuxu s využitím Dockeru pro databázi a podporuje rozšiřitelnost o další funkce. Refaktorovaná verze přináší modernější design a lepší strukturu kódu, což zvyšuje přehlednost a udržovatelnost projektu.",
+      "description": "Webová aplikace pro správu pojištěnců a pojištění, postavená na C#, ASP.NET, MS SQL a Entity Frameworku. Umožňuje autentizaci uživatelů, správu pracovních rolí pojišťovny a moderní responzivní uživatelské rozhraní.\n\nNad rámec původního zadání rekvalifikačního kurzu obsahuje aplikace i XSS ochranu, dvoufaktorovou autentizaci a roli správce pro administraci uživatelských účtů a adminů. Aplikace byla testována na Windows i Linuxu s využitím Dockeru pro databázi a podporuje rozšiřitelnost o další funkce. Refaktorovaná verze přináší modernější design a lepší strukturu kódu, což zvyšuje přehlednost a udržovatelnost projektu.",
       "shortDescription": "Správce pojištěnců a pojištění v C# .NET",
       "note": "Projekt vznikl jako závěrečný úkol rekvalifikačního kurzu a byl omezen technickými podmínkami. Refaktorizace projektu ukázala schopnost nespokojit se s prvotním výsledkem a přinést samostatně zpracovaná zlepšení. Při práci jsem zdokonalil backendovou logiku, administraci uživatelů a multiplatformní testování.",
-      "completionDate": "2025-07",
-      "version": "0.64",
+      "completionDate": "2025-09",
+      "version": "0.85",
       "tags": "C#, ASP.NET, Bootstrap, Entity Framework, SQL",
       "links": [
         {
@@ -208,9 +208,14 @@
       ],
       "changelog": [
         {
+          "version": "0.85",
+          "date": "2025-09",
+          "notes": "Přidána dvoufaktorová autentizace a XSS ochrana.\nUživatelé nyní mohou editovat svůj profil.\nPřihlašovací údaje superadmina se nově načítají nepřihlášeným uživatelům.\nTabulky databáze jsou již předvyplněny pojištěnci, pojištěními i články."
+        },
+        {
           "version": "0.80",
           "date": "2025-07",
-          "notes": "Nyní již i superadmin může registrovat nové uživatele. Upraveno logování, čištění kódu a oprava chyb v backend logice."
+          "notes": "Nyní již i superadmin může registrovat nové uživatele i adminy. Upraveno logování, čištění kódu a oprava chyb v backend logice."
         },
         {
           "version": "0.75",
