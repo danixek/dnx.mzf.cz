@@ -178,7 +178,7 @@
       "note": "Projekt vznikl jako závěrečný úkol rekvalifikačního kurzu a byl omezen technickými podmínkami. Refaktorizace projektu ukázala schopnost nespokojit se s prvotním výsledkem a přinést samostatně zpracovaná zlepšení. Při práci jsem zdokonalil backendovou logiku, administraci uživatelů a multiplatformní testování.",
       "completionDate": "2025-09",
       "version": "0.85",
-      "tags": "C#, ASP.NET, Bootstrap, Entity Framework, SQL",
+      "tags": "C#, ASP.NET, Bootstrap, XSS Protection, Entity Framework, SQL",
       "links": [
         {
           "type": "download",
@@ -451,6 +451,66 @@
           "version": "1.0",
           "date": "2018-03",
           "notes": "Vytvořena hlavní plocha s vyhledávacím formulářem - po scrollování jsou dostupné i záložky, které se responzivně přizpůsobují velikosti okna."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Wsoft",
+      "description": "Webová aplikace postavená na ASP.NET s REST API, která kombinuje e-shop a administraci uživatelů. Umožňuje registraci, přihlášení s dvoufaktorovou autentizací, změnu vlastních údajů, i správu produktů a objednávek, a to i s důrazem na bezpečnost (XSS ochrana, prevence manipulace s cenami).",
+      "shortDescription": "Firemní web s REST API, e-shopem, autentizací a správou uživatelů.",
+      "note": "Projekt vznikl jako zadání od firmy s termínem odevzdání 14 dní - původně měl být použit Vue.js namísto čistého JavaScriptu; Na projektu jsem pokračoval i po jeho odevzdání. Díky implementaci XSS ochrany a dvoufaktorové autentizace jsem si vyzkoušel i praktické aspekty bezpečnosti - např cookies a ochrana vůči úpravám cen. Navíc jsem si procvičil integraci frontendu (Bootstrap, JavaScript) s backendem přes REST API.",
+      "completionDate": "2025-09",
+      "version": "0.9",
+      "tags": "C#, ASP.NET, REST API, XSS Protection, 2FA, Bootstrap, Javascript, Entity Framework, SQL, HTML, CSS",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://whitesoft.tryasp.net/"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/WhiteSoft"
+        }
+      ],
+      "status": [
+        "completed",
+        "chatgpt"
+      ],
+      "thumbnail": "Wsoft_thumb.webp",
+      "gallery": [
+        "Wsoft1.webp",
+        "Wsoft2.webp",
+        "Wsoft3.webp",
+        "Wsoft4.webp",
+        "Wsoft5.webp",
+        "Wsoft6.webp"
+      ],
+      "changelog": [
+        {
+          "version": "0.9",
+          "date": "2025-09",
+          "notes": "Změněno přihlašování - nyní je formulář přístupný v modalu, který se načítá dynamicky pomocí JavaScriptu."
+        },
+        {
+          "version": "0.8",
+          "date": "2025-09",
+          "notes": "Nyní má superadmin přístupnou správu produktů - formulář se načítá dynamicky.\nLze přidávat, mazat i editovat produkty, včetně změny obrázkového náhledu produktu."
+        },
+        {
+          "version": "0.6",
+          "date": "2025-09",
+          "notes": "Přidáno dynamické zobrazení objednávek - ty se zatím nedají spravovat.\nNamísto toho si superadmin může spustit náhodné generování objednávek.\nNyní se v košíku dá měnit množství položek či je odebírat.\nPřidána vlastní XSS ochrana."
+        },
+        {
+          "version": "0.4",
+          "date": "2025-09",
+          "notes": "Přidán košík, včetně zobrazení produktů díky základnímu dynamickému načítání v javascriptu (původně to měl být vue.js) - v eshopu i na úvodní stránce.\nCeny produktů se neukládají do cookies - a to kvůli kyberbezpečnosti."
+        },
+        {
+          "version": "0.2",
+          "date": "2025-09",
+          "notes": "Přidána autentizace - admin, superadmin a uživatel.\nPrvní registrovaný se stává superadminem - ten spravuje admin práva ostatních uživatelů, včetně adminů.\nUživatel může měnit údaje vlastního účtu v nastavení.\nK dispozici je i tmavý režim."
         }
       ]
     }
