@@ -31,13 +31,13 @@ body {
     background-color: var(--secondary-color);
     /* Tmavě šedé pozadí pro sekce */
     color: rgb(220, 220, 220);
-    padding: 60px 0;
+    padding: 60px 0 !important;
 }
 
 .bg-dark-gray {
     background-color: var(--primary-color);
     /* Tmavší pozadí pro sekce */
-    padding: 60px 0;
+    padding: 60px 0 !important;
 }
 
 .btn-themed {
@@ -298,6 +298,10 @@ body {
 
 img[alt] {
     position: relative;
+}
+.card div img[alt] {
+    border-top-left-radius: 7px !important;
+    border-top-right-radius: 7px !important;
 }
 
 img[alt]:empty {
@@ -727,4 +731,29 @@ span.bg-secondary {
     /* lepší zarovnání při víc řádcích */
     padding: 0.5rem 1rem;
     /* můžeš upravit padding podle chuti */
+}
+
+/* Styles for freehosting ads */
+.endora-panel:not(.bottom) {
+    display: none;
+    z-index: -15
+}
+.endora-panel { 
+    border-bottom: 1px solid var(--primary-color) !important;
+    background: var(--secondary-color) !important;
+    color: rgb(200,200,200);
+    opacity: 0.95;
+}
+.endora-panel.bottom {
+    border-top-right-radius: 7px;
+}
+.endora-panel-btn {
+    border-radius: 7px !important;
+    background: var(--primary-color) !important;
+}
+.endora-panel-text {
+    color: rgb(200,200,200) !important;
+}
+.endora-panel-text-span {
+    color: rgb(250,250,250) !important;
 }
