@@ -1,0 +1,11 @@
+{
+    "require": {
+        "php": ">=7.4",
+        "google/apiclient": "2.13",
+        "firebase/php-jwt": "^6.0",
+        "monolog/monolog": "^2.9",
+        "phpseclib/phpseclib": "~3.0.36",
+        "guzzlehttp/guzzle": "~6.5",
+        "guzzlehttp/psr7": "^1.2"
+    }
+}

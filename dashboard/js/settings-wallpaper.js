@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (selectedRadio && background) {
             const imageUrl = selectedRadio.value;
-            background.style.background = `url('img/${imageUrl}') no-repeat ${selectedPosition} / cover`;
+            background.style.background = `url('dashboard/img/${imageUrl}') no-repeat ${selectedPosition} / cover`;
         }
     }
 

@@ -37,7 +37,7 @@ body.scrolled::before {
     background: rgba(0, 0, 0, 0.4);
     /* ztmavení po scrollu */
 }
-
+h2 {margin-top: 25px}
 
 .background-overlay {
     position: fixed;
@@ -85,7 +85,6 @@ body.scrolled::before {
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 1.2em;
 }
 
 .logo-text span {
@@ -268,6 +267,13 @@ body.scrolled::before {
     z-index: 10;
     margin-bottom: 100px;
 }
+.bookmarks p {
+    display: block !important;
+    width: 100%;
+    word-wrap: break-word; 
+    white-space: normal;
+    text-align: center;
+}
 
 .bookmark {
     width: 150px;
@@ -378,8 +384,8 @@ a.bookmark {
 .form-description {
   color: #aaa;
   font-size: 0.9em;
-  margin-top: -0.5em;
-  margin-bottom: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0.7em;
 }
 
 input[type="radio"]:checked+label img {
@@ -463,6 +469,7 @@ input[type="url"] {
 
 .href-btn {
     color: rgb(220, 220, 220);
+    text-decoration: underline;
 }
 
 /* RSS feed */

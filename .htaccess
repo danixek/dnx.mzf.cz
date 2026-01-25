@@ -1,23 +1,27 @@
 # Aktivace přepisovacího modulu
 RewriteEngine On
 
-# Nastavení vlastních error pages
-ErrorDocument 404 /error.php?code=404
-ErrorDocument 403 /error.php?code=403
-ErrorDocument 500 /error.php?code=500
+# Zákaz přímého přístupu do /vendor a /data složek
+RedirectMatch 403 ^/vendor/
+
+# /dashboard nebo /dashboard/ → dashboard.php
+RewriteRule ^dashboard/?$ /dashboard.php [R=301]
+
+# /DEVportfolio nebo /DEVportfolio/ → devportfolio.php
+RewriteRule ^DEVportfolio/?$ /devportfolio.php [R=301]
+
+# Pokud URL neobsahuje .php, interně mapuj na .php soubor
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/.]+)$ $1.php [L]
 
 # nastaveni vychozi stranky adresare
-DirectoryIndex index.html index.php
+DirectoryIndex index.php
 
 # povoleni zobrazeni obsahu adresare, pokud chybi vychozi soubor
 Options +Indexes
 
-# Odstranění koncovky .html
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L]
-
-# Odstranění koncovky .php
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php [L]
+# Nastavení vlastních error pages
+ErrorDocument 404 /error.php?code=404
+ErrorDocument 403 /error.php?code=403
+ErrorDocument 500 /error.php?code=500

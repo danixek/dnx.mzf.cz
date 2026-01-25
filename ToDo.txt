@@ -1,6 +1,8 @@
 Nápady na projekty do portfolia:
 
 * Taskami - kombinace self-hostingu, Todoistu a Redmine.
+* Thoughts - RSS mastodon, možná i přidání MyAnimeListu na filmy, anime a hry.
+* H-Launcher - Herní knihovna na hentai hry
 * DarkWave Player (alternativní název: Aether)
     - Přehrávač hudby (a videí)
     - Koncipované jako mobilní aplikace (a možná i jako desktop)

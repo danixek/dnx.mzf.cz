@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="cs">
 
-<?php include 'partials/header.php'; ?>
+<?php include 'DEVportfolio/partials/header.php'; ?>
 <?php
 // cesta k log souboru (ujisti se, že má PHP právo zapisovat)
-$logFile = __DIR__ . '/logs/visits.log';
+$logFile = __DIR__ . '/DEVportfolio/logs/visits.log';
 
 // datum a čas
 $date = date("Y-m-d H:i:s");
@@ -28,10 +28,10 @@ file_put_contents($logFile, $logLine, FILE_APPEND | LOCK_EX);
         <?php
 
         // Navigační menu
-        require('partials/navbar.php');
+        require('DEVportfolio/partials/navbar.php');
 
         // Utilita v PHP na přepínání barev frontendu - CSS přepínač
-        require('utils.php'); ?>
+        require('DEVportfolio/utils.php'); ?>
 
         <!-- Sekce domů - speciální verze bez citátů -->
         <section id="home" class="<?= getBgClass() ?> text-center text-white pt-4">
@@ -75,15 +75,15 @@ file_put_contents($logFile, $logLine, FILE_APPEND | LOCK_EX);
     <footer>
         <?php
         // Citáty
-        require('partials/quotes.php');
+        require('DEVportfolio/partials/quotes.php');
 
         // Kontakt
-        require('partials/contacts.php'); ?>
+        require('DEVportfolio/partials/contacts.php'); ?>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/quotes.js"></script>
-    <script src="/js/bs-tooltip.js"></script>
+    <script src="/DEVportfolio/js/quotes.js"></script>
+    <script src="/DEVportfolio/js/bs-tooltip.js"></script>
 
 
 </body>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="cs">
 
-<?php include 'partials/header.php'; ?>
-<?php include 'logger.php'; ?>
+<?php include 'DEVportfolio/partials/header.php'; ?>
+<?php include 'DEVportfolio/logger.php'; ?>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLWMMCFJX5"></script>
@@ -18,35 +18,36 @@
     <header>
         <?php
         // Navigační menu
-        require('partials/navbar.php');
+        require('DEVportfolio/partials/navbar.php');
 
         // Utilita v PHP na přepínání barev frontendu - CSS přepínač
-        require('utils.php');
+        require('DEVportfolio/utils.php');
 
         // Domů - nadpis, podnadpis a citáty
-        require('portfolio/partials/home.php'); ?>
+        require('DEVportfolio/partials/home.php'); ?>
     </header>
     <main>
         <?php
         // O mně
-        require('portfolio/partials/about.php');
+        require('DEVportfolio/partials/about.php');
 
         // Portfolio
-        require('portfolio/partials/portfolio.php');
+        require('DEVportfolio/partials/portfolio.php');
 
         // Blog
-        require('portfolio/partials/blog.php'); ?>
+        require('DEVportfolio/partials/blog.php'); ?>
     </main>
 
     <footer>
         <?php
         // Kontakt
-        require('partials/contacts.php'); ?>
+        require('DEVportfolio/partials/contacts.php');
+        require('DEVportfolio/partials/modals.php'); ?>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/bs-tooltip.js"></script>
+    <script src="/DEVportfolio/js/quotes.js"></script>
+    <script src="/DEVportfolio/js/bs-tooltip.js"></script>
 
 </body>
 
