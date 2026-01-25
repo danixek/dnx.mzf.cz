@@ -33,7 +33,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/blog.php">Blog</a>
                 </li>
-                <li class="nav-item mt-1">
+                <li class="nav-item">
                     <button id="theme-toggle" class="btn btn-outline-secondary btn-sm" data-bs-tooltip="tooltip"
                         data-bs-placement="bottom" title="Změnit vzhled stránky" style="border-color: transparent">
                         <i class="bi bi-circle-half"></i>
@@ -45,8 +45,8 @@
                     session_start();
                     if (isset($_SESSION['user_id'])): ?>
                         <span class="nav-link d-flex align-items-center gap-2" style="margin-left: 12px;"> <?php
-                            if (isset($_SESSION['user_id']) && !empty($_SESSION['google_id'])): ?>
-                                <img src="<?php echo htmlspecialchars($_SESSION['avatar_url']) ?? '/dashboard/img/default-avatar.png' ?>"
+                            if (isset($_SESSION['user_id'])): ?>
+                                <img src="<?php echo htmlspecialchars($_SESSION['avatar_url'] ?? '/dashboard/default_avatar.png'); ?>"
                                     style="width: 35px; border-radius:50%">
                             <?php 
                             endif; ?>

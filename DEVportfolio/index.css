@@ -156,7 +156,7 @@ body {
 }
 
 .footer {
-    padding-bottom: 10px;
+    padding: 60px 0 10px !important;
 }
 
 .navbar-brand {
@@ -768,4 +768,70 @@ span.bg-secondary {
         width: 20px;
 	    height: 20px;
     }
+}
+.add-card, .add-card.card {
+    border: dashed 4px rgb(150,150,150);
+    background-color: transparent !important;
+    --bs-card-bg: transparent !important;
+    --bs-card-border-color: transparent !important;
+    box-shadow: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    transition: all .2s ease;
+}
+.add-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.add-card-content i {
+    font-size: 48px;
+}
+
+.add-card:hover {
+    background-color: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.8);
+    transform: translateY(-2px);
+}
+.project .card .admin-btn-ico {
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    z-index: 10;
+    font-size: 12px;
+    padding-top: 1px;
+    border-radius: 50%;
+    transition: opacity 0.2s ease-in-out 0.5s;
+    color: white;
+    visibility: hidden; 
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project .card:hover .admin-btn-ico {     
+    visibility: visible;
+    opacity: 1;
+}
+/* Různé barvy pro edit a delete */
+.project .card .edit-btn, .project .card .pin-btn {
+    color: white;
+}
+.project .card .edit-btn:hover, .project .card .pin-btn:hover {
+    background-color: #363636;
+}
+.project .card .delete-btn {
+    color: white;
+}
+.project .card .delete-btn:hover {
+    background-color: #b02a37;
 }

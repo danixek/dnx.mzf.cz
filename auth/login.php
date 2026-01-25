@@ -9,7 +9,7 @@ session_start();
 try {
 
     $stmt = pdo()->prepare("
-    SELECT id, email, username, password_hash
+    SELECT id, email, username, password_hash, role, avatar_url
     FROM users
     WHERE email = :email
     LIMIT 1
@@ -32,6 +32,7 @@ try {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];
+        $_SESSION['avatar_url'] = $user['avatar_url'];
     } else {
     // neplatné přihlašovací údaje
     $_SESSION['login_error'] = 'Neplatný email nebo heslo.';

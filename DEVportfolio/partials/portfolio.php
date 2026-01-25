@@ -4,7 +4,7 @@
         <div class="d-flex justify-content-between align-items-center mb-3">
 
             <?php
-        // Načteme databázi
+            // Načteme databázi
             require 'auth/pdo.php';
 
             $stmt = pdo()->query("
@@ -17,7 +17,7 @@
             ");
 
             $projects = $stmt->fetchAll(PDO::FETCH_ASSOC); // pole projektů
-
+            
             // 2️⃣ Načti všechny badge zvlášť
             $stmtBadges = pdo()->query("
                 SELECT *
@@ -51,10 +51,13 @@
                     </div>
                 </div>
                 <?php
-                    $stmt = pdo()->query("SELECT COUNT(*) FROM projects");
-                    $totalProjects = (int) $stmt->fetchColumn();
+                $stmt = pdo()->query("SELECT COUNT(*) FROM projects");
+                $totalProjects = (int) $stmt->fetchColumn();
                 ?>
-
+                <a href="add.php" class="btn btn-themed bg-dark d-flex align-items-center">
+                    <i class="bi bi-plus-lg me-2"></i>
+                    Přidat projekt
+                </a>
                 <div id="results-count" class="d-flex align-items-center ms-auto">
                     <strong>Výsledků:</strong> <span id="project-count" class="ms-1 me-1"><?= $totalProjects ?></span>
                 </div>
@@ -223,8 +226,8 @@
                                         <?php foreach ($badgesMap as $badgeKey => $badge): ?>
                                             <div class="form-check filter-tristate-wrapper" tabindex="0"
                                                 aria-checked="mixed" role="checkbox"
-                                                data-version="<?= htmlspecialchars($badge['status_label']) ?>" data-filter-state="null"
-                                                id="filter<?= ucfirst($badgeKey) ?>">
+                                                data-version="<?= htmlspecialchars($badge['status_label']) ?>"
+                                                data-filter-state="null" id="filter<?= ucfirst($badgeKey) ?>">
 
                                                 <input type="checkbox" class="form-check-input filter-tristate-checkbox"
                                                     id="filter<?= ucfirst($badgeKey) ?>-checkbox" hidden>
@@ -267,7 +270,7 @@
                 $id = $project['id'] ?? 0;
                 $title = htmlspecialchars($project['title'] ?? '');
                 $description = htmlspecialchars($project['short_description'] ?? '');
-                
+
                 // 🧠 TAGY - Zpracování tagů, aby byly malá písmena, trim a bez HTML entit
                 $rawTags = explode(', ', $project['tags']) ?? '';
                 if (is_string($rawTags)) {
@@ -313,10 +316,28 @@
                 ?>
                 <a href="detail.php?id=<?= $id ?>" class="project col-lg-3 col-md-4 col-sm-6 col-12 d-flex"
                     data-tech="<?= htmlspecialchars($dataTech) ?>" data-version="<?= htmlspecialchars($dataVersion) ?>">
-                    <div class="card bg-dark text-light flex-fill">
+                    <div class="card bg-dark text-light flex-fill d-flex flex-column position-relative">
+                        <?php if ($_SESSION['role'] === 'admin'): ?>
+                            <!-- Admin icons -->
+                            <div class="position-absolute top-0 start-0 d-flex m-2">
+                                <span class="admin-btn-ico pin-btn" title="Připnout">
+                                    <i class="bi bi-pin-angle"></i>
+                                </span>
+                            </div>
+
+                            <div class="position-absolute top-0 end-0 m-2 d-flex gap-1">
+                                <span class="admin-btn-ico edit-btn" title="Upravit">
+                                    <i class="bi bi-pencil"></i>
+                                </span>
+                                <span class="admin-btn-ico delete-btn" title="Smazat">
+                                    <i class="bi bi-x-lg"></i>
+                                </span>
+                            </div>
+
+                        <?php endif; ?>
                         <div class="ratio ratio-16x9">
-                            <img src="<?= $thumbnail ?>" aria-label="Náhled projektu: <?= $title ?>"
-                                alt="<?= $title ?>" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+                            <img src="<?= $thumbnail ?>" aria-label="Náhled projektu: <?= $title ?>" alt="<?= $title ?>"
+                                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
                         </div>
                         <div class="card-body flex-column" style="display: flex">
                             <h5 class="card-title"><?= $title ?></h5>
@@ -327,8 +348,8 @@
 
                                     foreach ($badgeKeys as $key) { ?>
                                         <?php if (isset($badgesMap[$key]) && $badgesMap[$key]['status_visible'] == "visible"):
-                                            
-                                            $b = $badgesMap[$key];?>
+
+                                            $b = $badgesMap[$key]; ?>
                                             <span
                                                 class="badge fw-bold bg-<?= htmlspecialchars($b['status_background_color']) ?> text-<?= htmlspecialchars($b['status_text_color']) ?> mt-1 me-1"
                                                 data-bs-tooltip="tooltip" data-bs-placement="left" style="font-weight: bold"
@@ -343,7 +364,17 @@
                         </div>
                     </div>
                 </a>
-            <?php endforeach; ?>
+            <?php endforeach;
+            if ($_SESSION['role'] === 'admin'): ?>
+                <a href="" class="project col-lg-3 col-md-4 col-sm-6 col-12 d-flex">
+                    <div class="card card-body add-card text-light flex-fill">
+                        <div class="add-card-content">
+                            <i class="bi bi-plus-lg pt-3"></i>
+                            <span class="bold fs-5 pb-3">Přidat projekt</span>
+                        </div>
+                    </div>
+                </a>
+            <?php endif; ?>
         </div>
     </div>
 

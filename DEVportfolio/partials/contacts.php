@@ -6,7 +6,7 @@
         <div class="row">
             <!-- Levá část pro email -->
             <div class="col-md-7 text-left">
-                <p>Pokud se chcete spojit, neváhejte mi napsat na email:</p>
+                <p class="mb-4">Pokud se chcete spojit, neváhejte mi napsat na email:</p>
                 <!-- Fallback pro uživatele bez JS -->
                 <noscript>
                     <p>danielkefurt [V] gmail com</p>
@@ -28,7 +28,7 @@
                     document.getElementById("e_m_l").innerHTML = link;
                 </script>
 
-                <button id="bmc-button-dark" class="btn btn-themed" aria-label="Buy me a coffee"
+                <button id="bmc-button-dark" class="btn btn-themed my-4" aria-label="Buy me a coffee"
                     onclick="window.open('https://www.buymeacoffee.com/danixek', '_blank', 'noopener,noreferrer')">
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
