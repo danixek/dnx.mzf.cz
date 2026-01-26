@@ -332,7 +332,9 @@
                                                 }
                                             }
 
-                                            $noteLines = explode("\n", $item['notes']);
+                                            $notes = str_replace('\n', "\n", $item['notes']);
+                                            $noteLines = explode("\n", $notes);
+
                                             ?>
                                     <li>
                                         <div class="d-flex justify-content-between">
