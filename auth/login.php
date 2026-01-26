@@ -6,6 +6,10 @@ $password = trim($_POST['password'] ?? '');
 
 session_start();
 
+// redirect
+$redirect = $_SESSION['redirect_after_login'] ?? '/index.php';
+unset($_SESSION['redirect_after_login']);
+
 try {
 
     $stmt = pdo()->prepare("
@@ -18,9 +22,6 @@ try {
     $stmt->execute([':email' => $email]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // redirect
-    $redirect = $_SESSION['redirect_after_login'] ?? '/index.php';
-    unset($_SESSION['redirect_after_login']);
     if (
         filter_var($email, FILTER_VALIDATE_EMAIL) &&
         $user &&
@@ -34,10 +35,10 @@ try {
         $_SESSION['role'] = $user['role'];
         $_SESSION['avatar_url'] = $user['avatar_url'];
     } else {
-    // neplatné přihlašovací údaje
-    $_SESSION['login_error'] = 'Neplatný email nebo heslo.';
+        // neplatné přihlašovací údaje
+        $_SESSION['login_error'] = 'Neplatný email nebo heslo.';
 
-    header("Location: $redirect");
+        header("Location: $redirect");
     }
     exit;
 
@@ -51,7 +52,7 @@ try {
 
     error_log('Login error: ' . $e->getMessage());
 
-    header('Location: /login.php');
+    header("Location: $redirect");
     exit;
 }
 ?>
