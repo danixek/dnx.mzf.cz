@@ -69,17 +69,7 @@ class CloudComposer extends \Google\Service
         'environments',
         [
           'methods' => [
-            'checkUpgrade' => [
-              'path' => 'v1/{+environment}:checkUpgrade',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'environment' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'create' => [
+            'create' => [
               'path' => 'v1/{+parent}/environments',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -186,16 +176,6 @@ class CloudComposer extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'environment' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'restartWebServer' => [
-              'path' => 'v1/{+name}:restartWebServer',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -471,10 +451,6 @@ class CloudComposer extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'returnPartialSuccess' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ],
               ],
             ],

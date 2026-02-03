@@ -28,10 +28,10 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                portfolio: 'resources/js/DEVportfolio/main.js',
+                portfolio: 'resources/js/portfolio/main.js',
                 dashboard: 'resources/js/dashboard/main.js',
             },
         },
-        manifest: "manifest.json",
+        manifest: "mix-manifest.json",
     },
 });

@@ -18,7 +18,7 @@
                     @foreach ($project->projectBadges as $badgeId)
                         @if (isset($badges[$badgeId]) && $badges[$badgeId]->status_visible === 'visible')
                             <span
-                                class="badge fw-bold bg-{{!! nl2br(e($badges[$badgeId]->status_background_color)) }} text-{{ $badges[$badgeId]->status_text_color }} me-2"
+                                class="badge fw-bold bg-{{ nl2br(e($badges[$badgeId]->status_background_color)) }} text-{{ $badges[$badgeId]->status_text_color }} me-2"
                                 data-bs-tooltip="tooltip" data-bs-placement="top" style="font-weight: bold"
                                 title="{{ $badges[$badgeId]->status_description }}">
                                 {!! nl2br(e($badges[$badgeId]->status_label)) !!}
@@ -29,8 +29,8 @@
                     <!-- Verze jako badge -->
                     @if (!empty($project->version))
                         <span class="badge text-white ms-2" data-bs-tooltip="tooltip" data-bs-placement="top"
-                            title="Verze projektu: v{!! nl2br(e( $project->version )) !!}">
-                            v{!! nl2br(e( $project->version )) !!}
+                            title="Verze projektu: v{!! nl2br(e($project->version)) !!}">
+                            v{!! nl2br(e($project->version)) !!}
                         </span>
                     @endif
 
@@ -54,7 +54,7 @@
                         @php $czechCompletionDate = Utils::CzechDate($project->completion_date); @endphp
                         @if(!empty($czechCompletionDate))
                             <span class="badge" data-bs-tooltip="tooltip" data-bs-placement="top"
-                                title="Datum poslední změny: {!! nl2br(e( $czechCompletionDate )) !!}">
+                                title="Datum poslední změny: {!! nl2br(e($czechCompletionDate)) !!}">
                                 <i class="bi bi-calendar-event me-1"></i>
                                 {!! nl2br(e($czechCompletionDate)) !!}
                             </span>
@@ -92,15 +92,19 @@
                                         <div class="d-flex justify-content-between">
                                             <strong>Verze {!! nl2br(e($item->version)) !!}</strong>
                                             @if (!empty($item->date))
-                                                <small class="text-muted-darkmode">{!! nl2br(e(Utils::CzechDate($item->date))) !!}</small>
+                                                <small
+                                                    class="text-muted-darkmode">{!! nl2br(e(Utils::CzechDate($item->date))) !!}</small>
                                             @endif
                                         </div>
 
                                         @if (!empty($item->notes))
                                             <ul class="notes-list">
-                                                @foreach (explode("\n", $item->notes) as $line)
-                                                    <li><small>{!! nl2br(e($line)) !!}</small></li>
+                                                @foreach (explode('\\n', $item->notes) as $line)
+                                                    @if(trim($line) !== '')
+                                                        <li><small>{{ $line }}</small></li>
+                                                    @endif
                                                 @endforeach
+
                                             </ul>
                                         @endif
                                     </li>

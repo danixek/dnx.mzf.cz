@@ -25,10 +25,12 @@
                         <span><strong>Filtry:</strong> <span id="active-filters"></span></span>
                     </div>
                 </div>
-                <a href="add.php" class="btn btn-themed bg-dark d-flex align-items-center">
-                    <i class="bi bi-plus-lg me-2"></i>
-                    Přidat projekt
-                </a>
+                @if (session('role') === 'admin')
+                    <a href="add.php" class="btn btn-themed bg-dark d-flex align-items-center">
+                        <i class="bi bi-plus-lg me-2"></i>
+                        Přidat projekt
+                    </a>
+                @endif
                 <div id="results-count" class="d-flex align-items-center ms-auto">
                     <strong>Výsledků:</strong> <span id="project-count" class="ms-1 me-1"> {{ $totalProjects }}</span>
                 </div>
@@ -130,8 +132,8 @@
                                         @foreach($badges as $badge)
                                             <div class="form-check filter-tristate-wrapper" tabindex="0"
                                                 aria-checked="mixed" role="checkbox"
-                                                data-version="{!! nl2br(e($badge->status_label)) !!}" data-filter-state="null"
-                                                id="filter{!! $badge->id !!}">
+                                                data-version="{!! nl2br(e($badge->status_label)) !!}"
+                                                data-filter-state="null" id="filter{!! $badge->id !!}">
                                                 <input type="checkbox" class="form-check-input filter-tristate-checkbox"
                                                     id="filter{!! $badge->id !!}-checkbox" hidden>
                                                 <span class="custom-checkbox"></span>

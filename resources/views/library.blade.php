@@ -3,7 +3,6 @@
 
 @php
     use App\Helpers\Utils;
-    $bgClass = Utils::getBgClass();
 @endphp
 
 @include('portfolio.header')
@@ -20,11 +19,18 @@
 <body id="page-wrapper">
     <header>
         @include('portfolio.navbar')
-        @include('portfolio.home')
+        <!-- Sekce domů - speciální verze bez citátů -->
+        <section id="home" class="{{ Utils::getBgClass('bg-light-gray') }} text-center text-white pt-4">
+            <div class="container mt-5 pt-4">
+                <h1 class="display-2"><span style="position: relative; bottom: 4px">[</span> <span
+                        style="font-size: 80%">d</span><span style="position: relative; bottom: 4px">]</span></h1>
+                <p class="lead pt-4">O světě, kódu a myšlení.</p>
+            </div>
+        </section>
     </header>
 
     <main>
-        <section id="library" class="{{ $bgClass }} text-white">
+        <section id="library" class="{{ Utils::getBgClass() }} text-white">
             <div class="container">
 
                 <h2 class="section-title me-3 mb-3">Knihovna – Moje doporučení</h2>
@@ -70,6 +76,8 @@
     </main>
 
     <footer>
+        @include('portfolio.quotes')
+
         @include('portfolio.contacts')
     </footer>
 
