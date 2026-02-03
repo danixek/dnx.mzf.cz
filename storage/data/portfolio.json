@@ -1,0 +1,523 @@
+{
+  "badges": {
+    "alpha": {
+      "statusLabel": "Alpha",
+      "statusVisible": "visible",
+      "statusBackgroundColor": "secondary",
+      "statusTextColor": "light",
+      "statusDescription": "Velmi raná fáze vývoje či pouze myšlenkový koncept; zatím neuspokojivý výsledek, který neplní ani má očekávání."
+    },
+    "beta": {
+      "statusLabel": "Beta",
+      "statusVisible": "visible",
+      "statusBackgroundColor": "warning",
+      "statusTextColor": "dark",
+      "statusDescription": "Funkční a pokročilý, ale stále s nedostatky a potenciálem k vylepšení; očekávání částečně splněna."
+    },
+    "completed": {
+      "statusLabel": "Completed",
+      "statusVisible": "visible",
+      "statusBackgroundColor": "success",
+      "statusTextColor": "light",
+      "statusDescription": "Považovaný za dokončený a uspokojivě hotový projekt - vlastní očekávání splněna."
+    },
+    "forRemake": {
+      "statusLabel": "For Remake",
+      "statusVisible": "visible",
+      "statusBackgroundColor": "danger",
+      "statusTextColor": "light",
+      "statusDescription": "Projekt určený k přepracování nebo úplné náhradě; s větším důrazem na detaily a vizi, kterou jsem dříve opomíjel."
+    },
+    "tester": {
+      "statusLabel": "Tester",
+      "statusVisible": "visible",
+      "statusBackgroundColor": "secondary",
+      "statusTextColor": "light",
+      "statusDescription": "Testoval funkčnost. Nezasahoval do kódu, ale přispěl zpětnou vazbou; kód generoval ChatGPT."
+    },
+    "chatgpt": {
+      "statusLabel": "S ChatGPT",
+      "statusVisible": "hidden",
+      "statusBackgroundColor": "warning",
+      "statusTextColor": "dark",
+      "statusDescription": "Junior používá ChatGPT jako interaktivní dokumentaci. A učí se při tom přemýšlet."
+    },
+    "documentation": {
+      "statusLabel": "S dokumentací",
+      "statusVisible": "hidden",
+      "statusBackgroundColor": "orange",
+      "statusTextColor": "dark",
+      "statusDescription": "Medior čte oficiální dokumentaci a implementuje řešení samostatně."
+    },
+    "nohelp": {
+      "statusLabel": "Bez nápovědy",
+      "statusVisible": "hidden",
+      "statusBackgroundColor": "success",
+      "statusTextColor": "light",
+      "statusDescription": "Senior nepotřebuje nápovědu – většinou; spoléhá na zkušenosti a kontext."
+    }
+  },
+  "projects": [
+    {
+      "id": 0,
+      "title": "Taskami",
+      "description": "Aplikace pro správu úkolů kombinuje principy Pomodoro a To-Do Listu, navržená pro zvýšení produktivity jednotlivců i týmů.\n\nProjekt je koncipován pro self-hosting, aby uživatelé mohli mít plnou kontrolu nad svými daty, i když současná ASP.NET verze tuto možnost ještě plně nepodporuje. Aplikace staví na modulární architektuře s REST API, což umožňuje snadné napojení vlastního backendu, škálovatelnost a flexibilní rozšiřování funkcí. Uživatelé získávají nástroj pro organizaci úkolů s možností synchronizace se službou Todoist a budoucím self-hosting nasazením.",
+      "shortDescription": "To-Do List s Pomodoro funkcí",
+      "note": "Inspiraci pro self-hosting mi poskytl Mastodon - kopie twitteru, kterou lze nainstalovat na vlastní web. Současná verze ještě neobsahuje plnohodnotný backend ani přihlašování přes Google účet, tyto funkce jsou však plánovány. Projekt podporuje flexibilní rozšiřování a připravuje prostor pro budoucí WPF verzi pro lokální použití.",
+      "completionDate": "2025-08",
+      "version": "0.40",
+      "tags": "C#, WPF, API, ASP.NET",
+      "links": [
+        {
+          "type": "download",
+          "url": "https://github.com/danixek/Taskami/archive/refs/heads/master.zip"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/Taskami"
+        },
+        {
+          "type": "preview",
+          "url": "https://taskami.tryasp.net/"
+        }
+      ],
+      "status": [
+        "alpha"
+      ],
+      "thumbnail": "taskami_thumb.webp",
+      "gallery": [
+        "taskami1.webp",
+        "taskami2.webp",
+        "taskami3.webp",
+        "taskami4.webp"
+      ],
+      "changelog": [
+        {
+          "version": "0.40 Alpha",
+          "date": "2025-08",
+          "notes": "Added user accounts\nImplemented Settings page\nChanged API key storage\nCreated background color handler\nNow users can change app appearance from Settings\nRefactored project structure: Settings separated into its own controller, main controller cleaned up, task ordering moved from views to controller\nWeb deployment completed with free hosting\nRemoved appsettings.json from repo"
+        }, 
+        {
+          "version": "0.35 Alpha",
+          "date": "2025-08",
+          "notes": "Todoist API klíč se nyní načítá a ukládá za pomocí databáze - z bezpečnostních důvodů\nBylo přidáno logo"
+        }, 
+        {
+          "version": "0.30 Alpha",
+          "date": "2025-08",
+          "notes": "Přidáno měsíční zobrazení úkolů.\nPřidán inbox pro nezařazené projekty.\nUpraveno řazení úkolů pro dnešní den.\nStránka s dnešními úkoly byla nastavena jako defaultní (Index) stránkou místo Inboxu."
+        },        
+        {
+          "version": "0.25 Alpha",
+          "date": "2025-08",
+          "notes": "Barva času u úkolů se mění dle toho, zda projekt je zmeškaný (červená), je na čase jej plnit (oranžová) či je ještě dostatek času (zelená).\nZákladní šablona úkolů upravena."
+        },
+        {
+          "version": "0.20 Alpha",
+          "date": "2025-08",
+          "notes": "Ladění UI pro úkoly dnešního dne\nVytvořena základní šablona zobrazování úkolů k znovuužití.\nNyní po kliknutí na kolečko se označí úkol za dokončený.\nKolečko mění barvu dle důležitosti úkolu."
+        },
+        {
+          "version": "0.15 Alpha",
+          "date": "2025-08",
+          "notes": "Navrhnuto uživatelské rozhraní ASP.NET webové aplikace.\nImplementováno Todoist API, ačkoliv zatím Taskami nemá vlastní alternativu pro Todoist API backend.\nPřidáno zobrazení úkolů pro dnešní den."
+        },
+        {
+          "version": "0.10 Alpha",
+          "date": "2025-08",
+          "notes": "Vygenerovány Taskami.API a Taskami.Client dle Todoist OpenAPI JSON specification šablony za pomocí openapi-generator-cli\nProjekt rozšířen - kromě WPF je v plánu vytvořit i webovou verzi."
+        },
+        {
+          "version": "0.05 Alpha",
+          "date": "2025-05",
+          "notes": "Náčrt uživatelského rozhraní (WPF)"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Todoist Widget",
+      "description": "Widget je nástroj pro rychlou správu úkolů přímo z domácí obrazovky, který usnadňuje práci s Todoist úkoly bez nutnosti otevírat hlavní aplikaci.\n\n<strong>Interakce s úkoly je intuitivní:</strong>\nKliknutím na odrážku se úkol označí jako splněný. Barva odrážky zároveň vyjadřuje prioritu úkolu a barva času ukazuje jeho stav – červená znamená zmeškaný projekt, oranžová označuje, že je čas začít na úkolu pracovat, a zelená signalizuje, že je ještě dostatek času.\n\nNastavení umožňuje měnit umístění widgetu s živým náhledem, takže uživatel okamžitě vidí jeho pozici na ploše. Widget je navržen pro rychlou použitelnost a přehlednost a lze jej rozšířit o další funkce, například synchronizaci s mým self-hosting klonem Todoistu, Taskami.",
+      "shortDescription": "Todoist widget na plochu",
+      "note": "Projekt vznikl s využitím ChatGPT, který generoval kód v Pythonu, zatímco já jsem se soustředil na testování, ladění a praktické vylepšení funkcionality. Zkušenost zahrnovala práci s Todoist API, zajištění přehlednosti a rychlé použitelnosti widgetu a přípravu na budoucí rozšíření o synchronizaci s Taskami.",
+      "completionDate": "2024-06",
+      "version": "1.0",
+      "tags": "Python, API",
+      "links": [
+        {
+          "type": "download",
+          "url": "https://github.com/danixek/todoist-widget/releases/download/todoist/TodoistWidget.exe"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/todoist-widget"
+        }
+      ],
+      "status": [
+        "completed",
+        "tester"
+      ],
+      "thumbnail": "todoistWidget_thumb.webp",
+      "gallery": [
+        "todoistWidget1.webp",
+        "todoistWidget2.webp"
+      ],
+      "changelog": [
+        {
+          "version": "1.0",
+          "date": "2024-06",
+          "notes": "Podpora Todoist API a synchronizace\nPřidáno přemístění widgety - změnou souřadnic se zobrazuje náhled, kam se widgeta umístí.\nBarva času u úkolů se mění dle toho, zda projekt je zmeškaný (červená), je na čase jej plnit (oranžová) či je ještě dostatek času (zelená).\nPřidáno průhledné pozadí\nPřidána možnost označit úkol jako splněný kliknutím na kolečko."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Pojišťák.NET",
+      "description": "Webová aplikace pro správu pojištěnců a pojištění, postavená na C#, ASP.NET, MS SQL a Entity Frameworku. Umožňuje autentizaci uživatelů, správu pracovních rolí pojišťovny a moderní responzivní uživatelské rozhraní.\n\nNad rámec původního zadání rekvalifikačního kurzu obsahuje aplikace i XSS ochranu, dvoufaktorovou autentizaci a roli správce pro administraci uživatelských účtů a adminů. Aplikace byla testována na Windows i Linuxu s využitím Dockeru pro databázi a podporuje rozšiřitelnost o další funkce. Refaktorovaná verze přináší modernější design a lepší strukturu kódu, což zvyšuje přehlednost a udržovatelnost projektu.",
+      "shortDescription": "Správce pojištěnců a pojištění v C# .NET",
+      "note": "Projekt vznikl jako závěrečný úkol rekvalifikačního kurzu a byl omezen technickými podmínkami. Refaktorizace projektu ukázala schopnost nespokojit se s prvotním výsledkem a přinést samostatně zpracovaná zlepšení. Při práci jsem zdokonalil backendovou logiku, administraci uživatelů a multiplatformní testování.",
+      "completionDate": "2025-09",
+      "version": "0.85",
+      "tags": "C#, ASP.NET, Bootstrap, XSS Protection, Entity Framework, SQL",
+      "links": [
+        {
+          "type": "download",
+          "url": "https://github.com/danixek/PojistakNET/archive/refs/heads/master.zip"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/PojistakNET"
+        },
+        {
+          "type": "preview",
+          "url": "https://pojistak.tryasp.net/"
+        }
+      ],
+      "status": [
+        "completed",
+        "chatgpt"
+      ],
+      "thumbnail": "pojistakNET_thumb.webp",
+      "gallery": [
+        "pojistakNET1.webp",
+        "pojistakNET2.webp",
+        "pojistakNET3.webp",
+        "pojistakNET4.webp",
+        "pojistakNET5.webp",
+        "pojistakNET6.webp"
+      ],
+      "changelog": [
+        {
+          "version": "0.85",
+          "date": "2025-09",
+          "notes": "Přidána dvoufaktorová autentizace a XSS ochrana.\nUživatelé nyní mohou editovat svůj profil.\nPřihlašovací údaje superadmina se nově načítají nepřihlášeným uživatelům.\nTabulky databáze jsou již předvyplněny pojištěnci, pojištěními i články."
+        },
+        {
+          "version": "0.80",
+          "date": "2025-07",
+          "notes": "Nyní již i superadmin může registrovat nové uživatele i adminy. Upraveno logování, čištění kódu a oprava chyb v backend logice."
+        },
+        {
+          "version": "0.75",
+          "date": "2025-07",
+          "notes": "Přidáno logování do aplikace.\nNyní lze přidávat, upravovat a mazat články - nově se ukládají do databáze.\nDosud nebylo přidáno stránkování v administrativě superadmina, a ani ve výpisu článků."
+        },
+        {
+          "version": "0.70",
+          "date": "2025-07",
+          "notes": "Byl proveden redesign administračního navbaru - nyní plně začleněn do navbaru namísto tlačítek.\nSuperadminovi se již zobrazuje možnost přiřazovat a odebírat uživatelům admin práva.\nNyní se superadminovi zobrazuje možnost přidávat/mazat/editovat uživatele a adminy.\nByl navržen základ pro přidávání článků a napojení do databáze.\nPřidáno UI pro prohlížení logu superadminem (vedoucím); díky kterému může kontrolovat činnost adminů (pracovníků pojištovny)."
+        },
+        {
+          "version": "0.65",
+          "date": "2025-07",
+          "notes": "Byly uživatelským účtům přiřazeny role - user, admin, superadmin\nPrvní registrovaný uživatel se stane superadminem; správcem admin účtů (ještě neimplementováno) a editorem článků (též neimplementováno).\nAdmin správa byla oddělena od uživatelské části webu."
+        },
+        {
+          "version": "0.61",
+          "date": "2025-07",
+          "notes": "Přidána základní registrace uživatelů.\nProzatím není možné přidávat ani upravovat role (úrovně oprávnění) uživatelských účtů (superadmin).\nDo registračního formuláře bylo přidáno datum narození, které dříve chybělo, ačkoliv bylo požadováno v kódu."
+        },
+        {
+          "version": "0.60",
+          "date": "2025-06",
+          "notes": "Byl proveden vzhledový redesing\nNyní se na hlavní stránce zobrazují články\nPředělána sekce Kontakt - patička webu"
+        },
+        {
+          "version": "0.57 Hotfix",
+          "date": "2025-06",
+          "notes": "Opraveny chyby v URL routách – už se nezobrazují chyby 404 kvůli špatnému směrování.\nZnovu zavedené URL routování bez specifikace souboru (pouze složka v URL).\nMírný pokrok ve vzhledovém redesingu – stránka působí čistěji a přehledněji."
+        },
+        {
+          "version": "0.56 Tech debt release",
+          "date": "2025-06",
+          "notes": "URL Routy převedeny na lowercase, a URL názvy byly zjednodušeny.\nPo úpravách URL si aplikace neprošla testováním => Tech debt release\nVylepšeno UI úvodní stránky\nPřidána dočasná stránka Under Development"
+        },
+        {
+          "version": "0.54",
+          "date": "2025-05",
+          "notes": "Změněn název aplikace na Pojišťák.NET.\nOznámeno oficiální zahájení fáze revize – projekt bude postupně modernizován a přizpůsoben jako silná ukázka pro IT portfolio."
+        },
+        {
+          "version": "0.53",
+          "date": "2025-03",
+          "notes": "Přidáno automatické formátování finančních částek, PSČ pojištěnce a telefonních čísel pro lepší čitelnost dat.\nKontrola dobrých praktik."
+        },
+        {
+          "version": "0.50",
+          "date": "2025-03",
+          "notes": "Doplněna základní dokumentace k metodám kontrolerů.\nRevize části kontrolerů pro větší přehlednost.\nZavedena základní validace vstupních polí na frontendu.\nProvedena úprava uživatelského rozhraní za pomocí Bootstrapu.\nDoladěny chyby na backendu související s pojmenováním a sladěním proměnných id, insurerId a insuranceId."
+        },
+        {
+          "version": "0.40",
+          "date": "2025-03",
+          "notes": "Přidána možnost přidávat, upravovat a mazat pojištění.\nNyní se při stisknutí tlačítka 'Smazat' zobrazí potvrzovací dialog.\nPři kliknutí na pojištěnce se zobrazí detail s informacemi o jeho pojištění."
+        },
+        {
+          "version": "0.30",
+          "date": "2025-02",
+          "notes": "Přidána základní MVC architektura a načítání z databáze MS-SQL.\nPřidána možnost přidávat, upravovat a mazat pojištěnce"
+        },
+        {
+          "version": "0.20",
+          "date": "2025-02",
+          "notes": "Vytvořen základ projektu v ASP.NET Core MVC.\nZaložen repozitář a inicializována databáze."
+        },
+        {
+          "version": "0.10",
+          "date": "2025-02",
+          "notes": "Vytvořeny základní modely pro pojištěnce a pojištění."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "DEV portfolio",
+      "description": "Webové portfolio vytvořené pomocí Bootstrapu, s důrazem na responzivitu, přehlednost a snadnou rozšiřitelnost.\n\nHlavní součástí je seznam projektů s vlastním třístavovým filtrem (checkboxy), který umožňuje rychlé vyhledávání projektů podle technologie a typu – backendový výpis projektů je kompletně mé vlastní řešení a odráží moje architektonické myšlení. Portfolio dále obsahuje [ d] blog psaný v Markdownu, kde sdílím postřehy od programování, přes školství a motivaci, až po psychologii a společenská témata.\n\nCelá struktura portfolia je modulární, což usnadňuje přidávání nových projektů a funkcionalit a zároveň demonstruje schopnost vytvářet čistý a udržitelný kód.",
+      "shortDescription": "Webové portfolio k prezentaci",
+      "note": "Portfolio reflektuje můj pokrok ve vývoji a designu. Hlavní architektura, backend a třístavový filtr jsou zcela mé vlastní práce. Blogové články jsou snadno spravovatelné díky Markdownu. UI a texty jsou laděny pro přehlednost a čitelnost, s cílem efektivně prezentovat mé projekty a schopnosti.",
+      "completionDate": "2025-06",
+      "version": "1.14",
+      "tags": "PHP, Bootstrap, Javascript, HTML, CSS",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://dnx.mzf.cz"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/dnx.mzf.cz"
+        }
+      ],
+      "status": [
+        "completed",
+        "chatgpt"
+      ],
+      "thumbnail": "devPortfolio_thumb.webp",
+      "gallery": [
+        "devPortfolio1.webp",
+        "devPortfolio2.webp",
+        "devPortfolio3.webp",
+        "devPortfolio4.webp",
+        "devPortfolio5.webp",
+        "devPortfolio6.webp"
+      ],
+      "changelog": [
+        {
+          "version": "1.14",
+          "date": "2025-08",
+          "notes": "Přepracovány popisky projektů, aby lépe vystihovaly technické schopnosti a hlavní funkcionalitu. Upraveny štítky a metadata projektů pro přehlednější prezentaci v portfoliu."
+        },
+        {
+          "version": "1.13",
+          "date": "2025-08",
+          "notes": "Aktualizovány popisky projektů - nyní jsou delší."
+        },
+        {
+          "version": "1.12",
+          "date": "2025-08",
+          "notes": "Rozšířen a vylepšen životopis - nyní má dvě stránky, a je ATS a Copy&Paste kompatibilní\nPřidána anglická verze životopisu"
+        },
+        {
+          "version": "1.11",
+          "date": "2025-08",
+          "notes": "Blog sloučen s DEV portfoliem."
+        },
+        {
+          "version": "1.11 - [ d] blog",
+          "date": "2025-05",
+          "notes": "Blog vytvořen - sdílí vzhled portfolia.\nPokročilé filtry dosud nepřidány\nImprovizované UI rozhraní"
+        },
+        {
+          "version": "1.10",
+          "date": "2025-06",
+          "notes": "Vylepšena sekce „O mně“: přidány podnadpisy a text upraven pro lepší čitelnost a vyšší úspěšnost u HR.\nDůvod úpravy: HR specialisté často nestíhají číst dlouhé slohovky a přitom snadno přehlédnou klíčovou motivaci uchazeče.\nOpravena drobná UI chyba s výpisem verze (u nadpisu) na mobilních zařízeních - nyní se zalamuje.\nProblém s tlačítkem zpět byl již vyřešen - stačí použít tlačítko prohlížeče (odstraněn target _blank z odkazu)."
+        },
+        {
+          "version": "1.07",
+          "date": "2025-06",
+          "notes": "Status štítky rozšířeny - kromě verzovacích jsou dostupné i dle úrovně zapojení ve vývoji.\nDo detailu projektu stále nebylo přidáno tlačítko zpět (UX) pro netechnické HR.\nDosud nebyl opraven bug, kdy aktuální verze v detailu na mobilech se schová mimo obrazovku."
+        },
+        {
+          "version": "1.00",
+          "date": "2025-05",
+          "notes": "Přidán životopis do sekce about-me na hlavní stránce; web již plní základní funkčnost v0.70 --> v1.00."
+        },
+        {
+          "version": "0.70",
+          "date": "2025-05",
+          "notes": "Nyní jsou k dispozici tři motivy vzhledu - 'dark', 'darker' a 'softlight'. Všechny jsou variace tmavých témat.\nVylepšen filtr portfolia - nyní lze filtrovat i podle vývojových štítků (Alpha,Beta,Completed,ForRemake).\nPřidána zpětná vazba filtru: vypisování aktivních filtrů a počet aktuálně zobrazených výsledků.\nPřidán changelog."
+        },
+        {
+          "version": "0.65",
+          "date": "2025-05",
+          "notes": "Vylepšeno UI v detailech\nPřidán přepínač motivů stránky - kromě defaultního 'dark' vzhledu je dostupný i vzhled 'darker'.\nPřidáno nové logo.\nNyní lze galerii zvětšit a přepínat mezi obrázky ve zvětšeném režimu.\nOprava rozbitého UI v detailu projektu.\nPřidán do patičky webu anti-bot dešifrovač emailu."
+        },
+        {
+          "version": "0.60",
+          "date": "2025-05",
+          "notes": "Vylepšen filtr portfolia - nyní je třístavový.\nPřidána v detailu žlutá poznámka, datum a verze projektu.\nV detailu byla vylepšena tlačítka 'Stáhnout' a 'GitHub'; přidáno tlačítko 'Zobrazit'.\nOprava bugů."
+        },
+        {
+          "version": "0.55",
+          "date": "2025-04",
+          "notes": "Přidán detail projektu i s galerií a tagy.\nDále - jednoduchý filtr technologií k portfoliu a verzovací štítky.\nPřidány citáty."
+        },
+        {
+          "version": "0.50",
+          "date": "2025-04",
+          "notes": "Stránka je celá postavena responzivně a po částech - sekcích čili partials.\nPřidán navbar, hlavička, patička, about-me, a citáty.\nPřidáno bylo i portfolio - výpis projektů na hlavní stránce."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Dashboard",
+      "description": "Vlastní domovská stránka vytvořená v PHP, HTML, CSS a JavaScriptu, která umožňuje uživatelům ukládat záložky, měnit pozadí, nastavit výchozí vyhledávač a sledovat RSS kanály.\n\nProjekt obsahuje vlastní JavaScriptový našeptávač založený na záložkách a podporuje přihlášení přes Google pro autentizaci uživatelů. Použité PHP balíčky přes Composer zajišťují vyšší bezpečnost a rozšiřitelnost funkcionality. Dnes je připraven k použití pro ostatní uživatele a slouží jako platforma, kde si mohou upravit své prostředí podle vlastních preferencí.",
+      "shortDescription": "Domovská stránka s Google přihlášením, záložkami, RSS a tapetou.",
+      "note": "Projekt mi umožnil zvládnout implementaci form POSTů a Google OAuth přímo v PHP – dlouho jsem hledal funkční řešení a až s pomocí ChatGPT jsem ho realizoval. Zkušenost zahrnovala překonání technických omezení hostingu a seznámení se s Composer balíčky, což posílilo mé dovednosti v PHP a práci s externími knihovnami.",
+      "completionDate": "2025-08",
+      "version": "1.9",
+      "tags": "Javascript, PHP, HTML, CSS, Composer, Google OAuth",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://dnx.mzf.cz/dashboard/"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/dnx.mzf.cz/tree/main/dashboard"
+        }
+      ],
+      "status": [
+        "completed",
+        "chatgpt"
+      ],
+      "thumbnail": "dashboard_thumb.webp",
+      "gallery": [
+        "dashboard1.webp",
+        "dashboard2.webp",
+        "dashboard3.webp",
+        "dashboard4.webp",
+        "dashboard5.webp",
+        "dashboard6.webp"
+      ],
+      "changelog": [
+        {
+          "version": "1.9",
+          "date": "2025-08",
+          "notes": "Testovací režim přihlášení je již dostupný i pro širokou veřejnost - kdysi sloužil jen pro vývojářské účely."
+        },
+        {
+          "version": "1.8",
+          "date": "2025-07",
+          "notes": "Přidány tapety, včetně možnosti pozicování tapety (např. left center apod.)\nPřidáno přihlašování přes Google účet\nDo nastavení přidána správa záložek a RSS kanálů\nPřidány RSS zprávy do dashboardu\nPřidán náhled tapety — při výběru se pozadí mění ještě před uložením\nPřidán výběr, který externí vyhledávač se má použít při užití vestavěného vyhledávacího pole.\nDosud NEBYLA přidána možnost měnit pořadí záložek (Drag & Drop)\nDosud NEBYLO přidáno zobrazení záložky už z nastavení s atributem target _blank\nDosud NEBYLA přidána možnost záložku deaktivovat (skrýt bez smazání)."
+        },
+        {
+          "version": "1.4",
+          "date": "2025-05",
+          "notes": "Web prošel kompletním redesignem a nově je koncipován jako multifunkční aplikace.\nVyhledávání zahrnuje našeptávač i živé filtrování zobrazených záložek.\nPodpora tagů zatím znovu nebyla implementována.\nPřidány přepínatelné kategorie."
+        },
+        {
+          "version": "1.2",
+          "date": "2024-03",
+          "notes": "Přidán jednoduchý systém záložek s pomocí javascriptu a podporou tagů.\nDo vyhledávacího pole stačí napsat část názvu nebo tagu, a výsledek se objeví v našeptávači."
+        },
+        {
+          "version": "1.1",
+          "date": "2019-03",
+          "notes": "Přidána podpora pro pozadí na hlavní plochu; prozatím bez uživatelské přizpůsobivosti pozadí."
+        },
+        {
+          "version": "1.0",
+          "date": "2018-03",
+          "notes": "Vytvořena hlavní plocha s vyhledávacím formulářem - po scrollování jsou dostupné i záložky, které se responzivně přizpůsobují velikosti okna."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "SafeSoft",
+      "description": "Webová aplikace postavená na ASP.NET s REST API, která kombinuje e-shop a administraci uživatelů. Umožňuje registraci, přihlášení s dvoufaktorovou autentizací, změnu vlastních údajů, i správu produktů a objednávek, a to i s důrazem na bezpečnost (XSS ochrana, prevence manipulace s cenami).",
+      "shortDescription": "Firemní web s REST API, e-shopem, autentizací a správou uživatelů.",
+      "note": "Projekt vznikl jako zadání od firmy s termínem odevzdání 14 dní - původně měl být použit Vue.js namísto čistého JavaScriptu; Na projektu jsem pokračoval i po jeho odevzdání. Díky implementaci XSS ochrany a dvoufaktorové autentizace jsem si vyzkoušel i praktické aspekty bezpečnosti - např cookies a ochrana vůči úpravám cen. Navíc jsem si procvičil integraci frontendu (Bootstrap, JavaScript) s backendem přes REST API.",
+      "completionDate": "2025-09",
+      "version": "0.9",
+      "tags": "C#, ASP.NET, REST API, XSS Protection, 2FA, Bootstrap, Javascript, Entity Framework, SQL, HTML, CSS",
+      "links": [
+        {
+          "type": "preview",
+          "url": "https://safesoft.tryasp.net/"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/danixek/SafeSoft"
+        }
+      ],
+      "status": [
+        "completed",
+        "chatgpt"
+      ],
+      "thumbnail": "SafeSoft_thumb.webp",
+      "gallery": [
+        "SafeSoft1.webp",
+        "SafeSoft2.webp",
+        "SafeSoft3.webp",
+        "SafeSoft4.webp",
+        "SafeSoft5.webp",
+        "SafeSoft6.webp"
+      ],
+      "changelog": [
+        {
+          "version": "0.92",
+          "date": "2026-02",
+          "notes": "Projekt přejmenován na SafeSoft."
+        },
+        {
+          "version": "0.9",
+          "date": "2025-09",
+          "notes": "Změněno přihlašování - nyní je formulář přístupný v modalu, který se načítá dynamicky pomocí JavaScriptu."
+        },
+        {
+          "version": "0.8",
+          "date": "2025-09",
+          "notes": "Nyní má superadmin přístupnou správu produktů - formulář se načítá dynamicky.\nLze přidávat, mazat i editovat produkty, včetně změny obrázkového náhledu produktu."
+        },
+        {
+          "version": "0.6",
+          "date": "2025-09",
+          "notes": "Přidáno dynamické zobrazení objednávek - ty se zatím nedají spravovat.\nNamísto toho si superadmin může spustit náhodné generování objednávek.\nNyní se v košíku dá měnit množství položek či je odebírat.\nPřidána vlastní XSS ochrana."
+        },
+        {
+          "version": "0.4",
+          "date": "2025-09",
+          "notes": "Přidán košík, včetně zobrazení produktů díky základnímu dynamickému načítání v javascriptu (původně to měl být vue.js) - v eshopu i na úvodní stránce.\nCeny produktů se neukládají do cookies - a to kvůli kyberbezpečnosti."
+        },
+        {
+          "version": "0.2",
+          "date": "2025-09",
+          "notes": "Přidána autentizace - admin, superadmin a uživatel.\nPrvní registrovaný se stává superadminem - ten spravuje admin práva ostatních uživatelů, včetně adminů.\nUživatel může měnit údaje vlastního účtu v nastavení.\nK dispozici je i tmavý režim."
+        }
+      ]
+    }
+  ]
+}

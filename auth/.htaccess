@@ -1,9 +1,0 @@
-<FilesMatch "\.(env|secret)$">
-    Require all denied
-</FilesMatch>
-
-
-# Povolit PHP skripty
-<FilesMatch "\.php$">
-    Require all granted
-</FilesMatch>

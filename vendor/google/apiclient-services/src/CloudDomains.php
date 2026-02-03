@@ -85,6 +85,11 @@ class CloudDomains extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'extraLocationTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -234,6 +239,16 @@ class CloudDomains extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'initiatePushTransfer' => [
+              'path' => 'v1/{+registration}:initiatePushTransfer',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'registration' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/registrations',
               'httpMethod' => 'GET',
@@ -280,6 +295,16 @@ class CloudDomains extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'renewDomain' => [
+              'path' => 'v1/{+registration}:renewDomain',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'registration' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'resetAuthorizationCode' => [
               'path' => 'v1/{+registration}:resetAuthorizationCode',
               'httpMethod' => 'POST',
@@ -292,6 +317,34 @@ class CloudDomains extends \Google\Service
               ],
             ],'retrieveAuthorizationCode' => [
               'path' => 'v1/{+registration}:retrieveAuthorizationCode',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'registration' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'retrieveGoogleDomainsDnsRecords' => [
+              'path' => 'v1/{+registration}:retrieveGoogleDomainsDnsRecords',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'registration' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'retrieveGoogleDomainsForwardingConfig' => [
+              'path' => 'v1/{+registration}:retrieveGoogleDomainsForwardingConfig',
               'httpMethod' => 'GET',
               'parameters' => [
                 'registration' => [

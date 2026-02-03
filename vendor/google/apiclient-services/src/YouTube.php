@@ -85,6 +85,7 @@ class YouTube extends \Google\Service
   public $thumbnails;
   public $videoAbuseReportReasons;
   public $videoCategories;
+  public $videoTrainability;
   public $videos;
   public $watermarks;
   public $youtube_v3;
@@ -565,6 +566,10 @@ class YouTube extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'postId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'searchTerms' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -1014,6 +1019,19 @@ class YouTube extends \Google\Service
                 'profileImageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
+                ],
+              ],
+            ],'transition' => [
+              'path' => 'youtube/v3/liveChat/messages/transition',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'id' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'status' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
@@ -1973,6 +1991,25 @@ class YouTube extends \Google\Service
           ]
         ]
     );
+    $this->videoTrainability = new YouTube\Resource\VideoTrainability(
+        $this,
+        $this->serviceName,
+        'videoTrainability',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'youtube/v3/videoTrainability',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'id' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->videos = new YouTube\Resource\Videos(
         $this,
         $this->serviceName,
@@ -2206,17 +2243,34 @@ class YouTube extends \Google\Service
         'messages',
         [
           'methods' => [
-            'transition' => [
-              'path' => 'youtube/v3/liveChat/messages/transition',
-              'httpMethod' => 'POST',
+            'stream' => [
+              'path' => 'youtube/v3/liveChat/messages/stream',
+              'httpMethod' => 'GET',
               'parameters' => [
-                'id' => [
+                'hl' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'status' => [
+                'liveChatId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'part' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'profileImageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
                 ],
               ],
             ],

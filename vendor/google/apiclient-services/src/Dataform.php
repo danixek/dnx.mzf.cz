@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for Dataform (v1beta1).
+ * Service definition for Dataform (v1).
  *
  * <p>
  * Service to develop, version control, and operationalize SQL pipelines in
@@ -35,19 +35,23 @@ use Google\Client;
  */
 class Dataform extends \Google\Service
 {
+  /** View and manage your data in Google BigQuery and see the email address for your Google Account. */
+  const BIGQUERY =
+      "https://www.googleapis.com/auth/bigquery";
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations;
-  public $projects_locations_collections;
+  public $projects_locations_folders;
+  public $projects_locations_operations;
   public $projects_locations_repositories;
-  public $projects_locations_repositories_commentThreads;
   public $projects_locations_repositories_compilationResults;
   public $projects_locations_repositories_releaseConfigs;
   public $projects_locations_repositories_workflowConfigs;
   public $projects_locations_repositories_workflowInvocations;
   public $projects_locations_repositories_workspaces;
+  public $projects_locations_teamFolders;
   public $rootUrlTemplate;
 
   /**
@@ -64,7 +68,7 @@ class Dataform extends \Google\Service
     $this->rootUrlTemplate = $rootUrl ?: 'https://dataform.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta1';
+    $this->version = 'v1';
     $this->serviceName = 'dataform';
 
     $this->projects_locations = new Dataform\Resource\ProjectsLocations(
@@ -74,7 +78,17 @@ class Dataform extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getConfig' => [
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -84,7 +98,132 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+name}/locations',
+              'path' => 'v1/{+name}/locations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'extraLocationTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'updateConfig' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_folders = new Dataform\Resource\ProjectsLocationsFolders(
+        $this,
+        $this->serviceName,
+        'folders',
+        [
+          'methods' => [
+            'getIamPolicy' => [
+              'path' => 'v1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'options.requestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_operations = new Dataform\Resource\ProjectsLocationsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -104,49 +243,9 @@ class Dataform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_collections = new Dataform\Resource\ProjectsLocationsCollections(
-        $this,
-        $this->serviceName,
-        'collections',
-        [
-          'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
+                'returnPartialSuccess' => [
                   'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
+                  'type' => 'boolean',
                 ],
               ],
             ],
@@ -160,7 +259,7 @@ class Dataform extends \Google\Service
         [
           'methods' => [
             'commit' => [
-              'path' => 'v1beta1/{+name}:commit',
+              'path' => 'v1/{+name}:commit',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -170,7 +269,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'computeAccessTokenStatus' => [
-              'path' => 'v1beta1/{+name}:computeAccessTokenStatus',
+              'path' => 'v1/{+name}:computeAccessTokenStatus',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -180,7 +279,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta1/{+parent}/repositories',
+              'path' => 'v1/{+parent}/repositories',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -194,7 +293,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -208,7 +307,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'fetchHistory' => [
-              'path' => 'v1beta1/{+name}:fetchHistory',
+              'path' => 'v1/{+name}:fetchHistory',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -226,7 +325,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'fetchRemoteBranches' => [
-              'path' => 'v1beta1/{+name}:fetchRemoteBranches',
+              'path' => 'v1/{+name}:fetchRemoteBranches',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -236,7 +335,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -246,7 +345,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => [
                 'resource' => [
@@ -260,7 +359,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/repositories',
+              'path' => 'v1/{+parent}/repositories',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -286,7 +385,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -300,7 +399,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'queryDirectoryContents' => [
-              'path' => 'v1beta1/{+name}:queryDirectoryContents',
+              'path' => 'v1/{+name}:queryDirectoryContents',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -326,7 +425,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'readFile' => [
-              'path' => 'v1beta1/{+name}:readFile',
+              'path' => 'v1/{+name}:readFile',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -344,7 +443,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -354,41 +453,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_repositories_commentThreads = new Dataform\Resource\ProjectsLocationsRepositoriesCommentThreads(
-        $this,
-        $this->serviceName,
-        'commentThreads',
-        [
-          'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -408,7 +473,7 @@ class Dataform extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/compilationResults',
+              'path' => 'v1/{+parent}/compilationResults',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -418,7 +483,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -428,7 +493,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/compilationResults',
+              'path' => 'v1/{+parent}/compilationResults',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -454,7 +519,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'query' => [
-              'path' => 'v1beta1/{+name}:query',
+              'path' => 'v1/{+name}:query',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -486,7 +551,7 @@ class Dataform extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/releaseConfigs',
+              'path' => 'v1/{+parent}/releaseConfigs',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -500,7 +565,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -510,7 +575,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -520,7 +585,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/releaseConfigs',
+              'path' => 'v1/{+parent}/releaseConfigs',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -538,7 +603,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -562,7 +627,7 @@ class Dataform extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta1/{+parent}/workflowConfigs',
+              'path' => 'v1/{+parent}/workflowConfigs',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -576,7 +641,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -586,7 +651,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -596,7 +661,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/workflowConfigs',
+              'path' => 'v1/{+parent}/workflowConfigs',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -614,7 +679,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -638,7 +703,7 @@ class Dataform extends \Google\Service
         [
           'methods' => [
             'cancel' => [
-              'path' => 'v1beta1/{+name}:cancel',
+              'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -648,7 +713,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta1/{+parent}/workflowInvocations',
+              'path' => 'v1/{+parent}/workflowInvocations',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -658,7 +723,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -668,7 +733,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -678,7 +743,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/workflowInvocations',
+              'path' => 'v1/{+parent}/workflowInvocations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -704,7 +769,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'query' => [
-              'path' => 'v1beta1/{+name}:query',
+              'path' => 'v1/{+name}:query',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -732,7 +797,7 @@ class Dataform extends \Google\Service
         [
           'methods' => [
             'commit' => [
-              'path' => 'v1beta1/{+name}:commit',
+              'path' => 'v1/{+name}:commit',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -742,7 +807,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta1/{+parent}/workspaces',
+              'path' => 'v1/{+parent}/workspaces',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -756,7 +821,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -766,7 +831,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'fetchFileDiff' => [
-              'path' => 'v1beta1/{+workspace}:fetchFileDiff',
+              'path' => 'v1/{+workspace}:fetchFileDiff',
               'httpMethod' => 'GET',
               'parameters' => [
                 'workspace' => [
@@ -780,7 +845,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'fetchFileGitStatuses' => [
-              'path' => 'v1beta1/{+name}:fetchFileGitStatuses',
+              'path' => 'v1/{+name}:fetchFileGitStatuses',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -790,7 +855,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'fetchGitAheadBehind' => [
-              'path' => 'v1beta1/{+name}:fetchGitAheadBehind',
+              'path' => 'v1/{+name}:fetchGitAheadBehind',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -804,7 +869,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -814,7 +879,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => [
                 'resource' => [
@@ -828,7 +893,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'installNpmPackages' => [
-              'path' => 'v1beta1/{+workspace}:installNpmPackages',
+              'path' => 'v1/{+workspace}:installNpmPackages',
               'httpMethod' => 'POST',
               'parameters' => [
                 'workspace' => [
@@ -838,7 +903,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta1/{+parent}/workspaces',
+              'path' => 'v1/{+parent}/workspaces',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -864,7 +929,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'makeDirectory' => [
-              'path' => 'v1beta1/{+workspace}:makeDirectory',
+              'path' => 'v1/{+workspace}:makeDirectory',
               'httpMethod' => 'POST',
               'parameters' => [
                 'workspace' => [
@@ -874,7 +939,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'moveDirectory' => [
-              'path' => 'v1beta1/{+workspace}:moveDirectory',
+              'path' => 'v1/{+workspace}:moveDirectory',
               'httpMethod' => 'POST',
               'parameters' => [
                 'workspace' => [
@@ -884,7 +949,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'moveFile' => [
-              'path' => 'v1beta1/{+workspace}:moveFile',
+              'path' => 'v1/{+workspace}:moveFile',
               'httpMethod' => 'POST',
               'parameters' => [
                 'workspace' => [
@@ -894,7 +959,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'pull' => [
-              'path' => 'v1beta1/{+name}:pull',
+              'path' => 'v1/{+name}:pull',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -904,7 +969,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'push' => [
-              'path' => 'v1beta1/{+name}:push',
+              'path' => 'v1/{+name}:push',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -914,7 +979,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'queryDirectoryContents' => [
-              'path' => 'v1beta1/{+workspace}:queryDirectoryContents',
+              'path' => 'v1/{+workspace}:queryDirectoryContents',
               'httpMethod' => 'GET',
               'parameters' => [
                 'workspace' => [
@@ -936,7 +1001,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'readFile' => [
-              'path' => 'v1beta1/{+workspace}:readFile',
+              'path' => 'v1/{+workspace}:readFile',
               'httpMethod' => 'GET',
               'parameters' => [
                 'workspace' => [
@@ -954,7 +1019,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'removeDirectory' => [
-              'path' => 'v1beta1/{+workspace}:removeDirectory',
+              'path' => 'v1/{+workspace}:removeDirectory',
               'httpMethod' => 'POST',
               'parameters' => [
                 'workspace' => [
@@ -964,7 +1029,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'removeFile' => [
-              'path' => 'v1beta1/{+workspace}:removeFile',
+              'path' => 'v1/{+workspace}:removeFile',
               'httpMethod' => 'POST',
               'parameters' => [
                 'workspace' => [
@@ -974,7 +1039,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'reset' => [
-              'path' => 'v1beta1/{+name}:reset',
+              'path' => 'v1/{+name}:reset',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -984,7 +1049,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'searchFiles' => [
-              'path' => 'v1beta1/{+workspace}:searchFiles',
+              'path' => 'v1/{+workspace}:searchFiles',
               'httpMethod' => 'GET',
               'parameters' => [
                 'workspace' => [
@@ -1006,7 +1071,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -1016,7 +1081,7 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
@@ -1026,10 +1091,54 @@ class Dataform extends \Google\Service
                 ],
               ],
             ],'writeFile' => [
-              'path' => 'v1beta1/{+workspace}:writeFile',
+              'path' => 'v1/{+workspace}:writeFile',
               'httpMethod' => 'POST',
               'parameters' => [
                 'workspace' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_teamFolders = new Dataform\Resource\ProjectsLocationsTeamFolders(
+        $this,
+        $this->serviceName,
+        'teamFolders',
+        [
+          'methods' => [
+            'getIamPolicy' => [
+              'path' => 'v1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'options.requestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

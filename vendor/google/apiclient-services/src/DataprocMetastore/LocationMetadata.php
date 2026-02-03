@@ -20,13 +20,33 @@ namespace Google\Service\DataprocMetastore;
 class LocationMetadata extends \Google\Collection
 {
   protected $collection_key = 'supportedHiveMetastoreVersions';
+  protected $customRegionMetadataType = CustomRegionMetadata::class;
+  protected $customRegionMetadataDataType = 'array';
   protected $multiRegionMetadataType = MultiRegionMetadata::class;
   protected $multiRegionMetadataDataType = '';
   protected $supportedHiveMetastoreVersionsType = HiveMetastoreVersion::class;
   protected $supportedHiveMetastoreVersionsDataType = 'array';
 
   /**
-   * @param MultiRegionMetadata
+   * Possible configurations supported if the current region is a custom region.
+   *
+   * @param CustomRegionMetadata[] $customRegionMetadata
+   */
+  public function setCustomRegionMetadata($customRegionMetadata)
+  {
+    $this->customRegionMetadata = $customRegionMetadata;
+  }
+  /**
+   * @return CustomRegionMetadata[]
+   */
+  public function getCustomRegionMetadata()
+  {
+    return $this->customRegionMetadata;
+  }
+  /**
+   * The multi-region metadata if the current region is a multi-region.
+   *
+   * @param MultiRegionMetadata $multiRegionMetadata
    */
   public function setMultiRegionMetadata(MultiRegionMetadata $multiRegionMetadata)
   {
@@ -40,7 +60,11 @@ class LocationMetadata extends \Google\Collection
     return $this->multiRegionMetadata;
   }
   /**
-   * @param HiveMetastoreVersion[]
+   * The versions of Hive Metastore that can be used when creating a new
+   * metastore service in this location. The server guarantees that exactly one
+   * HiveMetastoreVersion in the list will set is_default.
+   *
+   * @param HiveMetastoreVersion[] $supportedHiveMetastoreVersions
    */
   public function setSupportedHiveMetastoreVersions($supportedHiveMetastoreVersions)
   {
