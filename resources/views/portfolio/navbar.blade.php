@@ -4,7 +4,7 @@
     <div class="container">
 
         <a class="navbar-brand" href="/#" id="logo-link">
-            <img src="logo/dnx-logo_mini_60px.png" alt="Logo" class="logo-img mb-1">
+            <img src="{{ asset('assets/logo/dnx-logo_mini_60px.png') }}" alt="Logo" class="logo-img mb-1">
             <span class="logo-text">
                 <l>D</l>aniel <b>Kefurt</b>
             </span>
@@ -66,4 +66,4 @@
         </div>
     </div>
 </nav>
-<script src="js/theme-toggler.js"></script>
+<script src="{{ asset('assets/portfolio/js/theme-toggler.js') }}"></script>

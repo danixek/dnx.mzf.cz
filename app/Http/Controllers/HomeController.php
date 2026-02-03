@@ -25,7 +25,7 @@ class HomeController extends BaseController
                 DB::raw('GROUP_CONCAT(b.status_background_color) as badges_bg'),
                 DB::raw('GROUP_CONCAT(b.status_text_color) as badges_text')
             )
-            ->groupBy('p.id')
+            ->groupBy('p.id', 'p.title', 'p.short_description', 'p.tags', 'p.thumbnail')
             ->get()
             ->map(function ($project) {
                 // Tagy
@@ -38,9 +38,9 @@ class HomeController extends BaseController
 
                 // Thumbnail
                 $defaultBase64 = 'data:image/png;base64,...'; // zkráceno
-                $thumbPath = public_path('portfolio/gallery/' . ($project->thumbnail ?? ''));
+                $thumbPath = public_path('assets/portfolio/gallery/' . ($project->thumbnail ?? ''));
                 $project->thumbnailUrl = ($project->thumbnail && file_exists($thumbPath))
-                    ? '/portfolio/gallery/' . $project->thumbnail
+                    ? 'assets/portfolio/gallery/' . $project->thumbnail
                     : $defaultBase64;
 
                 return $project;
@@ -92,9 +92,9 @@ class HomeController extends BaseController
         $project->dataTech = implode(',', $project->tagsArray);
 
         $defaultBase64 = 'data:image/png;base64,...'; // zkráceno
-        $thumbPath = public_path('portfolio/gallery/' . ($project->thumbnail ?? ''));
+        $thumbPath = public_path('assets/portfolio/gallery/' . ($project->thumbnail ?? ''));
         $project->thumbnailUrl = ($project->thumbnail && file_exists($thumbPath))
-            ? '/portfolio/gallery/' . $project->thumbnail
+            ? 'assets/portfolio/gallery/' . $project->thumbnail
             : $defaultBase64;
 
         // Galerie
@@ -184,7 +184,7 @@ class HomeController extends BaseController
         $thumbFile = $item['thumbnail'] ?? ($item['gallery'][0] ?? null);
 
         if ($thumbFile) {
-            $publicPath = 'library/' . ltrim($thumbFile, '/');
+            $publicPath = 'assets/library/' . ltrim($thumbFile, '/');
             $fullPath = public_path($publicPath);
             $thumbnail = file_exists($fullPath) ? '/' . $publicPath : $defaultBase64;
         } else {

@@ -40,7 +40,7 @@ foreach ($pinnedFiles as $file) {
                 class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex text-decoration-none">
                 <div class="card bg-dark text-light flex-fill">
                     <div class="ratio ratio-16x9">
-                        <img src="/blog/<?= htmlspecialchars($image) ?>"
+                        <img src="{{ asset('assets/blog/' . htmlspecialchars($image)) }}"
                             alt="<?= mb_substr(htmlspecialchars($title), 0, 25) ?>..."
                             class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="font-size: 99%">
                     </div>

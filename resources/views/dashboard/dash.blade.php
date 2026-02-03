@@ -22,7 +22,7 @@ $searchBase = $searchUrls[$engine] ?? $searchUrls['google'];
         <div class="search-section" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
             <div class="search-logo"
                 style="display: flex; justify-content: center; opacity: 0.5; align-items: center; width: 100%; margin-bottom: 4em">
-                <img src="/logo/dnx-logo_mini_120px.png" alt="Logo">
+                <img src="{{ asset('assets/logo/dnx-logo_mini_120px.png') }}" alt="Logo">
             </div>
             <div class="search-wrapper" style="width: 100%; display: flex; justify-content: center;">
                 <ul class="autocomplete-list"></ul>

@@ -39,10 +39,10 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/bs-tooltip.js"></script>
+    <script src="{{ asset('assets/portfolio/js/quotes.js') }}"></script>
+    <script src="{{ asset('assets/portfolio/js/bs-tooltip.js') }}"></script>
     <!-- JS skripty ke galerii -->
-    <script src="js/detail-gallery.js"></script>
+    <script src="{{ asset('assets/portfolio/js/detail-gallery.js') }}"></script>
 
 
 </body>

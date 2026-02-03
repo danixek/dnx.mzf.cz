@@ -187,7 +187,7 @@
                         @endif
 
                         <div class="ratio ratio-16x9">
-                            <img src="{!! nl2br(e($project->thumbnailUrl)) !!}" alt="{!! nl2br(e($project->title)) !!}"
+                            <img src="{!! asset(nl2br(e($project->thumbnailUrl))) !!}" alt="{!! nl2br(e($project->title)) !!}"
                                 class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
                         </div>
 
@@ -227,6 +227,6 @@
 
     </div>
 
-    <script src="js/portfolio-filter.js"></script>
+    <script src="{{ asset('assets/portfolio/js/portfolio-filter.js') }}"></script>
 
 </section>

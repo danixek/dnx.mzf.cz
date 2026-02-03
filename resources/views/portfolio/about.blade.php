@@ -30,7 +30,7 @@
 
             <!-- Obrázek -->
             <div class="col-lg-4 col-md-4 order-2 order-md-2 text-center text-md-end">
-                <img src="portfolio/img/profile.jpg" alt="O mně"
+                <img src="{{ asset('assets/portfolio/img/profile.jpg') }}" alt="O mně"
                     class="img-fluid rounded shadow mx-auto d-block d-md-inline" style="max-width: 100%; height: auto">
             </div>
 

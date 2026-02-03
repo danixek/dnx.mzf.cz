@@ -5,17 +5,17 @@
     <meta charset="UTF-8" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="logo/dnx-logo_mini.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/logo/dnx-logo_mini.ico') }}" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="dashboard/index.css" />
-    <link rel="stylesheet" href="dashboard/endora-ads.css">
+    <link rel="stylesheet" href="{{ asset('assets/dashboard/index.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/dashboard/endora-ads.css') }}">
 </head>
 
 <body>
     <div id="background-overlay"></div>    
     <a class="logo-wrapper" href="?">
-        <img src="/logo/dnx-logo_mini_60px.png" alt="Logo">
+        <img src="{{ asset('assets/logo/dnx-logo_mini_60px.png') }}" alt="Logo">
         <span class="logo-text">
             <span class="visually-hidden">d</span>
             <span class="logo_text-show" id="logo-text">nx</span>
@@ -30,7 +30,7 @@
 
     <style>
         #background-overlay {
-            background: url('{{ asset("dashboard/img/" . $preferences->wallpaper) }}') no-repeat
+            background: url('{{ asset("assets/dashboard/img/" . $preferences->wallpaper) }}') no-repeat
                 {{ $preferences->wallpaperPosition }}
                 /cover;
         }
@@ -55,18 +55,18 @@
     </nav>
     <!-- Javascript pro dash -->
     @if(($tab ?? null) === 'dash' || !isset($tab))
-        <script src="{{ asset('dashboard/js/filter-bookmark.js') }}"></script>
+        <script src="{{ asset('assets/dashboard/js/filter-bookmark.js') }}"></script>
     @endif
 
     <!-- Javascript - Obecné -->
-    <script src="{{ asset('dashboard/js/scroll-wallpaper.js') }}"></script>
-    <script src="{{ asset('dashboard/js/navbar-hide.js') }}"></script>
-    <script src="{{ asset('dashboard/js/logo-animated.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/scroll-wallpaper.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/navbar-hide.js') }}"></script>
+    <script src="{{ asset('assets/dashboard/js/logo-animated.js') }}"></script>
 
     <!-- Javascript pro nastavení -->
     @if(($tab ?? null) === 'set' && auth()->check())
-        <script src="{{ asset('dashboard/js/settings-add.js') }}"></script>
-        <script src="{{ asset('dashboard/js/settings-wallpaper.js') }}"></script>
+        <script src="{{ asset('assets/dashboard/js/settings-add.js') }}"></script>
+        <script src="{{ asset('assets/dashboard/js/settings-wallpaper.js') }}"></script>
     @endif
 
 </body>

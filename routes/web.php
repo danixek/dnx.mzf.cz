@@ -13,8 +13,6 @@ Route::get('/library', [HomeController::class, 'library'])->name('library');
 
 // Dashboard route
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('/dashboard', [DashboardController::class, 'index'])
-    ->name('dashboard');
 Route::post('/dashboard', [DashboardController::class, 'saveSettings'])
     ->middleware('auth')
     ->name('dashboard.save-settings');

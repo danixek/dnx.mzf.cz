@@ -66,7 +66,7 @@
   </div>
 </div>
 
-<script src="js/login-register-modal.js"></script>
+<script src="{{ asset('assets/portfolio/js/login-register-modal.js') }}"></script>
 <style>
   .modal-content.custom-dark .form-control,
   .modal-content.custom-dark .form-control::placeholder {
