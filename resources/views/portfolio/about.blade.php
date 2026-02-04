@@ -110,7 +110,7 @@
                 <!-- Životopis ke stažení a zobrazení -->
                 <div class="justify-content-end ms-auto col-6 text-end d-flex align-items-center">
                     <div class="btn-group">
-                        <a href="portfolio/CV_Csharp_Daniel-Kefurt.pdf" download
+                        <a href="CV_Csharp_Daniel-Kefurt.pdf" download
                             class="btn btn-themed d-flex align-items-center">
                             <i class="bi bi-download me-2"></i> Stáhnout životopis
                         </a>
@@ -122,20 +122,20 @@
                         <ul class="dropdown-menu dropdown-menu-dark bg-dark">
                             <li>
                                 <a class="dropdown-item d-flex align-items-center"
-                                    href="portfolio/CV_Csharp_Daniel-Kefurt.pdf" target="_blank"
+                                    href="CV_Csharp_Daniel-Kefurt.pdf" target="_blank"
                                     rel="noopener noreferrer">
                                     <i class="bi bi-file-earmark-pdf me-2"></i> Zobrazit životopis
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center"
-                                    href="portfolio/CV_Csharp_Daniel-Kefurt_OLD.pdf" download>
+                                    href="CL_Csharp_Daniel-Kefurt.pdf" download>
                                     <i class="bi bi-download me-2"></i> Stáhnout staré CV
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center"
-                                    href="portfolio/CV_Csharp_Daniel-Kefurt_OLD.pdf" target="_blank">
+                                    href="CL_Csharp_Daniel-Kefurt.pdf" target="_blank">
                                     <i class="bi bi-file-earmark-pdf me-2"></i> Zobrazit staré CV
                                 </a>
                             </li>

@@ -73,6 +73,7 @@
         <script src="{{ asset('assets/dashboard/js/settings-wallpaper.js') }}"></script>
     @endif
 
+    @vite(['resources/js/types/app.js', "resources/js/dashboard/{$page['component']}.vue"])
 </body>
 
 </html>
