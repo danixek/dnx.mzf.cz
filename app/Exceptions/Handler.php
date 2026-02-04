@@ -2,7 +2,10 @@
 
 namespace App\Exceptions;
 
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use App\Http\Controllers\ErrorController;
+use Throwable;
 
 class Handler extends ExceptionHandler
 {
@@ -33,5 +36,15 @@ class Handler extends ExceptionHandler
     public function register()
     {
         //
+    }
+    public function render($request, Throwable $exception)
+    {
+        // Zjistíme status code
+        $status = 500;
+        if ($exception instanceof HttpExceptionInterface) {
+            $status = $exception->getStatusCode();
+        }
+
+        return app(ErrorController::class)->show($request, $status);
     }
 }
