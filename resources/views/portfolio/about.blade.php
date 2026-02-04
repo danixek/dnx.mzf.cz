@@ -130,13 +130,13 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center"
                                     href="CL_Csharp_Daniel-Kefurt.pdf" download>
-                                    <i class="bi bi-download me-2"></i> Stáhnout staré CV
+                                    <i class="bi bi-download me-2"></i> Stáhnout průvodní dopis
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center"
                                     href="CL_Csharp_Daniel-Kefurt.pdf" target="_blank">
-                                    <i class="bi bi-file-earmark-pdf me-2"></i> Zobrazit staré CV
+                                    <i class="bi bi-file-earmark-pdf me-2"></i> Zobrazit průvodní dopis
                                 </a>
                             </li>
                         </ul>
