@@ -2,23 +2,9 @@
 <div class="background-overlay"></div>
 
 <main>
-    <?php
-$engine = $_SESSION['search_engine'] ?? 'google';
-
-$searchUrls = [
-    'google' => 'https://www.google.com/search?q=',
-    'duckduckgo' => 'https://duckduckgo.com/?q=',
-    'bing' => 'https://www.bing.com/search?q=',
-    'seznam' => 'https://search.seznam.cz/?q=',
-    'brave' => 'https://search.brave.com/search?q='
-];
-
-$searchBase = $searchUrls[$engine] ?? $searchUrls['google'];
-
-            ?>
 
     <!-- Vyhledávač -->
-    <form id="searchForm" method="get" target="_parent" action="<?= htmlspecialchars($searchBase) ?>">
+    <form id="searchForm" method="get" target="_parent" action="{{ e($preferences->searchEngine) }}">
         <div class="search-section" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
             <div class="search-logo"
                 style="display: flex; justify-content: center; opacity: 0.5; align-items: center; width: 100%; margin-bottom: 4em">

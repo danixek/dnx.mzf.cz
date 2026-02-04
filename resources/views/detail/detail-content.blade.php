@@ -1,11 +1,13 @@
-@php use App\Helpers\Utils; @endphp
+@php
+    use App\Helpers\Utils;
+@endphp
 
 <!-- Sekce Detail - detail portfolia -->
-<section id="detail" class="{{  Utils::getBgClass() }} py-5 text-white">
+<section id="detail" class="{{ $bgClass }} py-5 text-white">
     <div class="container">
         <div class="row align-items-start">
             <!-- Galerie vlevo -->
-            @include('portfolio.detail-gallery', ['gallery' => $project->gallery, 'mainImage' => $mainImage])
+            @include('detail.detail-gallery', ['gallery' => $project->gallery, 'mainImage' => $mainImage])
 
             <!-- Informace vpravo -->
             <div class="col-md-8">
@@ -37,13 +39,14 @@
                 </div>
 
                 <!-- Popisek projektu -->
-                <p class="project-description mt-3">{!! nl2br(e($project->description)) !!}</p>
-
+                <p class="project-description mt-3">
+                    {!! nl2br(strip_tags(str_replace('\n', "\n", $project->description), '<strong><em>')) !!}
+                </p>
 
                 <!-- Poznámka "pod čarou" k popisku -->
                 @if (!empty($project->note))
                     <p class="text-warning fw-bold mt-4">
-                        {!! nl2br(e($project->note)) !!}
+                        {!! nl2br(strip_tags(str_replace('\n', "\n", $project->note), '<strong><em>')) !!}
                     </p>
                 @endif
 
@@ -71,7 +74,7 @@
 
                 <!-- Odkazy ke stažení - začátek -->
                 <div class="d-flex flex-wrap align-items-center mt-4">
-                    @include('portfolio.project-links', ['links' => $project->links])
+                    @include('detail.project-links', ['links' => $project->links])
                     <!-- Collapse tlačítko na odkrytí changelogu -->
                     <button class="btn btn-themed ms-auto" type="button" data-bs-tooltip="tooltip"
                         data-bs-placement="top" title="changelog" data-bs-toggle="collapse"

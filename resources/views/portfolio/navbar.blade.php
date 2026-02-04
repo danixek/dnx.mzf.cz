@@ -31,7 +31,7 @@
                     <a class="nav-link" href="/#contact">Kontakt</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/blog.php">Blog</a>
+                    <a class="nav-link" href="{!! route('blog') !!}">Blog</a>
                 </li>
                 <li class="nav-item">
                     <button id="theme-toggle" class="btn btn-outline-secondary btn-sm" data-bs-tooltip="tooltip"
@@ -40,27 +40,19 @@
                     </button>
                 </li>
                 <li class="nav-item">
-                    <!-- Button trigger modal -->
-                    <?php
-                    session_start();
-                    if (isset($_SESSION['user_id'])): ?>
-                        <span class="nav-link d-flex align-items-center gap-2" style="margin-left: 12px;"> <?php
-                            if (isset($_SESSION['user_id'])): ?>
-                                <img src="<?php echo htmlspecialchars($_SESSION['avatar_url'] ?? '/dashboard/default_avatar.png'); ?>"
-                                    style="width: 35px; border-radius:50%">
-                            <?php 
-                            endif; ?>
-                            <strong style="margin-left: 6px"><?= htmlspecialchars($_SESSION['username']) ?></strong>
+                    @auth
+                        <span class="nav-link d-flex align-items-center gap-2 ms-3 pe-1">
+                            <img src="{{ Auth::user()->avatar_url ?? '/dashboard/default_avatar.png' }}"
+                                style="width:35px;border-radius:50%">
+                            <strong>{{ Auth::user()->username }}</strong>
                         </span>
-                        <?php
-                    else: ?>
-                        <span class="nav-link" role="button" style="margin-left: 12px" data-bs-toggle="modal"
+                    @else
+                        <span class="nav-link ms-3" role="button" data-bs-toggle="modal"
                             data-bs-target="#loginRegisterModal">
                             Přihlásit se
                         </span>
-                        <?php
-                    endif;
-                    ?>
+                    @endauth
+
                 </li>
             </ul>
         </div>

@@ -3,51 +3,55 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@yield('title', 'Dashboard')</title>
+
+    {{-- CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="{{ asset('assets/logo/dnx-logo_mini.ico') }}" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="{{ asset('assets/dashboard/index.css') }}" />
+
+    <link rel="stylesheet" href="{{ asset('assets/dashboard/index.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/dashboard/endora-ads.css') }}">
+
+    @stack('head')
 </head>
 
 <body>
-    <div id="background-overlay"></div>    
-    <a class="logo-wrapper" href="?">
+
+    <div id="background-overlay"></div>
+
+    {{-- Logo --}}
+    <a class="logo-wrapper" href="{{ route('dashboard') }}">
         <img src="{{ asset('assets/logo/dnx-logo_mini_60px.png') }}" alt="Logo">
         <span class="logo-text">
             <span class="visually-hidden">d</span>
             <span class="logo_text-show" id="logo-text">nx</span>
         </span>
     </a>
+
+    {{-- Modály --}}
     @include('portfolio.modals')
 
-    @php
-        use App\Helpers\Logger;
-        $user = auth()->user();
-    @endphp
+    {{-- Background (wallpaper) --}}
+    @isset($preferences)
+        <style>
+            #background-overlay {
+                background:
+                    url('{{ asset("assets/dashboard/img/" . $preferences->wallpaper) }}') no-repeat
+                    {{ $preferences->wallpaperPosition }}
+                    / cover;
+            }
+        </style>
+    @endisset
 
-    <style>
-        #background-overlay {
-            background: url('{{ asset("assets/dashboard/img/" . $preferences->wallpaper) }}') no-repeat
-                {{ $preferences->wallpaperPosition }}
-                /cover;
-        }
-    </style>
-
-    @if (isset($_GET['rss']))
-        {{-- 'rss' --}}
-        @include('dashboard.rss')
-    @elseif (isset($_GET['set']))
-        {{-- 'settings' --}}
-        @include('dashboard.set')
-    @else
-        {{-- 'dashboard' - default --}}
-        @include('dashboard.dash')
-    @endif
+    {{-- HLAVNÍ OBSAH --}}
+    <main>
+        @yield('content')
     </main>
 
+    {{-- Spodní navigace --}}
     <nav class="bottom-navbar">
         <a href="?dash" class="nav-icon {{ $tab === 'dash' ? 'active' : '' }}">🏠</a>
         <a href="?rss" class="nav-icon {{ $tab === 'rss' ? 'active' : '' }}">📡</a>
@@ -70,11 +74,5 @@
     @endif
 
 </body>
-
-{{-- 
-<script src="{{ mix('js/dashboard/main.js') }}"></script>
-<link rel="stylesheet" href="{{ mix('css/app.css') }}">
- --}}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

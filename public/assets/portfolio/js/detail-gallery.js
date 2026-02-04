@@ -1,6 +1,6 @@
 let currentIndex = 0;
 const galleryImages = JSON.parse(document.getElementById('gallery').dataset.gallery);
-const galleryPrefix = "/portfolio/gallery/"; // Nastav adresu ke složce s galerií
+const galleryPrefix = "assets/portfolio/gallery/"; // Nastav adresu ke složce s galerií
 
 function changeMainImage(imgElement) {
     const src = imgElement.src;

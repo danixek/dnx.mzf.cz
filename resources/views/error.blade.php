@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
 <?php
-use App\Helpers\Utils;
-$bgClass = Utils::getBgClass();
 use App\Helpers\Logger; ?>
 
 @include('portfolio.header') 

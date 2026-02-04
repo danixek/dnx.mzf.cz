@@ -1,5 +1,5 @@
-<?php use App\Helpers\Utils; ?>
-<section id="blog" class="<?= Utils::getBgClass() ?> py-5 text-white">
+<!-- Sekce Blog -->
+<section id="blog" class="{{ $bgClass }} py-5 text-white">
     <div class="container">
         <div class="row g-3">
             <h2 class="section-title mb-0 me-3">Články</h2>

@@ -7,18 +7,6 @@ class Utils
     // statická proměnná pro index sekce
     protected static int $sectionIndex = 0;
 
-    // metoda pro získání třídy pozadí
-    public static function getBgClass(?string $color = null): string
-    {
-        if ($color) {
-            return $color;
-        }
-
-        $class = (self::$sectionIndex % 2 === 0) ? 'bg-dark-gray' : 'bg-light-gray';
-        self::$sectionIndex++;
-        return $class;
-    }
-
     public static function CzechDate(string $date): string
     {
 
@@ -52,4 +40,5 @@ class Utils
         [$year, $month, $day] = $parts;
         return $months[$month] . ' ' . $year;
     }
+    
 }

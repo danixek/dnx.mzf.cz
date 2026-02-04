@@ -27,7 +27,7 @@ class DashboardController extends Controller
     {
         $user = $request->user();
 
-        return view('dashboard', [
+        return view('pages.dashboard', [
             'tab' => 'dash',
             'user' => $user,
             'bookmarks' => $this->dashBookmarks($user),
@@ -39,7 +39,7 @@ class DashboardController extends Controller
     {
         $user = $request->user();
 
-        return view('dashboard', [
+        return view('pages.dashboard', [
             'tab' => 'rss',
             'user' => $user,
             'feedItems' => $this->dashFeedItems($user),
@@ -79,10 +79,10 @@ class DashboardController extends Controller
         ];
 
         $wallpapers = collect(
-            glob(public_path('dashboard/img/*.jpg'))
+            glob(public_path('assets/dashboard/img/*.jpg'))
         )->map(fn($f) => basename($f));
 
-        return view('dashboard', [
+        return view('pages.dashboard', [
             'tab' => 'set',
             'user' => $user,
             'feeds' => $dashFeeds,
@@ -139,7 +139,7 @@ class DashboardController extends Controller
             );
         }
 
-        return redirect()->route('dashboard', ['set' => true])
+        return redirect()->route('pages.dashboard', ['set' => true])
             ->with('success', 'Nastavení uloženo.');
     }
 

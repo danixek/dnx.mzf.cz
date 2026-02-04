@@ -67,7 +67,7 @@
                     <div class="wallpaper-thumb">
                         <input type="radio" id="wp-{{ $filename }}" name="wallpaper" value="{{ $filename }}" {{ $preferences->wallpaper === $filename ? 'checked' : '' }} hidden>
                         <label for="wp-{{ $filename }}">
-                            <img src="{{ asset('dashboard/img/' . $filename) }}" width="100"
+                            <img src="{{ asset('assets/dashboard/img/' . $filename) }}" width="100"
                                 style="cursor:pointer; border-radius:8px;">
                         </label>
                     </div>

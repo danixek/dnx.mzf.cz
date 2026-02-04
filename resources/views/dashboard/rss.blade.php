@@ -5,7 +5,7 @@
     </div>
 @else
 
-    <img src="/logo/dnx-logo_mini_120px.png"
+    <img src="{{ asset('assets/logo/dnx-logo_mini_120px.png') }}"
          style="opacity: .6; position: absolute; top: 200px; left: 50%; transform: translateX(-50%)"
          alt="Logo">
 

@@ -68,7 +68,7 @@ class HomeController extends BaseController
         ];
 
         // Data pro view
-        return view('home', [
+        return view('pages.index', [
             'projects' => $projects,
             'badges' => $badges,
             'totalProjects' => $totalProjects,
@@ -91,6 +91,8 @@ class HomeController extends BaseController
         $project->tagsArray = array_map('strtolower', array_map('trim', explode(',', $project->tags ?? '')));
         $project->dataTech = implode(',', $project->tagsArray);
 
+        $mainImage = $project->gallery[0] ?? 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAA5CAYAAABxNnTaAAAAFElEQVR4nO3BMQEAAAgDoJvcf+FAAFY7gW8FAAAAAAAAAAAAAPA3A9MNAAEKCcAAAAASUVORK5CYII=';
+    
         $defaultBase64 = 'data:image/png;base64,...'; // zkráceno
         $thumbPath = public_path('assets/portfolio/gallery/' . ($project->thumbnail ?? ''));
         $project->thumbnailUrl = ($project->thumbnail && file_exists($thumbPath))
@@ -124,8 +126,9 @@ class HomeController extends BaseController
         $project->dataVersion = implode(',', array_map('strtolower', $project->projectBadges));
 
         // Posíláme do Blade
-        return view('detail', [
+        return view('pages.detail', [
             'project' => $project,
+            'mainImage' => $mainImage,
             'badges' => $badges
         ]);
     }
@@ -164,7 +167,7 @@ class HomeController extends BaseController
             ->map(fn ($item) => $this->prepareItem($item))
             ->values();
 
-        return view('library', compact('items', 'category'));
+        return view('pages.library', compact('items', 'category'));
     }
 
     private function prepareItem(array $item): array

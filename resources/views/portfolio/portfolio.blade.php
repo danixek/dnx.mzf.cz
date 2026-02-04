@@ -1,6 +1,5 @@
 <!-- Sekce Portfolio -->
-@php use App\Helpers\Utils; @endphp
-<section id="portfolio" class="{{ Utils::getBgClass() }} text-white main">
+<section id="portfolio" class="{{ $bgClass }} text-white main">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-3">
 
@@ -195,7 +194,7 @@
                             <h5 class="card-title">{!! nl2br(e($project->title)) !!}</h5>
                             <p class="card-text flex-grow-1">{!! nl2br(e($project->short_description)) !!}</p>
                             <div class="justify-content-between align-items-center mt-auto flex-wrap d-flex">
-                                <div class="flex-wrap w-100 d-flex">
+                                <div class="w-100">
                                     @foreach ($project->badgeKeys as $key)
                                         @if(isset($badges[$key]) && $badges[$key]->status_visible === "visible")
                                             <span

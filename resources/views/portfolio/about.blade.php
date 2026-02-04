@@ -1,6 +1,5 @@
 <!-- Sekce O mně -->
- <?php use App\Helpers\Utils; ?>
-<section id="about" class="<?= Utils::getBgClass() ?> main">
+<section id="about" class="{{ $bgClass }} main">
     <div class="container align-items-center">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <h2 class="section-title mb-0">O mně</h2>
@@ -63,7 +62,7 @@
 
                 <div class="row">
                     <div class="col-md-4 col-12 order-1 text-center">
-                        <img src="portfolio/img/library.jpg" class="img-fluid m-0 me-1 mt-4" loading="lazy" />
+                        <img src="{{ asset('assets/portfolio/img/library.jpg') }}" class="img-fluid m-0 me-1 mt-4" loading="lazy" />
                         <a href="{!! route('library') !!}" class="d-inline-block mt-2 collapse-link btn-link">[Knihovna - Easter
                             egg]</a>
                     </div>

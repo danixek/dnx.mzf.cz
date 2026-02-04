@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const radios = document.querySelectorAll('input[name="wallpaper"]');
     const positionSelect = document.getElementById('wallpaper-position');
     const background = document.getElementById('background-overlay');
+    background.style.transition = '200ms ease-in-out';
 
     function updateBackground() {
         const selectedRadio = document.querySelector('input[name="wallpaper"]:checked');
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (selectedRadio && background) {
             const imageUrl = selectedRadio.value;
-            background.style.background = `url('dashboard/img/${imageUrl}') no-repeat ${selectedPosition} / cover`;
+            background.style.background = `url('assets/dashboard/img/${imageUrl}') no-repeat ${selectedPosition} / cover`;
         }
     }
 

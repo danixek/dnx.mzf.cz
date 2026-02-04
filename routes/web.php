@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\SocialAuthController;
 use App\Http\Controllers\ErrorController;
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/detail', [HomeController::class, 'detail'])->name('detail');
 Route::get('/library', [HomeController::class, 'library'])->name('library');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 // Dashboard route
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
