@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Helpers\Utils;
 use Illuminate\Support\Facades\Log;
 
 class ErrorController extends Controller
@@ -28,9 +27,7 @@ class ErrorController extends Controller
 
         return view('error', [
             'code' => $code,
-            'title' => $error['title'],
-            'message' => $error['message'],
-            'bgClass' => Utils::getBgClass(),
+            'error' => $error,
         ]);
     }
 }

@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer(['portfolio.*', 'detail.*', 'library.*', 'blog.*'], function ($view) {
+        View::composer(['portfolio.*', 'detail.*', 'library.*', 'blog.*', 'error'], function ($view) {
             $view->with('bgClass', BgColor::next());
         });
 

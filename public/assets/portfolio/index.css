@@ -760,7 +760,7 @@ span.bg-secondary {
 .endora-panel-text-span {
     color: rgb(250,250,250) !important;
 }
-@media (max-width: 770px) {
+@media (max-width: 780px) {
     .endora-panel-text {
         font-size: 10px !important;
     }

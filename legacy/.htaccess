@@ -1,20 +1,6 @@
 # Aktivace přepisovacího modulu
 RewriteEngine On
 
-# Zákaz přímého přístupu do /vendor a /data složek
-RedirectMatch 403 ^/vendor/
-
-# /dashboard nebo /dashboard/ → dashboard.php
-RewriteRule ^dashboard/?$ /dashboard.php [R=301]
-
-# /DEVportfolio nebo /DEVportfolio/ → devportfolio.php
-RewriteRule ^DEVportfolio/?$ /devportfolio.php [R=301]
-
-# Pokud URL neobsahuje .php, interně mapuj na .php soubor
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^([^/.]+)$ $1.php [L]
-
 # nastaveni vychozi stranky adresare
 DirectoryIndex index.php
 
