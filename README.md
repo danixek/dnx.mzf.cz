@@ -10,9 +10,10 @@ a publikovat články na svém blogu.
 ---
 # dashboard
 
-Moje osobní webová stránka: [dashboard](https://dnx.mzf.cz)  
-Primárně slouží jako portfolio, kde mohu prezentovat své projekty,  
-a publikovat články na svém blogu.
+Pizpůsobitelná domovská stránka: [dashboard](https://dnx.mzf.cz)  
+Dlouhodobá nespokojenost s vyhledávači – zejména se Seznamem – a jejich layoutem mě přivedla k myšlence vytvořit vlastní domovskou stránku.
+
+Cílem projektu je nabídnout widgetový dashboard zaměřený primárně na UI, který umožňuje rychlý přístup k informacím bez vizuálního balastu a nutnosti používat klasické vyhledávače jako výchozí bod.
 
 ![dashboard](https://dnx.mzf.cz/assets/portfolio/gallery/dashboard4.webp)
 
