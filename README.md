@@ -1,10 +1,23 @@
 # dnx.mzf.cz
+## DEVportfolio
 
-Moje osobní webová stránka: [dnx.mzf.cz](https://dnx.mzf.cz)  
+Moje osobní webová stránka: [DEVportfolio](https://dnx.mzf.cz)  
 Primárně slouží jako portfolio, kde mohu prezentovat své projekty,  
 a publikovat články na svém blogu.
 
+![DEVportfolio](https://dnx.mzf.cz/assets/portfolio/gallery/devPortfolio2.webp)
+
 ---
+# dashboard
+
+Moje osobní webová stránka: [dashboard](https://dnx.mzf.cz)  
+Primárně slouží jako portfolio, kde mohu prezentovat své projekty,  
+a publikovat články na svém blogu.
+
+![dashboard](https://dnx.mzf.cz/assets/portfolio/gallery/dashboard4.webp)
+
+---
+
 
 ## 🛡 Licence
 
@@ -16,6 +29,7 @@ Můžete jej volně prohlížet, analyzovat a inspirovat se.
 **Komerční využití a šíření bez uvedení autora není povoleno.**
 
 ---
+![dashboard](https://dnx.mzf.cz/assets/portfolio/gallery/dashboard5.webp)
 
 ## License (EN)
 
